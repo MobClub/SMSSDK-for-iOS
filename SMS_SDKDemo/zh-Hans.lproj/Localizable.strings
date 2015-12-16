@@ -34,15 +34,15 @@
 "maxcode"="超过上限";
 
 "codetoooftenmsg"="客户端请求发送短信验证过于频繁";
-
+"Code" = "验证码";
 "verifycode"="请输入验证码";
 "verifylabel"="我们已发送验证码到这个号码";
 "timelabel"="接受短信大约需要60秒";
 "repeatsms"="收不到短信验证码？";
 "submit"="提交";
 "sendingin"="正在发送中...";
-"timelablemsg"="接收验证码中...";
-"second"="秒";
+"timelablemsg"="接收验证码大约需要";
+"second"=" 秒";
 
 "verifycoderightmsg"="验证码正确";
 "verifycoderighttitle"="验证成功";
@@ -74,11 +74,38 @@
 "phonecode"="手机号";
 "smsmessage"="快加入SMS_SDK吧,网址为http://mob.com";
 "choosephonenumber"="选择要发送邀请的号码";
-
 "voiceCallMsgLabel" = "您也可以选择电话收听语音验证码：";
 "try voice call" = "收听语音验证码";
 
 "verificationByVoiceCallConfirm" = "确定后将致电您的手机号，语音播报验证码。如不希望被来电打扰请使用短信验证码。";
+
+"-1009description" = "无法连接到网络";
+
+"251description" = "访问过于频繁";
+"252description" = "发送短信条数超过限制";
+"400description" = "无效请求";
+"408description" = "无效参数";
+"456description" = "手机号码为空";
+"457description" = "手机号码格式错误";
+"458description" = "手机号码在黑名单中";
+"459description" = "无appKey的控制数据";
+"460description" = "无权限发送短信";
+"461description" = "不支持该地区发送短信";
+"462description" = "每分钟发送次数超限";
+"463description" = "手机号码每天发送次数超限";
+"464description" = "每台手机每天发送次数超限";
+"465description" = "号码在App中每天发送短信次数超限";
+"466description" = "验证码为空";
+"467description" = "校验验证码请求频繁";
+"468description" = "验证码错误";
+"470description" = "账号余额不足";
+"472description" = "客户端请求发送短信验证过于频繁";
+"475description" = "appkey的应用信息不存在";
+"476description" = "当前appkey发送短信的数量超过限额";
+"477description" = "当前手机号发送短信的数量超过当天限额";
+"478description" = "当前手机号在当前应用内发送超过限额";
+"500description" = "服务器内部错误";
+
 
 
 

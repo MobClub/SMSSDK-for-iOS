@@ -34,7 +34,7 @@
 "maxcode"="Up max limit";
 
 "codetoooftenmsg"="The request is too often";
-
+"Code" = "Code";
 "verifycode"="Enter Code";
 "verifylabel"="Verification code has been sent to:";
 "verifylabel"="Verification code has been sent to:";
@@ -42,7 +42,7 @@
 "repeatsms"="Can't get code？";
 "submit"="Submit";
 "sendingin"="Sending in...";
-"timelablemsg"="Getting the verification code...";
+"timelablemsg"="Getting the verification code almost need";
 "second"=" seconds";
 
 "verifycoderightmsg"="Code is right";
@@ -81,3 +81,30 @@
 "try voice call" = "Get verification code by voice call";
 
 "verificationByVoiceCallConfirm" = "We will call you after your comfirmation. Vocie verification code. Please use message verification code service if you don't want to be called.";
+
+"-1009description" = "The Internet connection appears to be offline";
+
+"252description" = "Sending messages more than limit";
+
+"400description" = "Invalid request";
+"408description" = "Invalid parameter";
+"456description" = "Phone number is empty";
+"457description" = "Phone number is illegal";
+"458description" = "Phone number in the blacklist";
+"459description" = "Unable to obtain data";
+"460description" = "Permission denied";
+"461description" = "Do not support the region to send text messages";
+"462description" = "Sending messages limited per minute";
+"463description" = "Sending messages limited everyday";
+"464description" = "Sending text message hits limit";
+"465description" = "Invalid duid";
+"466description" = "The verification code is empty";
+"467description" = "Too frequently";
+"468description" = "Invalid validation code";
+"470description" = "Unable to obtain data";
+"472description" = "Unable to obtain data";
+"475description" = "No application information of appkey exists";
+"476description" = "The current appkey send messages over limit";
+"477description" = "The current phone number send messages over the limit";
+"478description" = "The current phone number in the current application sends messages over the limit";
+"500description" = "Server Error";

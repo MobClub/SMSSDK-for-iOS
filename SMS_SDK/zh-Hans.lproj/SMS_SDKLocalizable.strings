@@ -28,29 +28,14 @@
  470    账号余额不足                       账号短信余额不足
  472    客户端请求发送短信验证过于频繁        客户端请求发送短信验证过于频繁
  475    appKey的应用信息不存在              appKey的应用信息不存在
+ 476    当前appkey发送短信的数量超过限额      如果当前appkey对应的包名没有通过审核，每天次appkey+包名最多可以发送20条短信
+ 477    当前手机号发送短信的数量超过当天限额   当前手机号码在SMSSDK平台内每天最多可发送短信10条，包括客户端发送和WebApi发送
+ 478    当前手机号在当前应用内发送超过限额     当前手机号码在当前应用下12小时内最多可发送文本验证码5条
  500    服务器内部错误                     服务器程序报错
  */
 ///#end
 
-"400description" = "无效请求";
-"408description" = "无效参数";
-"456description" = "手机号码为空";
-"457description" = "手机号码格式错误";
-"458description" = "手机号码在黑名单中";
-"459description" = "无appKey的控制数据";
-"460description" = "无权限发送短信";
-"461description" = "不支持该地区发送短信";
-"462description" = "每分钟发送次数超限";
-"463description" = "手机号码每天发送次数超限";
-"464description" = "每台手机每天发送次数超限";
-"465description" = "号码在App中每天发送短信次数超限";
-"466description" = "验证码为空";
-"467description" = "校验验证码请求频繁";
-"468description" = "验证码错误";
-"470description" = "账号余额不足";
-"472description" = "客户端请求发送短信验证过于频繁";
-"475description" = "appkey的应用信息不存在";
-"500description" = "服务器内部错误";
+
 
 
 

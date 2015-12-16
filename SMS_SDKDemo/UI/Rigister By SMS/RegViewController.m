@@ -144,8 +144,10 @@
              }
              else
              {
+                 
+                 NSString *messageStr = [NSString stringWithFormat:@"%zidescription",error.code];
                  UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"codesenderrtitle", nil)
-                                                                 message:[NSString stringWithFormat:@"错误描述：%@",[error.userInfo objectForKey:@"getVerificationCode"]]
+                                                                 message:NSLocalizedString(messageStr, nil)
                                                                 delegate:self
                                                        cancelButtonTitle:NSLocalizedString(@"sure", nil)
                                                        otherButtonTitles:nil, nil];
@@ -199,23 +201,33 @@
     [self.view addSubview:tableView];
     
     //区域码
+    UILabel *seperateLineUp = [[UILabel alloc] initWithFrame:CGRectMake(10, 154 + statusBarHeight, self.view.frame.size.width - 20, 1)];
+    seperateLineUp.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:seperateLineUp];
+    
     UITextField* areaCodeField = [[UITextField alloc] init];
     areaCodeField.frame = CGRectMake(10, 155 + statusBarHeight, (self.view.frame.size.width - 30)/4, 40 + statusBarHeight/4);
-    areaCodeField.borderStyle = UITextBorderStyleBezel;
     areaCodeField.text = [NSString stringWithFormat:@"+86"];
     areaCodeField.textAlignment = NSTextAlignmentCenter;
     areaCodeField.font = [UIFont fontWithName:@"Helvetica" size:18];
     areaCodeField.keyboardType = UIKeyboardTypeDefault;
     [self.view addSubview:areaCodeField];
     
+    UILabel *verticalLine = [[UILabel alloc] initWithFrame:CGRectMake(areaCodeField.frame.origin.x + areaCodeField.frame.size.width + 1, seperateLineUp.frame.origin.y +1, 1, areaCodeField.frame.size.height)];
+    verticalLine.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:verticalLine];
+    
     //
     UITextField* telField = [[UITextField alloc] init];
     telField.frame = CGRectMake(20 + (self.view.frame.size.width - 30)/4, 155 + statusBarHeight,(self.view.frame.size.width - 30)*3/4 , 40 + statusBarHeight/4);
-    telField.borderStyle = UITextBorderStyleBezel;
     telField.placeholder = NSLocalizedString(@"telfield", nil);
     telField.keyboardType = UIKeyboardTypeDefault;
     telField.clearButtonMode = UITextFieldViewModeWhileEditing;
     [self.view addSubview:telField];
+    
+    UILabel *seperateLineDown = [[UILabel alloc] initWithFrame:CGRectMake(seperateLineUp.frame.origin.x, seperateLineUp.frame.origin.y + areaCodeField.frame.size.height + 1, seperateLineUp.frame.size.width, 1)];
+    seperateLineDown.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:seperateLineDown];
     
     //
     UIButton* nextBtn = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -233,6 +245,7 @@
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     self.areaCodeField.delegate = self;
     self.telField.delegate = self;
     
@@ -278,11 +291,8 @@
     else
     {
         _areaArray = [[MOBFDataService sharedInstance] cacheDataForKey:@"countryCodeArray" domain:nil];
-        
     }
-    
 }
-
 
 /**
  *  计算两个日期的天数差

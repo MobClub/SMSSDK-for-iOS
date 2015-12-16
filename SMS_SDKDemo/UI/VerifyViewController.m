@@ -200,8 +200,9 @@ static NSMutableArray* _userData2;
             {
                 if (error)
                 {
+                    NSString *messageStr = [NSString stringWithFormat:@"%zidescription",error.code];
                     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"codesenderrtitle", nil)
-                                                                    message:[NSString stringWithFormat:@"错误描述%@",[error.userInfo objectForKey:@"getVerificationCode"]]
+                                                                    message:NSLocalizedString(messageStr, nil)
                                                                    delegate:self
                                                           cancelButtonTitle:NSLocalizedString(@"sure", nil)
                                                           otherButtonTitles:nil, nil];
@@ -259,15 +260,30 @@ static NSMutableArray* _userData2;
     [self.view addSubview:_telLabel];
     self.telLabel.text = [NSString stringWithFormat:@"+%@ %@",_areaCode,_phone];
     
+    UILabel *seperaterLineUp = [[UILabel alloc] initWithFrame:CGRectMake(10, 110 + statusBarHeight, self.view.frame.size.width - 20, 1)];
+    seperaterLineUp.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:seperaterLineUp];
+    
+    UILabel *verifyCodeLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 111 + statusBarHeight, 80, 46)];
+    verifyCodeLabel.text = NSLocalizedString(@"Code", nil);
+    [self.view addSubview:verifyCodeLabel];
+    
+    UILabel *verticalLine = [[UILabel alloc] initWithFrame:CGRectMake(verifyCodeLabel.frame.origin.x - 10 + verifyCodeLabel.frame.size.width + 1, verifyCodeLabel.frame.origin.y, 1, verifyCodeLabel.frame.size.height)];
+    verticalLine.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:verticalLine];
+    
     _verifyCodeField = [[UITextField alloc] init];
-    _verifyCodeField.frame = CGRectMake(15, 111+statusBarHeight, self.view.frame.size.width - 30, 46);
-    _verifyCodeField.borderStyle = UITextBorderStyleBezel;
+    _verifyCodeField.frame = CGRectMake(verticalLine.frame.origin.x, 111 + statusBarHeight, self.view.frame.size.width - verifyCodeLabel.frame.size.width - 20, 46);
     _verifyCodeField.textAlignment = NSTextAlignmentCenter;
     _verifyCodeField.placeholder = NSLocalizedString(@"verifycode", nil);
     _verifyCodeField.font = [UIFont fontWithName:@"Helvetica" size:18];
     _verifyCodeField.keyboardType = UIKeyboardTypePhonePad;
     _verifyCodeField.clearButtonMode = UITextFieldViewModeWhileEditing;
     [self.view addSubview:_verifyCodeField];
+    
+    UILabel *seperaterLineDown = [[UILabel alloc] initWithFrame:CGRectMake(seperaterLineUp.frame.origin.x, _verifyCodeField.frame.origin.y + _verifyCodeField.frame.size.height + 1, seperaterLineUp.frame.size.width, 1)];
+    seperaterLineDown.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:seperaterLineDown];
     
     _timeLabel = [[UILabel alloc] init];
     _timeLabel.frame = CGRectMake(15, 169+statusBarHeight, self.view.frame.size.width - 30, 40);
@@ -323,6 +339,7 @@ static NSMutableArray* _userData2;
                                          userInfo:nil
                                           repeats:YES];
     
+    self.timeLabel.textColor = [UIColor lightGrayColor];
     NSTimer* timer2 = [NSTimer scheduledTimerWithTimeInterval:1
                                                     target:self
                                                   selector:@selector(updateTime)
@@ -349,6 +366,7 @@ static NSMutableArray* _userData2;
 
 -(void)updateTime
 {
+    
     count++;
     if (count >= 60)
     {
@@ -356,6 +374,7 @@ static NSMutableArray* _userData2;
         return;
     }
     //NSLog(@"更新时间");
+    
     self.timeLabel.text = [NSString stringWithFormat:@"%@%i%@",NSLocalizedString(@"timelablemsg", nil),60-count,NSLocalizedString(@"second", nil)];
     
     if (count == 30)

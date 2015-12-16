@@ -12,6 +12,7 @@
 /**
  *	@brief	错误代码，如果为调用API出错则应该参考API错误码对照表。错误码对照表如下：
  错误码	错误描述	                         备注
+ 252    发送短信条数超过限制                发送短信条数超过规则限制
  400	无效请求	                         客户端请求不能被识别。
  408	无效参数                          无效的请求参数
  456	手机号码为空	                     提交的手机号或者区号为空
@@ -30,6 +31,9 @@
  470    账号余额不足                       账号短信余额不足
  472    客户端请求发送短信验证过于频繁        客户端请求发送短信验证过于频繁
  475    appKey的应用信息不存在              appKey的应用信息不存在
+ 476    当前appkey发送短信的数量超过限额     如果当前appkey对应的包名没有通过审核，每天次appkey+包名最多可以发送20条短信
+ 477    当前手机号发送短信的数量超过当天限额   当前手机号码在SMSSDK平台内每天最多可发送短信10条，包括客户端发送和WebApi发送
+ 478    当前手机号在当前应用内发送超过限额     当前手机号码在当前应用下12小时内最多可发送文本验证码5条
  500    服务器内部错误                     服务器程序报错
  */
 ///#end
@@ -37,6 +41,7 @@
 /**
  *	@brief	Error code，If it is you call the API, you should see the error code table, if it is an HTTP error, this attribute indicates the HTTP error code.
  ErrorCode	 Error description                             Remarks
+ 252    Sending messages more than limit                   Sending messages more than limit
  400    Invalid request                                    The request could not be identified
  408    Invalid parameter                                  The parameters are invalid in the request
  456    Phone number is empty                              The submitted phone number or country code is empty
@@ -55,6 +60,9 @@
  470    Insufficient balance                               Insufficient balance
  472    Unable to obtain data                              Obtaining client platform information failed
  475    No application information of appkey exists        No application information of appkey exists
+ 476    The current appkey send text messages over limit
+ 477    The current phone number send messages over the limit
+ 478    The current phone number in the current application sends messages over the limit
  500    Server Error                                       Server Error
  */
 ///#end

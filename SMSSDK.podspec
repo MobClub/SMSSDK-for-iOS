@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-s.name                = "SMSSDKS"
+s.name                = "SMSSDK"
 s.version             = "2.0.0"
 s.summary             = 'mob.com免费短信验证码SDK'
 s.license             = 'Copyright © 2012-2015 mob.com'

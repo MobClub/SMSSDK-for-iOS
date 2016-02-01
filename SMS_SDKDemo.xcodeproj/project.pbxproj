@@ -7,26 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3637128A1A81AE7600271164 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363712891A81AE7600271164 /* SubmitViewController.m */; };
-		36A68A8F1A7A39850003417E /* RegisterByVoiceCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A68A8B1A7A39850003417E /* RegisterByVoiceCallViewController.m */; };
-		36A68A901A7A39850003417E /* RegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A68A8E1A7A39850003417E /* RegViewController.m */; };
 		36C07FDC1A7F453800C1642D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36C07FDB1A7F453800C1642D /* LaunchScreen.xib */; };
 		36E671AF1A80B6CD00CAA2F0 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36E671AB1A80B6CD00CAA2F0 /* SMS_SDKLocalizable.strings */; };
 		36E671B01A80B6CD00CAA2F0 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E671AD1A80B6CD00CAA2F0 /* SMS_SDK.framework */; };
+		7B5D79D21C58C01F003D37DF /* libSMSSDUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5D79D11C58C006003D37DF /* libSMSSDUI.a */; };
 		7B9890EC1BC7A19A0072626D /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9890EB1BC7A19A0072626D /* libstdc++.dylib */; };
+		7BA4E94E1C3A1DA80040EA04 /* SMSSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7BA4E94D1C3A1DA80040EA04 /* SMSSDKUI.bundle */; };
 		7BF9FC411BC7A0AC007DDBC2 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF9FC401BC7A0AC007DDBC2 /* MOBFoundation.framework */; };
 		7BF9FC451BC7A2CA007DDBC2 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF9FC441BC7A2CA007DDBC2 /* JavaScriptCore.framework */; };
 		F318BF0D19B04E23008E03EB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318BF0C19B04E23008E03EB /* MessageUI.framework */; };
-		F318BF1719B05208008E03EB /* NSDictionary-DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = F318BF1019B05208008E03EB /* NSDictionary-DeepMutableCopy.m */; };
-		F318BF1819B05208008E03EB /* SMS_HYZBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F318BF1219B05208008E03EB /* SMS_HYZBadgeView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F318BF1919B05208008E03EB /* SMS_MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = F318BF1419B05208008E03EB /* SMS_MBProgressHUD+Add.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F318BF1A19B05208008E03EB /* SMS_MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F318BF1619B05208008E03EB /* SMS_MBProgressHUD.m */; };
-		F318BF2919B0520F008E03EB /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F318BF1D19B0520F008E03EB /* CustomCell.m */; };
-		F318BF2A19B0520F008E03EB /* InvitationViewControllerEx.m in Sources */ = {isa = PBXBuildFile; fileRef = F318BF1F19B0520F008E03EB /* InvitationViewControllerEx.m */; };
-		F318BF2C19B0520F008E03EB /* SectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F318BF2319B0520F008E03EB /* SectionsViewController.m */; };
-		F318BF2D19B0520F008E03EB /* SectionsViewControllerFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = F318BF2519B0520F008E03EB /* SectionsViewControllerFriends.m */; };
-		F318BF2E19B0520F008E03EB /* smssdk.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F318BF2619B0520F008E03EB /* smssdk.bundle */; };
-		F318BF2F19B0520F008E03EB /* VerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F318BF2819B0520F008E03EB /* VerifyViewController.m */; };
 		F318BF3219B05231008E03EB /* YJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F318BF3119B05231008E03EB /* YJViewController.m */; };
 		F318BF8719B07914008E03EB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318BF8619B07914008E03EB /* Security.framework */; };
 		F35B886F19B018D800C67215 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F35B886D19B018D800C67215 /* AddressBook.framework */; };
@@ -44,40 +33,27 @@
 		F3F51D1219D51B4200FC5A04 /* country.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3F51D1419D51B4200FC5A04 /* country.plist */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7B5D79D01C58C006003D37DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B5D79CB1C58C006003D37DF /* SMSSDUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7B2A62491C4F66BE00A160C8;
+			remoteInfo = SMSSDUI;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		363712881A81AE7600271164 /* SubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitViewController.h; sourceTree = "<group>"; };
-		363712891A81AE7600271164 /* SubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitViewController.m; sourceTree = "<group>"; };
-		36A68A8A1A7A39850003417E /* RegisterByVoiceCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterByVoiceCallViewController.h; sourceTree = "<group>"; };
-		36A68A8B1A7A39850003417E /* RegisterByVoiceCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterByVoiceCallViewController.m; sourceTree = "<group>"; };
-		36A68A8D1A7A39850003417E /* RegViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegViewController.h; sourceTree = "<group>"; };
-		36A68A8E1A7A39850003417E /* RegViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegViewController.m; sourceTree = "<group>"; };
 		36C07FDB1A7F453800C1642D /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		36E671AC1A80B6CD00CAA2F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
 		36E671AD1A80B6CD00CAA2F0 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
 		36E671AE1A80B6CD00CAA2F0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
+		7B5D79CB1C58C006003D37DF /* SMSSDUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SMSSDUI.xcodeproj; sourceTree = "<group>"; };
 		7B9890EB1BC7A19A0072626D /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		7BA4E94D1C3A1DA80040EA04 /* SMSSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SMSSDKUI.bundle; sourceTree = "<group>"; };
 		7BF9FC401BC7A0AC007DDBC2 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		7BF9FC441BC7A2CA007DDBC2 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F318BF0C19B04E23008E03EB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		F318BF0F19B05208008E03EB /* NSDictionary-DeepMutableCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary-DeepMutableCopy.h"; sourceTree = "<group>"; };
-		F318BF1019B05208008E03EB /* NSDictionary-DeepMutableCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary-DeepMutableCopy.m"; sourceTree = "<group>"; };
-		F318BF1119B05208008E03EB /* SMS_HYZBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMS_HYZBadgeView.h; sourceTree = "<group>"; };
-		F318BF1219B05208008E03EB /* SMS_HYZBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMS_HYZBadgeView.m; sourceTree = "<group>"; };
-		F318BF1319B05208008E03EB /* SMS_MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMS_MBProgressHUD+Add.h"; sourceTree = "<group>"; };
-		F318BF1419B05208008E03EB /* SMS_MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SMS_MBProgressHUD+Add.m"; sourceTree = "<group>"; };
-		F318BF1519B05208008E03EB /* SMS_MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMS_MBProgressHUD.h; sourceTree = "<group>"; };
-		F318BF1619B05208008E03EB /* SMS_MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMS_MBProgressHUD.m; sourceTree = "<group>"; };
-		F318BF1C19B0520F008E03EB /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
-		F318BF1D19B0520F008E03EB /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
-		F318BF1E19B0520F008E03EB /* InvitationViewControllerEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitationViewControllerEx.h; sourceTree = "<group>"; };
-		F318BF1F19B0520F008E03EB /* InvitationViewControllerEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitationViewControllerEx.m; sourceTree = "<group>"; };
-		F318BF2219B0520F008E03EB /* SectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionsViewController.h; sourceTree = "<group>"; };
-		F318BF2319B0520F008E03EB /* SectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionsViewController.m; sourceTree = "<group>"; };
-		F318BF2419B0520F008E03EB /* SectionsViewControllerFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionsViewControllerFriends.h; sourceTree = "<group>"; };
-		F318BF2519B0520F008E03EB /* SectionsViewControllerFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionsViewControllerFriends.m; sourceTree = "<group>"; };
-		F318BF2619B0520F008E03EB /* smssdk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = smssdk.bundle; sourceTree = "<group>"; };
-		F318BF2719B0520F008E03EB /* VerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerifyViewController.h; path = ../VerifyViewController.h; sourceTree = "<group>"; };
-		F318BF2819B0520F008E03EB /* VerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerifyViewController.m; path = ../VerifyViewController.m; sourceTree = "<group>"; };
 		F318BF3019B05229008E03EB /* YJViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJViewController.h; sourceTree = "<group>"; };
 		F318BF3119B05231008E03EB /* YJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJViewController.m; sourceTree = "<group>"; };
 		F318BF8619B07914008E03EB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -109,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B5D79D21C58C01F003D37DF /* libSMSSDUI.a in Frameworks */,
 				7BF9FC451BC7A2CA007DDBC2 /* JavaScriptCore.framework in Frameworks */,
 				7B9890EC1BC7A19A0072626D /* libstdc++.dylib in Frameworks */,
 				F318BF8719B07914008E03EB /* Security.framework in Frameworks */,
@@ -128,28 +105,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		36A68A891A7A39850003417E /* Register By Voice Call */ = {
-			isa = PBXGroup;
-			children = (
-				36A68A8A1A7A39850003417E /* RegisterByVoiceCallViewController.h */,
-				36A68A8B1A7A39850003417E /* RegisterByVoiceCallViewController.m */,
-				363712881A81AE7600271164 /* SubmitViewController.h */,
-				363712891A81AE7600271164 /* SubmitViewController.m */,
-			);
-			path = "Register By Voice Call";
-			sourceTree = "<group>";
-		};
-		36A68A8C1A7A39850003417E /* Rigister By SMS */ = {
-			isa = PBXGroup;
-			children = (
-				36A68A8D1A7A39850003417E /* RegViewController.h */,
-				36A68A8E1A7A39850003417E /* RegViewController.m */,
-				F318BF2719B0520F008E03EB /* VerifyViewController.h */,
-				F318BF2819B0520F008E03EB /* VerifyViewController.m */,
-			);
-			path = "Rigister By SMS";
-			sourceTree = "<group>";
-		};
 		36E671AA1A80B6CD00CAA2F0 /* SMS_SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,42 +115,18 @@
 			path = SMS_SDK;
 			sourceTree = "<group>";
 		};
-		F318BF0E19B05208008E03EB /* SMS_UILib */ = {
+		7B5D79CC1C58C006003D37DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F318BF0F19B05208008E03EB /* NSDictionary-DeepMutableCopy.h */,
-				F318BF1019B05208008E03EB /* NSDictionary-DeepMutableCopy.m */,
-				F318BF1119B05208008E03EB /* SMS_HYZBadgeView.h */,
-				F318BF1219B05208008E03EB /* SMS_HYZBadgeView.m */,
-				F318BF1319B05208008E03EB /* SMS_MBProgressHUD+Add.h */,
-				F318BF1419B05208008E03EB /* SMS_MBProgressHUD+Add.m */,
-				F318BF1519B05208008E03EB /* SMS_MBProgressHUD.h */,
-				F318BF1619B05208008E03EB /* SMS_MBProgressHUD.m */,
+				7B5D79D11C58C006003D37DF /* libSMSSDUI.a */,
 			);
-			path = SMS_UILib;
-			sourceTree = "<group>";
-		};
-		F318BF1B19B0520F008E03EB /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				36A68A891A7A39850003417E /* Register By Voice Call */,
-				36A68A8C1A7A39850003417E /* Rigister By SMS */,
-				F318BF1C19B0520F008E03EB /* CustomCell.h */,
-				F318BF1D19B0520F008E03EB /* CustomCell.m */,
-				F318BF1E19B0520F008E03EB /* InvitationViewControllerEx.h */,
-				F318BF1F19B0520F008E03EB /* InvitationViewControllerEx.m */,
-				F318BF2219B0520F008E03EB /* SectionsViewController.h */,
-				F318BF2319B0520F008E03EB /* SectionsViewController.m */,
-				F318BF2419B0520F008E03EB /* SectionsViewControllerFriends.h */,
-				F318BF2519B0520F008E03EB /* SectionsViewControllerFriends.m */,
-				F318BF2619B0520F008E03EB /* smssdk.bundle */,
-			);
-			path = UI;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		F3F34AB719AED773004CA430 = {
 			isa = PBXGroup;
 			children = (
+				7B5D79CB1C58C006003D37DF /* SMSSDUI.xcodeproj */,
 				36E671AA1A80B6CD00CAA2F0 /* SMS_SDK */,
 				F3F34AC919AED773004CA430 /* SMS_SDKDemo */,
 				F3F34AC219AED773004CA430 /* Frameworks */,
@@ -233,8 +164,7 @@
 		F3F34AC919AED773004CA430 /* SMS_SDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F318BF1B19B0520F008E03EB /* UI */,
-				F318BF0E19B05208008E03EB /* SMS_UILib */,
+				7BA4E94D1C3A1DA80040EA04 /* SMSSDKUI.bundle */,
 				F3F34AD219AED773004CA430 /* YJAppDelegate.h */,
 				F3F34AD319AED773004CA430 /* YJAppDelegate.m */,
 				F318BF3019B05229008E03EB /* YJViewController.h */,
@@ -305,12 +235,28 @@
 			mainGroup = F3F34AB719AED773004CA430;
 			productRefGroup = F3F34AC119AED773004CA430 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7B5D79CC1C58C006003D37DF /* Products */;
+					ProjectRef = 7B5D79CB1C58C006003D37DF /* SMSSDUI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F3F34ABF19AED773004CA430 /* SMS_SDKDemo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7B5D79D11C58C006003D37DF /* libSMSSDUI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSMSSDUI.a;
+			remoteRef = 7B5D79D01C58C006003D37DF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F3F34ABE19AED773004CA430 /* Resources */ = {
@@ -320,10 +266,10 @@
 				F3F51D1219D51B4200FC5A04 /* country.plist in Resources */,
 				36E671AF1A80B6CD00CAA2F0 /* SMS_SDKLocalizable.strings in Resources */,
 				F3F51D0E19D5001700FC5A04 /* Localizable.strings in Resources */,
-				F318BF2E19B0520F008E03EB /* smssdk.bundle in Resources */,
 				F3F34ACE19AED773004CA430 /* InfoPlist.strings in Resources */,
 				36C07FDC1A7F453800C1642D /* LaunchScreen.xib in Resources */,
 				F3F34AD619AED773004CA430 /* Images.xcassets in Resources */,
+				7BA4E94E1C3A1DA80040EA04 /* SMSSDKUI.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,21 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F318BF1719B05208008E03EB /* NSDictionary-DeepMutableCopy.m in Sources */,
-				F318BF2919B0520F008E03EB /* CustomCell.m in Sources */,
-				F318BF1819B05208008E03EB /* SMS_HYZBadgeView.m in Sources */,
-				F318BF2D19B0520F008E03EB /* SectionsViewControllerFriends.m in Sources */,
-				F318BF2F19B0520F008E03EB /* VerifyViewController.m in Sources */,
-				F318BF1919B05208008E03EB /* SMS_MBProgressHUD+Add.m in Sources */,
 				F318BF3219B05231008E03EB /* YJViewController.m in Sources */,
-				36A68A901A7A39850003417E /* RegViewController.m in Sources */,
-				F318BF2A19B0520F008E03EB /* InvitationViewControllerEx.m in Sources */,
 				F3F34AD019AED773004CA430 /* main.m in Sources */,
-				3637128A1A81AE7600271164 /* SubmitViewController.m in Sources */,
-				F318BF1A19B05208008E03EB /* SMS_MBProgressHUD.m in Sources */,
-				36A68A8F1A7A39850003417E /* RegisterByVoiceCallViewController.m in Sources */,
 				F3F34AD419AED773004CA430 /* YJAppDelegate.m in Sources */,
-				F318BF2C19B0520F008E03EB /* SectionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +347,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -454,6 +389,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -477,7 +413,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -485,6 +421,12 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMS_SDKDemo/SMS_SDKDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/SMSSDKUI",
+					"$(SRCROOT)/SMSSDKUI/SMS_UILib",
+					"$(SRCROOT)/SMSSDKUI/UI",
+					"$(SRCROOT)/SMSSDKUI/UI/Rigister",
+				);
 				INFOPLIST_FILE = "SMS_SDKDemo/SMS_SDKDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -501,7 +443,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -509,6 +451,12 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMS_SDKDemo/SMS_SDKDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/SMSSDKUI",
+					"$(SRCROOT)/SMSSDKUI/SMS_UILib",
+					"$(SRCROOT)/SMSSDKUI/UI",
+					"$(SRCROOT)/SMSSDKUI/UI/Rigister",
+				);
 				INFOPLIST_FILE = "SMS_SDKDemo/SMS_SDKDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";

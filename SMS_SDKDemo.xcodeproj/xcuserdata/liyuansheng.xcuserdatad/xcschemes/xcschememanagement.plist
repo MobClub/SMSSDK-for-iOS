@@ -6,12 +6,19 @@
 	<dict>
 		<key>SMS_SDKDemo.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>7B45B44B1C338578002BA939</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F3F34ABF19AED773004CA430</key>
 		<dict>
 			<key>primary</key>

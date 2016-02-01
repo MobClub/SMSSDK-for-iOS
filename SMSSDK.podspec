@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
 s.name                = "SMSSDK"
-s.version             = "1.2.0"
+s.version             = "2.0.2"
 s.summary             = 'mob.com免费短信验证码SDK'
 s.license             = 'Copyright © 2012-2015 mob.com'
-s.author              = { "Jinghuang Liu" => "liujinghuang@icloud.com" }
+s.author              = { "liyuansheng" => "763497804@qq.com" }
 s.homepage            = 'http://www.mob.com'
 s.source              = { :git => "https://github.com/ShareSDKPlatform/SMSSDK-for-iOS.git", :tag => s.version.to_s }
 s.platform            = :ios, '6.0'

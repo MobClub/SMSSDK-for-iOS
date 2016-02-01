@@ -10,10 +10,15 @@
 #import "YJViewController.h"
 
 #import <SMS_SDK/SMSSDK.h>
-#import <SMS_SDK/SMSSDK+AddressBookMethods.h>
+#import <SMS_SDK/Extend/SMSSDK+AddressBookMethods.h>
 
-#define appKey @"5b2655c71290"
-#define appSecret @"55988074b9a3faadffa6f74cd3ae7845"
+//SMSSDK官网公共key
+#define appkey @"f3fc6baa9ac4"
+#define app_secrect @"7f3dedcb36d92deebcb373af921d635a"
+
+@interface YJAppDelegate ()
+
+@end
 
 @implementation YJAppDelegate
 
@@ -21,13 +26,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    
-    //初始化应用，appKey和appSecret从后台申请得到
-    [SMSSDK registerApp:appKey
-              withSecret:appSecret];
-    
-//    [SMSSDK enableAppContactFriends:NO];
   
+    [SMSSDK registerApp:appkey
+             withSecret:app_secrect];
+  //[SMSSDK enableAppContactFriends:NO];
+    
     YJViewController* yj = [[YJViewController alloc] init];
     self.window.rootViewController = yj;
     [self.window makeKeyAndVisible];

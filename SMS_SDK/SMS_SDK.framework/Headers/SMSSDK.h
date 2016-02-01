@@ -8,16 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-#import "SMSSDKResultHanderDef.h"
-#import "SMSSDKUserInfo.h"
+#import <SMS_SDK/Extend/SMSSDKResultHanderDef.h>
+#import <SMS_SDK/Extend/SMSSDKUserInfo.h>
 #import <MessageUI/MessageUI.h>
 
 /**
- * @brief 核心类（Core class）v1.2.0
+ * @brief 核心类（Core class）v2.0.1
  */
 @interface SMSSDK : NSObject <MFMessageComposeViewControllerDelegate>
 
 /**
+ *
+ *****  请注意：测试短信条数限制发送数量：20条/天，APP开发完成后请到Mob官网(http://mob.com/ )后台提交审核，获得不限制条数的免费短信权限。
+ *
  *  初始化应用，此方法在应用启动时在主线程中调用。(This method is called in the main thread in application:didFinishLaunchingWithOptions: method)
  *
  *  @param appKey    在Mob官网(http://mob.com/ )中注册的应用Key。(The appKey of mob Application. Log in to http://mob.com/ to register to be a Mob developer and create a application if you don't have one)
@@ -29,7 +32,7 @@
 #pragma mark - 支持获取验证码和提交验证码 (get the verification code and commit verifacation code)
 /**
  *  @from                    v1.1.1
- *  @brief                   获取验证码(Get verification code by SMS)
+ *  @brief                   获取验证码(Get verification code)
  *
  *  @param method            获取验证码的方法(The method of getting verificationCode)
  *  @param phoneNumber       电话号码(The phone number)
@@ -57,6 +60,11 @@
                   phoneNumber:(NSString *)phoneNumber
                          zone:(NSString *)zone
                        result:(SMSCommitCodeResultHandler)result;
+/**
+ * @from               v2.0.1
+ * @param              返回SDK版本号(Return the version of this SDK)
+ */
++(NSString *)SMSSDKVersion;
 
 
 @end

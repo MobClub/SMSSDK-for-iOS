@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SMS_SDKDemo/UI/Register By Voice Call/RegisterByVoiceCallViewController.m"
-            timestampString = "471509910.775213"
+            timestampString = "472385402.026874"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "264"
-            endingLineNumber = "264"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -35,44 +35,92 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SMS_SDKDemo/UI/Rigister By SMS/RegViewController.m"
-            timestampString = "471509320.765678"
+            filePath = "SMS_SDKDemo/UI/VerifyViewController.m"
+            timestampString = "473162868.964626"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "381"
+            endingLineNumber = "381"
+            landmarkName = "-updateTime"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMS_SDKDemo/UI/Rigister By SMS/RegViewController.m"
+            timestampString = "473163306.214189"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-nextStep"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMSSDKUI/UI/SectionsViewController.m"
+            timestampString = "474283882.251546"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "-resetSearch"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMSSDKUI/UI/Rigister/RegViewController.m"
+            timestampString = "474365890.526944"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-clickLeftButton"
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[RegViewController viewDidLoad]"
+                  symbolName = "-[RegViewController clickLeftButton]"
                   moduleName = "SMS_SDKDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liyuansheng/Desktop/SMSSDK2.0.0/%E6%96%B0%E7%89%88API_Release/SMS_SDKDemo/UI/Rigister%20By%20SMS/RegViewController.m"
-                  timestampString = "471858854.762143"
+                  urlString = "file:///Users/liyuansheng/Desktop/SMSSDK2.0.0/%E6%96%B0%E7%89%88API_Release/SMSSDKUI/UI/Rigister/RegViewController.m"
+                  timestampString = "473679208.803605"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "270"
-                  endingLineNumber = "270"
-                  offsetFromSymbolStart = "8327">
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "28">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__32-[RegViewController viewDidLoad]_block_invoke"
+                  symbolName = "__36-[RegViewController clickLeftButton]_block_invoke"
                   moduleName = "SMS_SDKDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liyuansheng/Desktop/SMSSDK2.0.0/%E6%96%B0%E7%89%88API_Release/SMS_SDKDemo/UI/Rigister%20By%20SMS/RegViewController.m"
-                  timestampString = "471858854.762413"
+                  urlString = "file:///Users/liyuansheng/Desktop/SMSSDK2.0.0/%E6%96%B0%E7%89%88API_Release/SMSSDKUI/UI/Rigister/RegViewController.m"
+                  timestampString = "473679208.803915"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "270"
-                  endingLineNumber = "270"
-                  offsetFromSymbolStart = "70">
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -83,62 +131,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SMS_SDKDemo/UI/Rigister By SMS/RegViewController.m"
-            timestampString = "469522709.381722"
+            filePath = "SMSSDKUI/UI/Rigister/VerifyViewController.m"
+            timestampString = "475580703.420352"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "-alertView:clickedButtonAtIndex:"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SMS_SDKDemo/YJViewController.m"
-            timestampString = "470631471.467844"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
-            landmarkName = "-getAddressBookFriends"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[YJViewController getAddressBookFriends]"
-                  moduleName = "SMS_SDKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liyuansheng/Desktop/SMSSDK2.0.0/%E6%96%B0%E7%89%88API_Release/SMS_SDKDemo/YJViewController.m"
-                  timestampString = "471858854.764407"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "176"
-                  endingLineNumber = "176"
-                  offsetFromSymbolStart = "429">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__41-[YJViewController getAddressBookFriends]_block_invoke"
-                  moduleName = "SMS_SDKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liyuansheng/Desktop/SMSSDK2.0.0/%E6%96%B0%E7%89%88API_Release/SMS_SDKDemo/YJViewController.m"
-                  timestampString = "471858854.764621"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "176"
-                  endingLineNumber = "176"
-                  offsetFromSymbolStart = "67">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

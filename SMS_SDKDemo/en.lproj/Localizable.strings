@@ -42,7 +42,7 @@
 "repeatsms"="Can't get code？";
 "submit"="Submit";
 "sendingin"="Sending in...";
-"timelablemsg"="Getting the verification code almost need";
+"timelablemsg"="Getting the verification code almost need ";
 "second"=" seconds";
 
 "verifycoderightmsg"="Code is right";
@@ -87,6 +87,7 @@
 "252description" = "Sending messages more than limit";
 
 "400description" = "Invalid request";
+"406description" = "Invalid appkey";
 "408description" = "Invalid parameter";
 "456description" = "Phone number is empty";
 "457description" = "Phone number is illegal";

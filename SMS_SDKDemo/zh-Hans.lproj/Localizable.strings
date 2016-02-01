@@ -84,6 +84,7 @@
 "251description" = "访问过于频繁";
 "252description" = "发送短信条数超过限制";
 "400description" = "无效请求";
+"406description" = "无效appkey";
 "408description" = "无效参数";
 "456description" = "手机号码为空";
 "457description" = "手机号码格式错误";

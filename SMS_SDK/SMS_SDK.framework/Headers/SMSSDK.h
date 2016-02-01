@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import "SMSSDKResultHanderDef.h"
-#import "SMSSDKUserInfo.h"
+#import <SMS_SDK/Extend/SMSSDKResultHanderDef.h>
+#import <SMS_SDK/Extend/SMSSDKUserInfo.h>
 #import <MessageUI/MessageUI.h>
 
 /**
- * @brief 核心类（Core class）v1.2.0
+ * @brief 核心类（Core class）v2.0.1
  */
 @interface SMSSDK : NSObject <MFMessageComposeViewControllerDelegate>
 
@@ -60,6 +60,11 @@
                   phoneNumber:(NSString *)phoneNumber
                          zone:(NSString *)zone
                        result:(SMSCommitCodeResultHandler)result;
+/**
+ * @from               v2.0.1
+ * @param              返回SDK版本号(Return the version of this SDK)
+ */
++(NSString *)SMSSDKVersion;
 
 
 @end

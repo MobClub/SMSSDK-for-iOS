@@ -45,7 +45,7 @@
     
     //短信验证码注册
     UIButton* regBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    regBtn.frame = CGRectMake(self.view.frame.size.width/2 - 100 , 50 + 1 * 70 + statusBarHeight, 200, 40);
+    regBtn.frame = CGRectMake(self.view.frame.size.width / 2 - 100 , 50 + 1 * 70 + statusBarHeight, 200, 40);
     [regBtn setTitle:NSLocalizedString(@"RegisterBySMS", nil) forState:UIControlStateNormal];
     [regBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [regBtn addTarget:self action:@selector(registerUser) forControlEvents:UIControlEventTouchUpInside];
@@ -55,7 +55,7 @@
     
     //语音验证码注册
     UIButton *btn =[UIButton buttonWithType:UIButtonTypeSystem];
-    btn.frame = CGRectMake(self.view.frame.size.width/2 - 100 , 50 + 2 * 70 + statusBarHeight, 200, 40);
+    btn.frame = CGRectMake(self.view.frame.size.width / 2 - 100 , 50 + 2 * 70 + statusBarHeight, 200, 40);
     [btn setTitle:NSLocalizedString(@"RegisterByVoiceCall", nil) forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(registerWithSpeechVerification) forControlEvents:UIControlEventTouchUpInside];
@@ -64,7 +64,7 @@
     
     //获取朋友列表按钮
     UIButton* friendsBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    friendsBtn.frame = CGRectMake(self.view.frame.size.width/2 - 100 , 50 + 3 * 70 + statusBarHeight, 200, 40);
+    friendsBtn.frame = CGRectMake(self.view.frame.size.width / 2 - 100 , 50 + 3 * 70 + statusBarHeight, 200, 40);
     [friendsBtn setTitle:NSLocalizedString(@"addressbookfriends", nil) forState:UIControlStateNormal];
     [friendsBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [friendsBtn addTarget:self action:@selector(getAddressBookFriends) forControlEvents:UIControlEventTouchUpInside];
@@ -73,7 +73,7 @@
     
     //提交用户信息
     UIButton *infoBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    infoBtn.frame = CGRectMake(self.view.frame.size.width/2 - 100 , 50 + 4 * 70 + statusBarHeight, 200, 40);
+    infoBtn.frame = CGRectMake(self.view.frame.size.width / 2 - 100 , 50 + 4 * 70 + statusBarHeight, 200, 40);
     [infoBtn setTitle:NSLocalizedString(@"submitUserInfo", nil) forState:UIControlStateNormal];
     [infoBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [infoBtn addTarget:self action:@selector(submitUserInfo:) forControlEvents:UIControlEventTouchUpInside];

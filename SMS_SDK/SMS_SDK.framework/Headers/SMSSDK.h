@@ -13,7 +13,7 @@
 #import <MessageUI/MessageUI.h>
 
 /**
- * @brief 核心类（Core class）v2.0.1
+ * @brief 核心类（Core class）v2.0.2
  */
 @interface SMSSDK : NSObject <MFMessageComposeViewControllerDelegate>
 
@@ -62,7 +62,7 @@
                        result:(SMSCommitCodeResultHandler)result;
 /**
  * @from               v2.0.1
- * @param              返回SDK版本号(Return the version of this SDK)
+ * @param              返回SDK版本号(Return the version number of this SDK)
  */
 +(NSString *)SMSSDKVersion;
 

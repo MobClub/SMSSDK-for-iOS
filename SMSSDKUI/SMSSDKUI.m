@@ -16,6 +16,7 @@
 
 @property (nonatomic, strong) UIWindow *showWindow;
 
+
 @end
 
 @implementation SMSSDKUI
@@ -42,9 +43,9 @@ static SMSSDKUI * sharedSingleton = nil;
     
 }
 
--(void)_showView:(SMSGetCodeMethod)getCodeMehtod
+-(void)_showView:(SMSGetCodeMethod)getCodeMethod
 {
-    
+
     self.showWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     UIViewController *rootVC = [[UIViewController alloc] init];
@@ -57,7 +58,7 @@ static SMSSDKUI * sharedSingleton = nil;
     
     RegViewController *regView = [[RegViewController alloc] init];
     
-    regView.getCodeMethod = getCodeMehtod;
+    regView.getCodeMethod = getCodeMethod;
     
     regView.window = self.showWindow;
     

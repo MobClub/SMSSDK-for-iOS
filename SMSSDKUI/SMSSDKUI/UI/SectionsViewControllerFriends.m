@@ -19,6 +19,8 @@
     NSMutableArray* _friendsData2;
     
     NSMutableArray* _other;
+    
+    NSBundle *_bundle;
 }
 
 @end
@@ -69,10 +71,11 @@
 
 -(void)clickLeftButton
 {
-    [self dismissViewControllerAnimated:YES completion:^{
-        _window.hidden = YES;
-    }];
-    
+    if (self.onCloseResultHandler) {
+        
+        self.onCloseResultHandler ();
+        
+    }
     //修改消息条数为0
     [SMSSDK setLatelyFriendsCount:0];
 
@@ -114,16 +117,19 @@
     {
         statusBarHeight = 20;
     }
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SMSSDKUI" ofType:@"bundle"];
+    NSBundle *bundle = [[NSBundle alloc] initWithPath:filePath];
+    _bundle = bundle;
     //创建一个导航栏
     UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0,0 + statusBarHeight, self.view.frame.size.width, 44)];
     UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@""];
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"back", nil)
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"back", @"Localizable", bundle, nil)
                                                                        style:UIBarButtonItemStyleBordered
                                                                       target:self
                                                                       action:@selector(clickLeftButton)];
-    //把导航栏集合添加入导航栏中，设置动画关闭
+    self.navigationItem.leftBarButtonItem = leftButton;
     [navigationBar pushNavigationItem:navigationItem animated:NO];
-    [navigationItem setLeftBarButtonItem:leftButton];
     [self.view addSubview:navigationBar];
     
     //添加搜索框
@@ -189,10 +195,10 @@
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     
     if (_friendsData2.count > 0) {
-        [dict setObject:_friendsData2 forKey:NSLocalizedString(@"hasjoined", nil)];
+        [dict setObject:_friendsData2 forKey:NSLocalizedStringFromTableInBundle(@"hasjoined", @"Localizable", bundle, nil)];
     }
     if (_other.count > 0) {
-         [dict setObject:_other forKey:NSLocalizedString(@"toinvitefriends", nil)];
+         [dict setObject:_other forKey:NSLocalizedStringFromTableInBundle(@"toinvitefriends", @"Localizable", bundle, nil)];
     }
     
     self.allNames = dict;
@@ -228,16 +234,16 @@
     NSLog(@"%@",btn.titleLabel.text);
     NSString* newStr = btn.titleLabel.text;
     
-    if ([newStr isEqualToString:NSLocalizedString(@"addfriends", nil)])
+    if ([newStr isEqualToString:NSLocalizedStringFromTableInBundle(@"addfriends", @"Localizable", _bundle, nil)])
     {
         NSLog(@"添加好友");
         NSLog(@"添加好友回调 用户自行处理");
         
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"addfriendstitle", nil) message:NSLocalizedString(@"addfriendsmsg", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"sure", nil) otherButtonTitles:nil, nil];
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"addfriendstitle", @"Localizable", _bundle, nil) message:NSLocalizedStringFromTableInBundle(@"addfriendsmsg", @"Localizable", _bundle, nil) delegate:self cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil) otherButtonTitles:nil, nil];
         [alert show];
     }
     
-    if ([newStr isEqualToString:NSLocalizedString(@"invitefriends", nil)])
+    if ([newStr isEqualToString:NSLocalizedStringFromTableInBundle(@"invitefriends", @"Localizable", _bundle, nil)])
     {
         NSLog(@"邀请好友");
         InvitationViewControllerEx* invit = [[InvitationViewControllerEx alloc] init];
@@ -277,14 +283,14 @@
     if ([newStr1 isEqualToString:@"@"])
     {
         UIButton* btn = cell.btn;
-        [btn setTitle:NSLocalizedString(@"addfriends", nil) forState:UIControlStateNormal];
-        cell.nameDesc = [NSString stringWithFormat:@"%@:%@",NSLocalizedString(@"phonecontacts", nil),cccc];
+        [btn setTitle:NSLocalizedStringFromTableInBundle(@"addfriends", @"Localizable", _bundle, nil) forState:UIControlStateNormal];
+        cell.nameDesc = [NSString stringWithFormat:@"%@:%@",NSLocalizedStringFromTableInBundle(@"phonecontacts", @"Localizable", _bundle, nil),cccc];
     }
     
     if ([newStr1 isEqualToString:@"#"])
     {
         UIButton* btn = cell.btn;
-        [btn setTitle:NSLocalizedString(@"invitefriends", nil) forState:UIControlStateNormal];
+        [btn setTitle:NSLocalizedStringFromTableInBundle(@"invitefriends", @"Localizable", _bundle, nil) forState:UIControlStateNormal];
         
         cell.nameDesc = [NSString stringWithFormat:@"%@",cccc];
         cell.nameDescLabel.hidden = YES;

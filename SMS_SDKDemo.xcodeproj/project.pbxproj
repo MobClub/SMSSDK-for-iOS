@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		36C07FDC1A7F453800C1642D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36C07FDB1A7F453800C1642D /* LaunchScreen.xib */; };
-		36E671AF1A80B6CD00CAA2F0 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36E671AB1A80B6CD00CAA2F0 /* SMS_SDKLocalizable.strings */; };
 		36E671B01A80B6CD00CAA2F0 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E671AD1A80B6CD00CAA2F0 /* SMS_SDK.framework */; };
-		7B5D79D21C58C01F003D37DF /* libSMSSDUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5D79D11C58C006003D37DF /* libSMSSDUI.a */; };
+		7B4910E81C96A38D00EDD0D0 /* libSMSSDUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4910E21C96987600EDD0D0 /* libSMSSDUI.a */; };
+		7B80CB861C96BC9600B067C3 /* button5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B80CB851C96BC9600B067C3 /* button5.png */; };
+		7B80CB881C96D7E800B067C3 /* SMSSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B80CB871C96D7E800B067C3 /* SMSSDKUI.bundle */; };
 		7B9890EC1BC7A19A0072626D /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9890EB1BC7A19A0072626D /* libstdc++.dylib */; };
-		7BA4E94E1C3A1DA80040EA04 /* SMSSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7BA4E94D1C3A1DA80040EA04 /* SMSSDKUI.bundle */; };
 		7BF9FC411BC7A0AC007DDBC2 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF9FC401BC7A0AC007DDBC2 /* MOBFoundation.framework */; };
 		7BF9FC451BC7A2CA007DDBC2 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF9FC441BC7A2CA007DDBC2 /* JavaScriptCore.framework */; };
 		F318BF0D19B04E23008E03EB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318BF0C19B04E23008E03EB /* MessageUI.framework */; };
@@ -29,28 +29,33 @@
 		F3F34AD619AED773004CA430 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F34AD519AED773004CA430 /* Images.xcassets */; };
 		F3F34B1C19AEDD10004CA430 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F34B1B19AEDD10004CA430 /* libz.dylib */; };
 		F3F34B1E19AEDD1D004CA430 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F34B1D19AEDD1D004CA430 /* libicucore.dylib */; };
-		F3F51D0E19D5001700FC5A04 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3F51D1019D5001700FC5A04 /* Localizable.strings */; };
 		F3F51D1219D51B4200FC5A04 /* country.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3F51D1419D51B4200FC5A04 /* country.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7B5D79D01C58C006003D37DF /* PBXContainerItemProxy */ = {
+		7B4910E11C96987600EDD0D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7B5D79CB1C58C006003D37DF /* SMSSDUI.xcodeproj */;
+			containerPortal = 7B4910DD1C96987600EDD0D0 /* SMSSDUI.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7B2A62491C4F66BE00A160C8;
+			remoteInfo = SMSSDUI;
+		};
+		7B4910E61C96A38800EDD0D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B4910DD1C96987600EDD0D0 /* SMSSDUI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B2A62481C4F66BE00A160C8;
 			remoteInfo = SMSSDUI;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		36C07FDB1A7F453800C1642D /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		36E671AC1A80B6CD00CAA2F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
 		36E671AD1A80B6CD00CAA2F0 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
-		36E671AE1A80B6CD00CAA2F0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
-		7B5D79CB1C58C006003D37DF /* SMSSDUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SMSSDUI.xcodeproj; sourceTree = "<group>"; };
+		7B4910DD1C96987600EDD0D0 /* SMSSDUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SMSSDUI.xcodeproj; path = SMSSDKUI/SMSSDUI.xcodeproj; sourceTree = "<group>"; };
+		7B80CB851C96BC9600B067C3 /* button5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button5.png; sourceTree = "<group>"; };
+		7B80CB871C96D7E800B067C3 /* SMSSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SMSSDKUI.bundle; sourceTree = "<group>"; };
 		7B9890EB1BC7A19A0072626D /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
-		7BA4E94D1C3A1DA80040EA04 /* SMSSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SMSSDKUI.bundle; sourceTree = "<group>"; };
 		7BF9FC401BC7A0AC007DDBC2 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		7BF9FC441BC7A2CA007DDBC2 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F318BF0C19B04E23008E03EB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -74,8 +79,6 @@
 		F3F34B1B19AEDD10004CA430 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		F3F34B1D19AEDD1D004CA430 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		F3F51D0919D4FCE100FC5A04 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		F3F51D0F19D5001700FC5A04 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		F3F51D1119D5001B00FC5A04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F3F51D1319D51B4200FC5A04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/country.plist; sourceTree = "<group>"; };
 		F3F51D1519D51B4A00FC5A04 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/country.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B5D79D21C58C01F003D37DF /* libSMSSDUI.a in Frameworks */,
+				7B4910E81C96A38D00EDD0D0 /* libSMSSDUI.a in Frameworks */,
 				7BF9FC451BC7A2CA007DDBC2 /* JavaScriptCore.framework in Frameworks */,
 				7B9890EC1BC7A19A0072626D /* libstdc++.dylib in Frameworks */,
 				F318BF8719B07914008E03EB /* Security.framework in Frameworks */,
@@ -109,16 +112,15 @@
 			isa = PBXGroup;
 			children = (
 				7BF9FC401BC7A0AC007DDBC2 /* MOBFoundation.framework */,
-				36E671AB1A80B6CD00CAA2F0 /* SMS_SDKLocalizable.strings */,
 				36E671AD1A80B6CD00CAA2F0 /* SMS_SDK.framework */,
 			);
 			path = SMS_SDK;
 			sourceTree = "<group>";
 		};
-		7B5D79CC1C58C006003D37DF /* Products */ = {
+		7B4910DE1C96987600EDD0D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B5D79D11C58C006003D37DF /* libSMSSDUI.a */,
+				7B4910E21C96987600EDD0D0 /* libSMSSDUI.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,7 +128,8 @@
 		F3F34AB719AED773004CA430 = {
 			isa = PBXGroup;
 			children = (
-				7B5D79CB1C58C006003D37DF /* SMSSDUI.xcodeproj */,
+				7B80CB871C96D7E800B067C3 /* SMSSDKUI.bundle */,
+				7B4910DD1C96987600EDD0D0 /* SMSSDUI.xcodeproj */,
 				36E671AA1A80B6CD00CAA2F0 /* SMS_SDK */,
 				F3F34AC919AED773004CA430 /* SMS_SDKDemo */,
 				F3F34AC219AED773004CA430 /* Frameworks */,
@@ -164,7 +167,6 @@
 		F3F34AC919AED773004CA430 /* SMS_SDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				7BA4E94D1C3A1DA80040EA04 /* SMSSDKUI.bundle */,
 				F3F34AD219AED773004CA430 /* YJAppDelegate.h */,
 				F3F34AD319AED773004CA430 /* YJAppDelegate.m */,
 				F318BF3019B05229008E03EB /* YJViewController.h */,
@@ -178,8 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				36C07FDB1A7F453800C1642D /* LaunchScreen.xib */,
-				F3F51D1019D5001700FC5A04 /* Localizable.strings */,
 				F3F34AD519AED773004CA430 /* Images.xcassets */,
+				7B80CB851C96BC9600B067C3 /* button5.png */,
 				F3F51D1419D51B4200FC5A04 /* country.plist */,
 				F3F34ACB19AED773004CA430 /* SMS_SDKDemo-Info.plist */,
 				F3F34ACC19AED773004CA430 /* InfoPlist.strings */,
@@ -203,6 +205,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B4910E71C96A38800EDD0D0 /* PBXTargetDependency */,
 			);
 			name = SMS_SDKDemo;
 			productName = SMS_SDKDemo;
@@ -237,8 +240,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 7B5D79CC1C58C006003D37DF /* Products */;
-					ProjectRef = 7B5D79CB1C58C006003D37DF /* SMSSDUI.xcodeproj */;
+					ProductGroup = 7B4910DE1C96987600EDD0D0 /* Products */;
+					ProjectRef = 7B4910DD1C96987600EDD0D0 /* SMSSDUI.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -249,11 +252,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		7B5D79D11C58C006003D37DF /* libSMSSDUI.a */ = {
+		7B4910E21C96987600EDD0D0 /* libSMSSDUI.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libSMSSDUI.a;
-			remoteRef = 7B5D79D01C58C006003D37DF /* PBXContainerItemProxy */;
+			remoteRef = 7B4910E11C96987600EDD0D0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -264,12 +267,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3F51D1219D51B4200FC5A04 /* country.plist in Resources */,
-				36E671AF1A80B6CD00CAA2F0 /* SMS_SDKLocalizable.strings in Resources */,
-				F3F51D0E19D5001700FC5A04 /* Localizable.strings in Resources */,
+				7B80CB861C96BC9600B067C3 /* button5.png in Resources */,
 				F3F34ACE19AED773004CA430 /* InfoPlist.strings in Resources */,
 				36C07FDC1A7F453800C1642D /* LaunchScreen.xib in Resources */,
 				F3F34AD619AED773004CA430 /* Images.xcassets in Resources */,
-				7BA4E94E1C3A1DA80040EA04 /* SMSSDKUI.bundle in Resources */,
+				7B80CB881C96D7E800B067C3 /* SMSSDKUI.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,16 +290,15 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		36E671AB1A80B6CD00CAA2F0 /* SMS_SDKLocalizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				36E671AC1A80B6CD00CAA2F0 /* en */,
-				36E671AE1A80B6CD00CAA2F0 /* zh-Hans */,
-			);
-			name = SMS_SDKLocalizable.strings;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		7B4910E71C96A38800EDD0D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SMSSDUI;
+			targetProxy = 7B4910E61C96A38800EDD0D0 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		F3F34ACC19AED773004CA430 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -305,15 +306,6 @@
 				F3F51D0919D4FCE100FC5A04 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F3F51D1019D5001700FC5A04 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F3F51D0F19D5001700FC5A04 /* zh-Hans */,
-				F3F51D1119D5001B00FC5A04 /* en */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		F3F51D1419D51B4200FC5A04 /* country.plist */ = {
@@ -421,12 +413,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMS_SDKDemo/SMS_SDKDemo-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/SMSSDKUI",
-					"$(SRCROOT)/SMSSDKUI/SMS_UILib",
-					"$(SRCROOT)/SMSSDKUI/UI",
-					"$(SRCROOT)/SMSSDKUI/UI/Rigister",
-				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SMS_SDKDemo/SMS_SDKDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -451,12 +438,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMS_SDKDemo/SMS_SDKDemo-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/SMSSDKUI",
-					"$(SRCROOT)/SMSSDKUI/SMS_UILib",
-					"$(SRCROOT)/SMSSDKUI/UI",
-					"$(SRCROOT)/SMSSDKUI/UI/Rigister",
-				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SMS_SDKDemo/SMS_SDKDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";

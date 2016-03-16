@@ -16,6 +16,8 @@
     NSString* _name;
     NSString* _phone;
     NSString* _phone2;
+    
+    NSBundle *_bundle;
 }
 
 @end
@@ -46,8 +48,8 @@
     NSLog(@"send invitational message");
     if ([_phone2 length]>0)
     {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"notice", nil)
-                                                      message:NSLocalizedString(@"choosephonenumber", nil)
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"notice", @"Localizable", _bundle, nil)
+                                                      message:NSLocalizedStringFromTableInBundle(@"choosephonenumber", @"Localizable", _bundle, nil)
                                                      delegate:self
                                             cancelButtonTitle:_phone
                                             otherButtonTitles:_phone2, nil];
@@ -55,7 +57,7 @@
     }
     else
     {
-        [SMSSDK sendSMS:_phone?_phone:@"" AndMessage:NSLocalizedString(@"smsmessage", nil)];
+        [SMSSDK sendSMS:_phone?_phone:@"" AndMessage:NSLocalizedStringFromTableInBundle(@"smsmessage", @"Localizable", _bundle, nil)];
     }
 }
 
@@ -63,11 +65,12 @@
 {
     if (1 == buttonIndex)
     {
-        [SMSSDK sendSMS:_phone?_phone:@"" AndMessage:NSLocalizedString(@"smsmessage", nil)];
+        [SMSSDK sendSMS:_phone?_phone:@"" AndMessage:NSLocalizedStringFromTableInBundle(@"smsmessage", @"Localizable", _bundle, nil)];
+        
     }
     if (0 == buttonIndex)
     {
-        [SMSSDK sendSMS:_phone?_phone:@"" AndMessage:NSLocalizedString(@"smsmessage", nil)];
+        [SMSSDK sendSMS:_phone?_phone:@"" AndMessage:NSLocalizedStringFromTableInBundle(@"smsmessage", @"Localizable", _bundle, nil)];
     }
 }
 
@@ -89,8 +92,7 @@
     
     cell.textLabel.text = _name;
     cell.imageView.image = [UIImage imageNamed:@"2.png"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@:%@ %@",NSLocalizedString(@"phonecode", nil),_phone?_phone:@"",_phone2?_phone2:@""];
-    
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@:%@ %@",NSLocalizedStringFromTableInBundle(@"phonecode", @"Localizable", _bundle, nil),_phone?_phone:@"",_phone2?_phone2:@""];
     return cell;
 }
 
@@ -106,6 +108,10 @@
 
     self.view.backgroundColor = [UIColor whiteColor];
     
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SMSSDKUI" ofType:@"bundle"];
+    NSBundle *bundle = [[NSBundle alloc] initWithPath:filePath];
+    _bundle = bundle;
+    
     CGFloat statusBarHeight = 0;
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0)
     {
@@ -114,7 +120,7 @@
     //创建一个导航栏
     UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0,0 + statusBarHeight, self.view.frame.size.width, 44)];
     UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@""];
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"back", nil)
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"back",@"Localizable", bundle, nil)
                                                                    style:UIBarButtonItemStyleBordered
                                                                   target:self
                                                                   action:@selector(clickLeftButton)];
@@ -129,9 +135,11 @@
     [self.view addSubview:tableView];
     
     UIButton* btn = [UIButton buttonWithType:UIButtonTypeSystem];
-    [btn setTitle:NSLocalizedString(@"sendinvite", nil) forState:UIControlStateNormal];
-    NSString *icon = [NSString stringWithFormat:@"SMSSDKUI.bundle/button4.png"];
-    [btn setBackgroundImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];
+    [btn setTitle:NSLocalizedStringFromTableInBundle(@"sendinvite", @"Localizable", bundle, nil) forState:UIControlStateNormal];
+    
+    NSString *imageString = [bundle pathForResource:@"button4" ofType:@"png"];
+    
+    [btn setBackgroundImage:[[UIImage alloc] initWithContentsOfFile:imageString] forState:UIControlStateNormal];
     btn.frame = CGRectMake(15, 198 + statusBarHeight, self.view.frame.size.width - 30, 42);
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(sendInvite) forControlEvents:UIControlEventTouchUpInside];
@@ -139,7 +147,9 @@
     
     UILabel* label = [[UILabel alloc] init];
     label.frame = CGRectMake(0, 146 + statusBarHeight, self.view.frame.size.width, 27);
-    label.text = [NSString stringWithFormat:@"%@%@",_name,NSLocalizedString(@"notjoined", nil)];
+    
+    label.text = [NSString stringWithFormat:@"%@%@",_name,NSLocalizedStringFromTableInBundle(@"notjoined", @"Localizable", bundle, nil)];
+    
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont fontWithName:@"Helvetica" size:13];
     [self.view addSubview:label];

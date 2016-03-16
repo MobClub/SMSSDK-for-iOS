@@ -11,6 +11,8 @@
 //#import "SMSSDKUI.h"
 #import <SMS_SDK/Extend/SMSSDKResultHanderDef.h>
 
+#import "SMSUIVerificationCodeViewResultDef.h"
+
 @protocol SecondViewControllerDelegate;
 
 @interface RegViewController : UIViewController
@@ -25,8 +27,9 @@ UITextFieldDelegate
 @property (nonatomic,strong) UITableView* tableView;
 @property (nonatomic,strong) UITextField* areaCodeField;
 @property (nonatomic,strong) UITextField* telField;
-@property (nonatomic,strong) UIWindow* window;
 @property (nonatomic) SMSGetCodeMethod getCodeMethod;
+
+@property (nonatomic, strong) SMSUIVerificationCodeResultHandler verificationCodeResult;
 
 -(void)nextStep;
 

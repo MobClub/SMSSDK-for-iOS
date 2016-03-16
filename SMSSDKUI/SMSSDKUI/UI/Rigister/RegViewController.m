@@ -21,13 +21,15 @@
 {
     SMSSDKCountryAndAreaCode* _data2;
     
-    
     NSString* _defaultCode;
     NSString* _defaultCountryName;
+    NSBundle *_bundle;
+    
 }
 
 @property (nonatomic, strong) NSMutableArray* areaArray;
 @property (nonatomic, strong) UIButton *nextButton;
+
 
 @end
 
@@ -35,13 +37,11 @@
 
 -(void)clickLeftButton
 {
-    __weak RegViewController *regViewController = self;
-    
-    [self dismissViewControllerAnimated:YES completion:^{
-        regViewController.window.hidden = YES;
-        regViewController.window = nil;
-    }];
-    
+    if (self.verificationCodeResult) {
+        
+        NSString* str2 = [self.areaCodeField.text stringByReplacingOccurrencesOfString:@"+" withString:@""];
+        self.verificationCodeResult (SMSUIResponseStateCancel,self.telField.text,str2, nil);
+    }
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
@@ -84,10 +84,10 @@
             if (!isMatch)
             {
                 //手机号码不正确
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"notice", nil)
-                                                                message:NSLocalizedString(@"errorphonenumber", nil)
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"notice", @"Localizable", _bundle, nil)
+                                                                message:NSLocalizedStringFromTableInBundle(@"errorphonenumber", @"Localizable", _bundle, nil)
                                                                delegate:self
-                                                      cancelButtonTitle:NSLocalizedString(@"sure", nil)
+                                                      cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil)
                                                       otherButtonTitles:nil, nil];
                 [alert show];
                 return;
@@ -101,10 +101,10 @@
         if (self.telField.text.length != 11)
         {
             //手机号码不正确
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"notice", nil)
-                                                            message:NSLocalizedString(@"errorphonenumber", nil)
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"notice", @"Localizable", _bundle, nil)
+                                                            message:NSLocalizedStringFromTableInBundle(@"errorphonenumber", @"Localizable", _bundle, nil)
                                                            delegate:self
-                                                  cancelButtonTitle:NSLocalizedString(@"sure", nil)
+                                                  cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil)
                                                   otherButtonTitles:nil, nil];
             [alert show];
             
@@ -112,16 +112,20 @@
         }
     }
     
-    NSString* str = [NSString stringWithFormat:@"%@:%@ %@",NSLocalizedString(@"willsendthecodeto", nil),self.areaCodeField.text,self.telField.text];
+    NSString* str = [NSString stringWithFormat:@"%@:%@ %@",NSLocalizedStringFromTableInBundle(@"willsendthecodeto", @"Localizable", _bundle, nil),self.areaCodeField.text,self.telField.text];
 
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"surephonenumber", nil)
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"surephonenumber", @"Localizable", _bundle, nil)
                                                     message:str delegate:self
-                                          cancelButtonTitle:NSLocalizedString(@"cancel", nil)
-                                          otherButtonTitles:NSLocalizedString(@"sure", nil), nil];
+                                          cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"cancel", @"Localizable", _bundle, nil)
+                                          otherButtonTitles:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil), nil];
     [alert show];
-    NSString *selectedImage = [NSString stringWithFormat:@"SMSSDKUI.bundle/button1.png"];
+    
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SMSSDKUI" ofType:@"bundle"];
+//    NSBundle *bundle = [[NSBundle alloc] initWithPath:filePath];
+    NSString *imageString = [_bundle pathForResource:@"button1" ofType:@"png"];
+    
     self.nextButton.enabled = NO;
-    [self.nextButton setBackgroundImage:[UIImage imageNamed:selectedImage] forState:UIControlStateNormal];
+    [self.nextButton setBackgroundImage:[[UIImage alloc] initWithContentsOfFile:imageString] forState:UIControlStateNormal];
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -171,19 +175,40 @@
 - (void)getVerificationCodeResultHandler:(NSString *)phoneNumber zone:(NSString *)zone error:(NSError *)error
 {
     
-    NSString *icon = [NSString stringWithFormat:@"SMSSDKUI.bundle/button4.png"];
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SMSSDKUI" ofType:@"bundle"];
+//    NSBundle *bundle = [[NSBundle alloc] initWithPath:filePath];
+    NSString *imageString = [_bundle pathForResource:@"button4" ofType:@"png"];
+    
     self.nextButton.enabled = YES;
-    [self.nextButton setBackgroundImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];
+    [self.nextButton setBackgroundImage:[[UIImage alloc] initWithContentsOfFile:imageString] forState:UIControlStateNormal];
     
     if (!error)
     {
-        NSLog(@"验证码发送成功");
+        if (self.getCodeMethod == SMSGetCodeMethodSMS)
+        {
+             NSLog(@"文本短信验证码发送成功");
+        }
+        else
+        {
+             NSLog(@"语音短信验证码发送成功");
+        }
         
         VerifyViewController* verify = [[VerifyViewController alloc] init];
         
         verify.getCodeMethod = self.getCodeMethod;
         
-        verify.window = self.window;
+        //发送验证码成功，进行回调
+        verify.verificationCodeResult = ^(enum SMSUIResponseState state,NSString *phoneNumber,NSString *zone,NSError *error){
+            
+            if (!error) {
+                
+                if (state == SMSUIResponseStateSuccess) {
+                    
+                    self.verificationCodeResult (SMSUIResponseStateSuccess,phoneNumber,zone,error);
+                }
+                
+            }
+        };
         
         [verify setPhone:phoneNumber AndAreaCode:zone];
         
@@ -196,10 +221,10 @@
     {
         
         NSString *messageStr = [NSString stringWithFormat:@"%zidescription",error.code];
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"codesenderrtitle", nil)
-                                                        message:NSLocalizedString(messageStr, nil)
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"codesenderrtitle", @"Localizable", _bundle, nil)
+                                                        message:NSLocalizedStringFromTableInBundle(messageStr, @"Localizable", _bundle, nil)
                                                        delegate:self
-                                              cancelButtonTitle:NSLocalizedString(@"sure", nil)
+                                              cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil)
                                               otherButtonTitles:nil, nil];
         [alert show];
         
@@ -222,22 +247,27 @@
         statusBarHeight = 20;
     }
     
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SMSSDKUI" ofType:@"bundle"];
+    NSBundle *bundle = [[NSBundle alloc] initWithPath:filePath];
+    _bundle = bundle;
+    
     //创建一个导航栏
     UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0,0 + statusBarHeight, self.view.frame.size.width, 44)];
     UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@""];
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"back", nil)
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"back", @"Localizable", bundle, nil)
                                                                    style:UIBarButtonItemStyleBordered
                                                                   target:self
                                                                   action:@selector(clickLeftButton)];
     self.navigationItem.leftBarButtonItem = leftButton;
-    self.navigationItem.title = NSLocalizedString(@"register", nil);
+    
+    self.navigationItem.title = NSLocalizedStringFromTableInBundle(@"register", @"Localizable", bundle, nil);
     [navigationBar pushNavigationItem:navigationItem animated:NO];
     [self.view addSubview:navigationBar];
-    
+   
     //
     UILabel* label = [[UILabel alloc] init];
     label.frame = CGRectMake(15, 56 + statusBarHeight, self.view.frame.size.width - 30, 50);
-    label.text = [NSString stringWithFormat:NSLocalizedString(@"labelnotice", nil)];
+    label.text = [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"labelnotice", @"Localizable", _bundle, nil)];
     label.numberOfLines = 0;
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont fontWithName:@"Helvetica" size:16];
@@ -257,7 +287,7 @@
     areaCodeField.text = [NSString stringWithFormat:@"+86"];
     areaCodeField.textAlignment = NSTextAlignmentCenter;
     areaCodeField.font = [UIFont fontWithName:@"Helvetica" size:18];
-    areaCodeField.keyboardType = UIKeyboardTypeDefault;
+    areaCodeField.keyboardType = UIKeyboardTypePhonePad;
     [self.view addSubview:areaCodeField];
     
     UILabel *verticalLine = [[UILabel alloc] initWithFrame:CGRectMake(areaCodeField.frame.origin.x + areaCodeField.frame.size.width + 1, seperateLineUp.frame.origin.y +1, 1, areaCodeField.frame.size.height)];
@@ -267,8 +297,8 @@
     //
     UITextField* telField = [[UITextField alloc] init];
     telField.frame = CGRectMake(20 + (self.view.frame.size.width - 30)/4, 155 + statusBarHeight,(self.view.frame.size.width - 30)*3/4 , 40 + statusBarHeight/4);
-    telField.placeholder = NSLocalizedString(@"telfield", nil);
-    telField.keyboardType = UIKeyboardTypeDefault;
+    telField.placeholder = NSLocalizedStringFromTableInBundle(@"telfield", @"Localizable", _bundle, nil);
+    telField.keyboardType = UIKeyboardTypePhonePad;
     telField.clearButtonMode = UITextFieldViewModeWhileEditing;
     [self.view addSubview:telField];
     
@@ -278,9 +308,11 @@
     
     //
     UIButton* nextBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    [nextBtn setTitle:NSLocalizedString(@"nextbtn", nil) forState:UIControlStateNormal];
-    NSString *icon = [NSString stringWithFormat:@"SMSSDKUI.bundle/button4.png"];
-    [nextBtn setBackgroundImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];
+    [nextBtn setTitle:NSLocalizedStringFromTableInBundle(@"nextbtn", @"Localizable", bundle, nil) forState:UIControlStateNormal];
+    
+    NSString *imageString = [bundle pathForResource:@"button4" ofType:@"png"];
+    
+    [nextBtn setBackgroundImage:[[UIImage alloc] initWithContentsOfFile:imageString] forState:UIControlStateNormal];
     nextBtn.frame = CGRectMake(10, 220 + statusBarHeight, self.view.frame.size.width - 20, 42);
     [nextBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [nextBtn addTarget:self action:@selector(nextStep) forControlEvents:UIControlEventTouchUpInside];
@@ -432,7 +464,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier] ;
         
     }
-    cell.textLabel.text = NSLocalizedString(@"countrylable", nil);
+    cell.textLabel.text = NSLocalizedStringFromTableInBundle(@"countrylable", @"Localizable", _bundle, nil);
     cell.textLabel.textColor = [UIColor darkGrayColor];
     
     if (_data2)

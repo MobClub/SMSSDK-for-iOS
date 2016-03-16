@@ -21,7 +21,7 @@
 @property (nonatomic, strong) UIButton *voiceCallButton;
 @property (nonatomic) SMSGetCodeMethod getCodeMethod;
 
-@property (nonatomic,strong) UIWindow* window;
+@property (nonatomic, strong) SMSUIVerificationCodeResultHandler verificationCodeResult;
 
 -(void)setPhone:(NSString*)phone AndAreaCode:(NSString*)areaCode;
 -(void)submit;

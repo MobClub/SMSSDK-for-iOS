@@ -5,6 +5,7 @@
 
 //#import <SMS_SDK/SMSSDKResultHanderDef.h>
 #import <SMS_SDK/Extend/SMSSDKResultHanderDef.h>
+#import "SMSUIVerificationCodeViewResultDef.h"
 
 @interface SectionsViewControllerFriends : UIViewController
 <UITableViewDataSource,
@@ -27,8 +28,9 @@ UISearchBarDelegate>
 @property (nonatomic, strong) NSMutableDictionary *names;
 @property (nonatomic, strong) NSMutableArray *keys;
 
-@property (nonatomic,strong) UIWindow* window;
 @property (nonatomic,strong) SMSShowNewFriendsCountBlock friendsBlock;
+
+@property (nonatomic, copy) SMSUIOnCloseResultHandler onCloseResultHandler;
 
 - (void)resetSearch;
 - (void)handleSearchForTerm:(NSString *)searchTerm;

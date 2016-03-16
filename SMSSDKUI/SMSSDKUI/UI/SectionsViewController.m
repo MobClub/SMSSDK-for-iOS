@@ -10,6 +10,8 @@
     NSMutableData*_data;
    
     NSMutableArray* _areaArray;
+    
+    NSBundle *_bundle;
 }
 
 @end
@@ -68,14 +70,18 @@
         statusBarHeight = 20;
     }
     
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SMSSDKUI" ofType:@"bundle"];
+    NSBundle *bundle = [[NSBundle alloc] initWithPath:filePath];
+    _bundle = bundle;
+    
     UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0,0 + statusBarHeight, self.view.frame.size.width, 44)];
     UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@""];
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"back", nil)
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"back", @"Localizable", bundle, nil)
                                                                    style:UIBarButtonItemStyleBordered
                                                                   target:self
                                                                   action:@selector(clickLeftButton)];
 
-    [navigationItem setTitle:NSLocalizedString(@"countrychoose", nil)];
+    [navigationItem setTitle:NSLocalizedStringFromTableInBundle(@"countrychoose", @"Localizable", bundle, nil)];
     [navigationBar pushNavigationItem:navigationItem animated:NO];
     [navigationItem setLeftBarButtonItem:leftButton];
     [self.view addSubview:navigationBar];
@@ -233,10 +239,10 @@ sectionForSectionIndexTitle:(NSString *)title
     
     if (!compareResult)
     {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"notice", nil)
-                                                      message:NSLocalizedString(@"doesnotsupportarea", nil)
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"notice", @"Localizable", _bundle, nil)
+                                                      message:NSLocalizedStringFromTableInBundle(@"doesnotsupportarea", @"Localizable", _bundle, nil)
                                                      delegate:self
-                                            cancelButtonTitle:NSLocalizedString(@"sure", nil)
+                                            cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil)
                                             otherButtonTitles:nil, nil];
         [alert show];
         return;

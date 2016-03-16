@@ -46,8 +46,12 @@
         _btn = [UIButton buttonWithType:UIButtonTypeSystem];
         [_btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
         [_btn setTitle:@"邀请" forState:UIControlStateNormal];
-        NSString *icon = [NSString stringWithFormat:@"SMSSDKUI.bundle/button2.png"];
-        [_btn setBackgroundImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];
+        
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SMSSDKUI" ofType:@"bundle"];
+        NSBundle *bundle = [[NSBundle alloc] initWithPath:filePath];
+        NSString *imageString = [bundle pathForResource:@"button2" ofType:@"png"];
+        
+        [_btn setBackgroundImage:[[UIImage alloc] initWithContentsOfFile:imageString] forState:UIControlStateNormal];
         [_btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         [self.contentView addSubview:_btn];
     }

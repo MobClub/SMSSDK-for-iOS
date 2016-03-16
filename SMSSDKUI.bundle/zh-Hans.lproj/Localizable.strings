@@ -5,6 +5,7 @@
   Created by 掌淘科技 on 14-9-26.
   Copyright (c) 2014年 掌淘科技. All rights reserved.
 */
+"smssdk" = "短信SDK";
 "welcome"="点击屏幕继续...";
 "RegisterBySMS"="短信验证码注册";
 "addressbookfriends"="通讯录好友";

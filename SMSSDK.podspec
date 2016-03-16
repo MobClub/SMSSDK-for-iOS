@@ -10,5 +10,5 @@ s.platform            = :ios, '6.0'
 s.frameworks          = "MessageUI", "AddressBook", "AddressBookUI", "JavaScriptCore"
 s.libraries           = "icucore", "z", "stdc++"
 s.vendored_frameworks = 'SMS_SDK/SMS_SDK.framework'
-s.resources           = 'SMS_SDK/en.lproj', 'SMS_SDK/zh-Hans.lproj'
+s.resources           = 'SMSSDKUI.bundle'
 end

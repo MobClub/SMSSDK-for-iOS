@@ -15,8 +15,6 @@
 @property(nonatomic,strong)  UILabel* timeLabel;
 @property(nonatomic,strong)  UIButton* repeatSMSBtn;
 
-@property(nonatomic,assign) NSString* isVerify;
-
 @property (nonatomic, strong) UILabel *voiceCallMsgLabel;
 @property (nonatomic, strong) UIButton *voiceCallButton;
 @property (nonatomic) SMSGetCodeMethod getCodeMethod;

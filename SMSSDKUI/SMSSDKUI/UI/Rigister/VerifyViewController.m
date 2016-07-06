@@ -14,17 +14,17 @@
 #import <SMS_SDK/Extend/SMSSDKAddressBook.h>
 #import <SMS_SDK/Extend/SMSSDK+DeprecatedMethods.h>
 
+
+#define TRY_AGAIN_GETSMSCODE_ALERTVIEW_TAG    10
+#define CLICKLEFTBUTTON_ALERTVIEW_TAG         11
+#define COMMITCODE_SUCCES_ALERTVIEW_TAG       12
+#define TRY_AGAIN_GETVOICECODE_ALERTVIEW_TAG  13
+
 @interface VerifyViewController ()
 {
     NSString* _phone;
     NSString* _areaCode;
-    UIAlertView* _alert1;
-    UIAlertView* _alert2;
-    UIAlertView* _alert3;
-    UIAlertView *_tryVoiceCallAlertView;
-    
     NSError *verifyError;
-    
     NSBundle *_bundle;
 
 }
@@ -46,7 +46,8 @@ static int count = 0;
                                                  delegate:self
                                         cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"back", @"Localizable", _bundle, nil)
                                         otherButtonTitles:NSLocalizedStringFromTableInBundle(@"wait", @"Localizable", _bundle, nil), nil];
-    _alert2 = alert;
+
+    alert.tag = CLICKLEFTBUTTON_ALERTVIEW_TAG;
     [alert show];    
 }
 
@@ -72,11 +73,10 @@ static int count = 0;
     }
     else
     {
-        
-        [SMSSDK commitVerificationCode:self.verifyCodeField.text phoneNumber:_phone zone:_areaCode result:^(NSError *error) {
-            
-            if (!error) {
-                
+        [SMSSDK commitVerificationCode:self.verifyCodeField.text phoneNumber:_phone zone:_areaCode result:^(NSError *error)
+        {
+            if (!error)
+            {
                 NSLog(@"验证成功");
                 verifyError = error;
                 NSString* str = [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"verifycoderightmsg", @"Localizable", _bundle, nil)];
@@ -86,8 +86,7 @@ static int count = 0;
                                                       cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil)
                                                       otherButtonTitles:nil, nil];
                 [alert show];
-                _alert3 = alert;
-                
+                alert.tag = COMMITCODE_SUCCES_ALERTVIEW_TAG;
             }
             else
             {
@@ -99,7 +98,6 @@ static int count = 0;
                                                       cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil)
                                                       otherButtonTitles:nil, nil];
                 [alert show];
-            
             }
         }];
     }
@@ -110,101 +108,109 @@ static int count = 0;
 {
     NSString* str = [NSString stringWithFormat:@"%@:%@",NSLocalizedStringFromTableInBundle(@"cannotgetsmsmsg", @"Localizable", _bundle, nil) ,_phone];
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"surephonenumber", @"Localizable", _bundle, nil) message:str delegate:self cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"cancel", @"Localizable", _bundle, nil) otherButtonTitles:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil), nil];
-    _alert1 = alert;
+    alert.tag = TRY_AGAIN_GETSMSCODE_ALERTVIEW_TAG;
     [alert show];
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     __weak VerifyViewController *verifyViewController = self;
-    if (alertView == _alert1)
-    {
-        if (1 == buttonIndex)
-        {
-            NSLog(@"重发验证码");
-            
-            
-            [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:_phone zone:_areaCode customIdentifier:nil result:^(NSError *error) {
-                
-                if (!error)
-                {
-                    
-                    NSLog(@"获取验证码成功");
-                    
-                }
-                else
-                {
-                  
-                    NSString *messageStr = [NSString stringWithFormat:@"%zidescription",error.code];
-                    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"codesenderrtitle", @"Localizable", _bundle, nil)
-                                                                  message:NSLocalizedStringFromTableInBundle(messageStr, @"Localizable", _bundle, nil)
-                                                                 delegate:self
-                                                        cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil)
-                                                        otherButtonTitles:nil, nil];
-                    [alert show];
-                
-                }
-                
-            }];
-
-        }
-        
-    }
     
-    if (alertView == _alert2) {
-        
-        if (0 == buttonIndex)
+    switch (alertView.tag)
+    {
+        case TRY_AGAIN_GETSMSCODE_ALERTVIEW_TAG:
         {
+            switch (buttonIndex)
+            {
+                case 1:
+                {
+                    NSLog(@"重发验证码");
+                    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:_phone zone:_areaCode customIdentifier:nil result:^(NSError *error) {
+                        if (!error)
+                        {
+                            NSLog(@"获取验证码成功");
+                        }
+                        else
+                        {
+                            NSString *messageStr = [NSString stringWithFormat:@"%zidescription",error.code];
+                            UIAlertView* alert=[[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"codesenderrtitle", @"Localizable", _bundle, nil)
+                                                                          message:NSLocalizedStringFromTableInBundle(messageStr, @"Localizable", _bundle, nil)
+                                                                         delegate:self
+                                                                cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil)
+                                                                otherButtonTitles:nil, nil];
+                            [alert show];
+                        }
+                    }];
+                    break;
+                }
+                default:
+                    break;
+            }
+            break;
+        }
+        case CLICKLEFTBUTTON_ALERTVIEW_TAG:
+        {
+            switch (buttonIndex)
+            {
+                case 0:
+                {
+                    [verifyViewController dismissViewControllerAnimated:YES completion:^{
+                        [verifyViewController.timer2 invalidate];
+                        [verifyViewController.timer1 invalidate];
+                    }];
+   
+                    break;
+                }
+                default:
+                    break;
+            }
+            break;
+        }
             
-            [verifyViewController dismissViewControllerAnimated:YES completion:^{
+        case COMMITCODE_SUCCES_ALERTVIEW_TAG:
+        {
+            if (self.verificationCodeResult)
+            {
+                self.verificationCodeResult (SMSUIResponseStateSuccess,_phone,_areaCode,verifyError);
+                //解决等待时间乱跳的问题
                 [verifyViewController.timer2 invalidate];
                 [verifyViewController.timer1 invalidate];
-            }];
+            }
+            break;
         }
-    }
-    
-    if (alertView == _alert3)
-    {
-        
-        if (self.verificationCodeResult) {
-            
-            self.verificationCodeResult (SMSUIResponseStateSuccess,_phone,_areaCode,verifyError);
-            //解决等待时间乱跳的问题
-            [verifyViewController.timer2 invalidate];
-            [verifyViewController.timer1 invalidate];
-            
-        }
-
-    }
-    
-    if (alertView == _tryVoiceCallAlertView)
-    {
-        if (0 == buttonIndex)
+        case TRY_AGAIN_GETVOICECODE_ALERTVIEW_TAG:
         {
-            
-            [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodVoice
-                                    phoneNumber:_phone
-                                           zone:_areaCode
-                               customIdentifier:nil
-                                         result:^(NSError *error)
-             
+            switch (buttonIndex)
             {
-                if (error)
+                case 0:
                 {
-                    NSString *messageStr = [NSString stringWithFormat:@"%zidescription",error.code];
-                    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"codesenderrtitle", @"Localizable", _bundle, nil)
-                                                                    message:NSLocalizedStringFromTableInBundle(messageStr, @"Localizable", _bundle, nil)
-                                                                   delegate:self
-                                                          cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil)
-                                                          otherButtonTitles:nil, nil];
-                    [alert show];
+                    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodVoice
+                                            phoneNumber:_phone
+                                                   zone:_areaCode
+                                       customIdentifier:nil
+                                                 result:^(NSError *error)
+                     {
+                         if (error)
+                         {
+                             NSString *messageStr = [NSString stringWithFormat:@"%zidescription",error.code];
+                             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"codesenderrtitle", @"Localizable", _bundle, nil)
+                                                                             message:NSLocalizedStringFromTableInBundle(messageStr, @"Localizable", _bundle, nil)
+                                                                            delegate:self
+                                                                   cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil)
+                                                                   otherButtonTitles:nil, nil];
+                             [alert show];
+                         }
+                     }];
+                    break;
                 }
-
-            }];
-            
+                default:
+                    break;
+            }
+            break;
         }
+        default:
+            break;
     }
-
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -357,7 +363,8 @@ static int count = 0;
                                                  delegate:self
                                         cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil)
                                         otherButtonTitles:NSLocalizedStringFromTableInBundle(@"cancel", @"Localizable", _bundle, nil), nil];
-    _tryVoiceCallAlertView = alert;
+    
+    alert.tag = TRY_AGAIN_GETVOICECODE_ALERTVIEW_TAG;
     [alert show];
 }
 

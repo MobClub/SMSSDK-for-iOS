@@ -24,11 +24,9 @@
  * @from          v1.1.1
  * @brief         向服务端请求获取通讯录好友信息(Get the data of address book which save in the server)
  *
- * @param  choose 调用参数 默认值为1(Get the chosen friend data of address book,the default value is 1)
  * @param  result 请求结果回调(Results of the request)
  */
-+(void)getAllContactFriends:(int)choose
-                     result:(SMSGetAllContactFriendsResultHandler)result;
++(void)getAllContactFriends:(SMSGetAllContactFriendsResultHandler)result;
 
 
 #pragma mark - 设置最新好友条数、显示最新好友条数

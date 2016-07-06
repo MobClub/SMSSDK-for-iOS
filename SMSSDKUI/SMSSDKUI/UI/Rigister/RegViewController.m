@@ -39,8 +39,7 @@
 {
     if (self.verificationCodeResult) {
         
-        NSString* str2 = [self.areaCodeField.text stringByReplacingOccurrencesOfString:@"+" withString:@""];
-        self.verificationCodeResult (SMSUIResponseStateCancel,self.telField.text,str2, nil);
+        self.verificationCodeResult (SMSUIResponseStateCancel,nil,nil, nil);
     }
 }
 
@@ -119,9 +118,7 @@
                                           cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"cancel", @"Localizable", _bundle, nil)
                                           otherButtonTitles:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil), nil];
     [alert show];
-    
-//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SMSSDKUI" ofType:@"bundle"];
-//    NSBundle *bundle = [[NSBundle alloc] initWithPath:filePath];
+
     NSString *imageString = [_bundle pathForResource:@"button1" ofType:@"png"];
     
     self.nextButton.enabled = NO;
@@ -153,13 +150,11 @@
              
              [regViewController getVerificationCodeResultHandler:phoneNumber zone:zone error:error];
              
-             
          }];
         
     }
     else if (getCodeMethod == SMSGetCodeMethodVoice)
     {
-        
         [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodVoice phoneNumber:phoneNumber
                                        zone:zone
                            customIdentifier:nil
@@ -167,18 +162,13 @@
          {
              [regViewController getVerificationCodeResultHandler:phoneNumber zone:zone error:error];
              
-             
          }];
     }
 }
 
 - (void)getVerificationCodeResultHandler:(NSString *)phoneNumber zone:(NSString *)zone error:(NSError *)error
 {
-    
-//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SMSSDKUI" ofType:@"bundle"];
-//    NSBundle *bundle = [[NSBundle alloc] initWithPath:filePath];
     NSString *imageString = [_bundle pathForResource:@"button4" ofType:@"png"];
-    
     self.nextButton.enabled = YES;
     [self.nextButton setBackgroundImage:[[UIImage alloc] initWithContentsOfFile:imageString] forState:UIControlStateNormal];
     
@@ -336,20 +326,19 @@
     
     NSDateComponents *dateComponents = nil;
     
-    if (saveTimeString.length != 0) {
-        
+    if (saveTimeString.length != 0)
+    {
         dateComponents = [YJLocalCountryData compareTwoDays:saveTimeString];
-        
     }
     
-    if (dateComponents.day >= 1 || saveTimeString.length == 0) { //day = 0 ,代表今天，day = 1  代表昨天  day >= 1 表示至少过了一天  saveTimeString.length == 0表示从未进行过缓存
-        
+    if (dateComponents.day >= 1 || saveTimeString.length == 0)
+    { //day = 0 ,代表今天，day = 1  代表昨天  day >= 1 表示至少过了一天  saveTimeString.length == 0表示从未进行过缓存
         __weak RegViewController *regViewController = self;
         //获取支持的地区列表
         [SMSSDK getCountryZone:^(NSError *error, NSArray *zonesArray) {
             
-            if (!error) {
-                
+            if (!error)
+            {
                 NSLog(@"get the area code sucessfully");
                 //区号数据
                 regViewController.areaArray = [NSMutableArray arrayWithArray:zonesArray];
@@ -462,7 +451,6 @@
     if (cell == nil)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier] ;
-        
     }
     cell.textLabel.text = NSLocalizedStringFromTableInBundle(@"countrylable", @"Localizable", _bundle, nil);
     cell.textLabel.textColor = [UIColor darkGrayColor];
@@ -492,8 +480,8 @@
     country2.delegate = self;
     
     //读取本地countryCode
-    if (_areaArray.count == 0) {
-        
+    if (_areaArray.count == 0)
+    {
         NSMutableArray *dataArray = [YJLocalCountryData localCountryDataArray];
         
         _areaArray = dataArray;

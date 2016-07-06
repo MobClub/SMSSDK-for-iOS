@@ -13,7 +13,7 @@
 #import <MessageUI/MessageUI.h>
 
 /**
- * @brief 核心类（Core class）v2.0.4
+ * @brief 核心类（Core class）v2.0.5
  */
 @interface SMSSDK : NSObject <MFMessageComposeViewControllerDelegate>
 
@@ -23,8 +23,8 @@
  *
  *  初始化应用，此方法在应用启动时在主线程中调用。(This method is called in the main thread in application:didFinishLaunchingWithOptions: method)
  *
- *  @param appKey    在Mob官网(http://mob.com/ )中注册的应用Key。(The appKey of mob Application. Log in to http://mob.com/ to register to be a Mob developer and create a application if you don't have one)
- *  @param appSecret 在Mob官网(http://mob.com/ )中注册的应用秘钥。(The appSecret of mob Application. Log in to http://mob.com/ to register to be a Mob developer and create a application if you don't have one)
+ *  @param   appKey          在Mob官网(http://mob.com/ )中注册的应用Key。(The appKey of mob Application. Log in to http://mob.com/ to register to be a Mob developer and create a application if you don't have one)
+ *  @param   appSecret       在Mob官网(http://mob.com/ )中注册的应用秘钥。(The appSecret of mob Application. Log in to http://mob.com/ to register to be a Mob developer and create a application if you don't have one)
  */
 +(void)registerApp:(NSString*)appKey withSecret:(NSString*)appSecret;
 
@@ -48,21 +48,21 @@
 
 
 /**
- * @from               v1.1.1
- * @brief              提交验证码(Commit the verification code)
+ * @from                    v1.1.1
+ * @brief                   提交验证码(Commit the verification code)
  *
- * @param code         验证码(Verification code)
- * @param phoneNumber  电话号码(The phone number)
- * @param zone         区域号，不要加"+"号(Area code)
- * @param result       请求结果回调(Results of the request)
+ * @param code              验证码(Verification code)
+ * @param phoneNumber       电话号码(The phone number)
+ * @param zone              区域号，不要加"+"号(Area code)
+ * @param result            请求结果回调(Results of the request)
  */
 +(void)commitVerificationCode:(NSString *)code
                   phoneNumber:(NSString *)phoneNumber
                          zone:(NSString *)zone
                        result:(SMSCommitCodeResultHandler)result;
 /**
- * @from               v2.0.1
- * @param              返回SDK版本号(Return the version number of this SDK)
+ * @from                    v2.0.1
+ * @return                  返回SDK版本号(Return the version number of this SDK)
  */
 +(NSString *)SMSSDKVersion;
 

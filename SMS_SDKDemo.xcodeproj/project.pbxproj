@@ -29,7 +29,6 @@
 		F3F34AD619AED773004CA430 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F34AD519AED773004CA430 /* Images.xcassets */; };
 		F3F34B1C19AEDD10004CA430 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F34B1B19AEDD10004CA430 /* libz.dylib */; };
 		F3F34B1E19AEDD1D004CA430 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F34B1D19AEDD1D004CA430 /* libicucore.dylib */; };
-		F3F51D1219D51B4200FC5A04 /* country.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3F51D1419D51B4200FC5A04 /* country.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,8 +78,6 @@
 		F3F34B1B19AEDD10004CA430 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		F3F34B1D19AEDD1D004CA430 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		F3F51D0919D4FCE100FC5A04 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		F3F51D1319D51B4200FC5A04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/country.plist; sourceTree = "<group>"; };
-		F3F51D1519D51B4A00FC5A04 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/country.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +179,6 @@
 				36C07FDB1A7F453800C1642D /* LaunchScreen.xib */,
 				F3F34AD519AED773004CA430 /* Images.xcassets */,
 				7B80CB851C96BC9600B067C3 /* button5.png */,
-				F3F51D1419D51B4200FC5A04 /* country.plist */,
 				F3F34ACB19AED773004CA430 /* SMS_SDKDemo-Info.plist */,
 				F3F34ACC19AED773004CA430 /* InfoPlist.strings */,
 				F3F34ACF19AED773004CA430 /* main.m */,
@@ -223,7 +219,7 @@
 				ORGANIZATIONNAME = "严军";
 				TargetAttributes = {
 					F3F34ABF19AED773004CA430 = {
-						DevelopmentTeam = 859T9526RA;
+						DevelopmentTeam = Q87QUX3533;
 					};
 				};
 			};
@@ -266,7 +262,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F51D1219D51B4200FC5A04 /* country.plist in Resources */,
 				7B80CB861C96BC9600B067C3 /* button5.png in Resources */,
 				F3F34ACE19AED773004CA430 /* InfoPlist.strings in Resources */,
 				36C07FDC1A7F453800C1642D /* LaunchScreen.xib in Resources */,
@@ -308,15 +303,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		F3F51D1419D51B4200FC5A04 /* country.plist */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F3F51D1319D51B4200FC5A04 /* en */,
-				F3F51D1519D51B4A00FC5A04 /* zh-Hans */,
-			);
-			name = country.plist;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -336,8 +322,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou ZhangAoBo Software Technology Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou ZhangAoBo Software Technology Co., Ltd.";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -356,7 +342,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "3b39b60f-a869-4c2e-81a7-12016be7a418";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -378,8 +364,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou ZhangAoBo Software Technology Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou ZhangAoBo Software Technology Co., Ltd.";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -391,7 +377,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PROVISIONING_PROFILE = "3b39b60f-a869-4c2e-81a7-12016be7a418";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -403,8 +389,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou ZhangAoBo Software Technology Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou ZhangAoBo Software Technology Co., Ltd.";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -416,8 +402,9 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SMS_SDKDemo/SMS_SDKDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.SMSSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3b39b60f-a869-4c2e-81a7-12016be7a418";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -428,8 +415,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou ZhangAoBo Software Technology Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou ZhangAoBo Software Technology Co., Ltd.";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -441,8 +428,9 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SMS_SDKDemo/SMS_SDKDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.SMSSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3b39b60f-a869-4c2e-81a7-12016be7a418";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

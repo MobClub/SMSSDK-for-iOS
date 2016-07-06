@@ -35,8 +35,9 @@ static YJLocalCountryData *localCountryData = nil;
 
 + (NSMutableArray *)localCountryDataArray
 {
-    
-    NSString *dataString = [[NSBundle mainBundle] pathForResource:@"country" ofType:@"plist"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SMSSDKUI" ofType:@"bundle"];
+    NSBundle *bundle = [[NSBundle alloc] initWithPath:filePath];
+    NSString *dataString = [bundle pathForResource:@"country" ofType:@"plist"];
     NSDictionary *dataDic = [[NSDictionary alloc] initWithContentsOfFile:dataString];
     
     NSMutableArray *keyArray = [[NSMutableArray alloc] init];
@@ -66,7 +67,7 @@ static YJLocalCountryData *localCountryData = nil;
             
             if ([areaCode isEqualToString:@"86"]) {
                 
-                codeDic = [NSDictionary dictionaryWithObjectsAndKeys:areaCode,@"zone",@"^0{0,1}(13[0-9]|15[3-9]|15[0-2]|18[0-9]|17[5-8]|145|147)[0-9]{8}$",@"rule", nil];
+                codeDic = [NSDictionary dictionaryWithObjectsAndKeys:areaCode,@"zone",@"^0{0,1}(13[0-9]|15[3-9]|15[0-2]|18[0-9]|17[5-8]|14[0-9]|170|171)[0-9]{8}$",@"rule", nil];
             }
             else
             {

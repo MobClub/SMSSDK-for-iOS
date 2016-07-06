@@ -84,6 +84,15 @@
 
 "251description" = "访问过于频繁";
 "252description" = "发送短信条数超过限制";
+"253description" = "无权限进行此操作";
+"254description" = "无权限发送验证码";
+"255description" =  "无权限发送国内验证码";
+"256description" =  "无权限发送港澳台验证码";
+"257description" =  "无权限发送国外验证码";
+"258description" =  "操作过于频繁";
+"259description" =  "未知错误";
+"260description" =  "未知错误";
+"261description" =  "数据未知错误";
 "400description" = "无效请求";
 "406description" = "无效appkey";
 "408description" = "无效参数";

@@ -97,7 +97,7 @@
     table.delegate = self;
     search.delegate = self;
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"country"
+    NSString *path = [_bundle pathForResource:@"country"
                                                      ofType:@"plist"];
     NSDictionary *dict = [[NSDictionary alloc] 
                           initWithContentsOfFile:path];

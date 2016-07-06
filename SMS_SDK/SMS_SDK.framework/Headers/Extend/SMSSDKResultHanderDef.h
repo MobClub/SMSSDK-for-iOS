@@ -13,11 +13,19 @@
  *	@brief	错误代码，如果为调用API出错则应该参考API错误码对照表。错误码对照表如下：
  错误码	错误描述	                         备注
  252    发送短信条数超过限制                发送短信条数超过规则限制
+ 253    无权限进行此操作                   无权限进行此操作
+ 254    无权限发送验证码                   无权限发送验证码
+ 255    无权限发送国内验证码                无权限发送国内验证码
+ 256    无权限发送港澳台验证码              无权限发送港澳台验证码
+ 257    无权限发送国外验证码                无权限发送国外验证码
+ 258    操作过于频繁                       操作过于频繁
+ 259    未知错误                          未知错误
+ 260    未知错误                          未知错误
  400	无效请求	                         客户端请求不能被识别。
  408	无效参数                          无效的请求参数
  456	手机号码为空	                     提交的手机号或者区号为空
  457	手机号码格式错误	                 提交的手机号格式不正确(包括手机的区号)
- 458	手机号码在黑名单中	                 手机号码在发送很名单中
+ 458	appkey在黑名单中	                 appkey在发送很名单中
  459	无appKey的控制数据	                 获取appKey控制发送短信的数据失败
  460	无权限发送短信	                     没有打开客户端发送短信的开关
  461	不支持该地区发送短信                没有开通当前地区发送短信的功能
@@ -43,11 +51,19 @@
  *	@brief	Error code，If it is you call the API, you should see the error code table, if it is an HTTP error, this attribute indicates the HTTP error code.
  ErrorCode	 Error description                             Remarks
  252    Sending messages more than limit                   Sending messages more than limit
+ 253    No permission to do this                           No permission to do this
+ 254    No permission to get verificationcode              No permission to get verificationcode
+ 255    No permission to send domestic verificationcode    No permission to send domestic verificationcode
+ 256    No permission to send verificationcode from Hong Kong, Macao and Taiwan              No permission to send verificationcode from Hong Kong, Macao and Taiwan
+ 257    No permission verification code sent abroad                                          No permission verification code sent abroad
+ 258    Action is too frequent                             Action is too frequent
+ 259    Unknown error                                      Unknown error
+ 260    Unknown error                                      Unknown error
  400    Invalid request                                    The request could not be identified
  408    Invalid parameter                                  The parameters are invalid in the request
  456    Phone number is empty                              The submitted phone number or country code is empty
  457    Phone number is illegal                            The submitted phone number or country code is incorrect
- 458    Phone number in the blacklist                      Mobile phone number in the blacklist
+ 458    AppKey in the blacklist                            AppKey in the blacklist
  459    Unable to obtain data                              Unable to obtain data related to the appkey
  460    Permission denied                                  Please turn on the switch to sending text messages by clients
  461    Do not support the region to send text messages    Do not support the region to send text messages

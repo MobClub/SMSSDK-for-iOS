@@ -165,14 +165,13 @@
     NSBundle *bundle = [[NSBundle alloc] initWithPath:filePath];
     [YJLocalCountryData showMessag:NSLocalizedStringFromTableInBundle(@"loading", @"Localizable", bundle, nil) toView:self.view];
     
-    [SMSSDK getAllContactFriends:1 result:^(NSError *error, NSArray *friendsArray) {
+    [SMSSDK getAllContactFriends:^(NSError *error, NSArray *friendsArray) {
         
         if (!error)
         {
             [SMSSDKUI showGetContactsFriendsViewWithNewFriends:[NSMutableArray arrayWithArray:friendsArray] newFriendClock:_friendsBlock result:^{
                 
             }];
-            
         }
         else
         {

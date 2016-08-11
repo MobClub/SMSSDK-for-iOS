@@ -12,7 +12,7 @@ SMSSDK is the most popular social SDK for apps and mobile games ! We've already 
       1.SMSSDK. Including static libraries and local files.When used directly to this folder into the project.
       2.SMSSDKDemo. Showing the SDK foundation.
 
-      3.SMSSDKUI. If you want to use it, drag SMSSDKUI.xcodeproj to your project.
+      3.SMSSDKUI. If you want to use it, drag SMSSDKUI.xcodeproj to your project directly.
 
 ##Step 2：Import the SDK
 

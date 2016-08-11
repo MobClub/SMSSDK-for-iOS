@@ -4,7 +4,7 @@ SMSSDK is the most popular social SDK for apps and mobile games ! We've already 
 ## Step 1: Download the SDK from here :
 ### [SMSSDK for iOS](http://www.mob.com/#/downloadDetail/SMS/ios)
         
- when you download the SDK, you will get something liking this:
+ When you download the SDK, you will get something liking this:
 ![](http://wiki.mob.com/wp-content/uploads/2014/09/SMSSDK.jpg)
 
   It’s contain the three parties:
@@ -34,13 +34,13 @@ SMSSDK is the most popular social SDK for apps and mobile games ! We've already 
       a.  AddressBook.framework （Needed by the AddressBook foundation）
       b.  AddressBookUI.framework（Needed by the AddressBook foundation）
 
-  show you like this：
+  Show you like this：
   ![](http://wiki.mob.com/wp-content/uploads/2014/09/SMSSDKAddFramework.png)
   
 ##Step 4:Add the initialization code
 
 
-    1.import the header file of the SDK  in this appDelegate  file of your project
+    1.Import the header file of the SDK  in this appDelegate  file of your project
 
        #import <SMS_SDK/SMSSDK.h>
 
@@ -54,7 +54,7 @@ SMSSDK is the most popular social SDK for apps and mobile games ! We've already 
             withSecret:appSecret];
 }
 
-    appKey and appSerect:
+    AppKey and appSerect:
 
      (1) Register as a Mob developers 
 ### [点击注册](http://www.mob.com/#/reg)

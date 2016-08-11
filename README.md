@@ -56,9 +56,9 @@ SMSSDK is the most popular social SDK for apps and mobile games ! We've already 
 
     AppKey and appSerect:
 
-     (1) Register as a Mob developers 
+    (1) Register as a Mob developers 
 ### [点击注册](http://www.mob.com/#/reg)
-     (2) New application,the steps of new application,please reference:
+    (2) New application,the steps of new application,please reference:
 ### [新建应用参考文档](http://bbs.mob.com/forum.php?mod=viewthread&tid=8212&extra=page%3D1)
 
 ##Step5:Using API 

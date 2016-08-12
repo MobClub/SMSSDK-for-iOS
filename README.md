@@ -16,8 +16,7 @@ Yeah, you are right,it's over using cocoaPods to import SMSSDK. The next is to i
 
 ## Now,tell you the steps of importing SMSSDK manually.
 
-## Step1: Download the SDK from here :
-### [SMSSDK for iOS](http://www.mob.com/#/downloadDetail/SMS/ios)
+## Step1: Download the SDK from here :### [SMSSDK for iOS](http://www.mob.com/#/downloadDetail/SMS/ios)
         
  When you download the SDK, you will get something liking this:
  ![](http://ww2.sinaimg.cn/mw690/9fbf66d3gw1f6qr5l038zj20h50brjrx.jpg)

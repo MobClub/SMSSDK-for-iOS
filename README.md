@@ -83,5 +83,5 @@ In the SMSSDK file ,it contains all the API in the SDK, and here,you can use any
 
 [SMSSDK  ********];
 
-## The chinese document reference to :[](http://wiki.mob.com/iOS%E7%9F%AD%E4%BF%A1SDK%E9%9B%86%E6%88%90%E6%96%87%E6%A1%A3/)
+## [If you want to see the chinese document,please click here](http://wiki.mob.com/iOS%E7%9F%AD%E4%BF%A1SDK%E9%9B%86%E6%88%90%E6%96%87%E6%A1%A3/)
 

@@ -17,7 +17,7 @@ SMSSDK is the most popular social SDK for apps and mobile games ! We've already 
 ##Step2：Import the SDK
 
         Drag  SMSSDK this folder into the project,like this:
-  ![](http://wiki.mob.com/wp-content/uploads/2014/09/SMS_SKD-drag.png)
+![](http://wiki.mob.com/wp-content/uploads/2014/09/SMS_SKD-drag.png)
   
 ##Step3: Add libraries 
 
@@ -35,7 +35,7 @@ SMSSDK is the most popular social SDK for apps and mobile games ! We've already 
       b.  AddressBookUI.framework（Needed by the AddressBook foundation）
 
   Show you like this：
-  ![](http://wiki.mob.com/wp-content/uploads/2014/09/SMSSDKAddFramework.png)
+![](http://wiki.mob.com/wp-content/uploads/2014/09/SMSSDKAddFramework.png)
   
 ##Step4: Add the initialization code
 

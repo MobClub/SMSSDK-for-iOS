@@ -82,3 +82,6 @@ Yeah, you are right,it's over using cocoaPods to import SMSSDK. The next is to i
 In the SMSSDK file ,it contains all the API in the SDK, and here,you can use anyone that you wanted liking this:
 
 [SMSSDK  ********];
+
+## The chinese document reference to :[](http://wiki.mob.com/iOS%E7%9F%AD%E4%BF%A1SDK%E9%9B%86%E6%88%90%E6%96%87%E6%A1%A3/)
+

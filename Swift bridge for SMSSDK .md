@@ -76,3 +76,5 @@ Initializing the SMSSDK, you’d better do this in this method “application(ap
 
 ###[Demo is here,please just enjoy it ~~~](https://github.com/kengsir/SMSSDK-Swift-)
 
+##On the side:
+###[If you want to see chinese document,please click here](http://bbs.mob.com/forum.php?mod=viewthread&tid=16933&highlight=Swift)

@@ -23,10 +23,9 @@ Yeah, you are right,it's over using cocoaPods to import SMSSDK. The next is to i
 
   It’s contain the three parties:
 
-      1.SMSSDK. Including static libraries and local files.When used directly to this folder into the project.
-      2.SMSSDKDemo. Showing the SDK foundation.
-
-      3.SMSSDKUI. If you want to use it, drag SMSSDKUI.xcodeproj to your project directly.
+   > * SMSSDK. Including static libraries and local files.When used directly to this folder into the project.
+   > * SMSSDKDemo. Showing the SDK foundation.
+   > * SMSSDKUI. If you want to use it, drag SMSSDKUI.xcodeproj to your project directly.
 
 ##Step2：Import the SDK
 
@@ -35,18 +34,18 @@ Yeah, you are right,it's over using cocoaPods to import SMSSDK. The next is to i
   
 ##Step3: Add libraries 
 
-     Required:
+  Required:
 
-      a.  libz.dylib
-      b.  libicucore.dylib
-      c.  MessageUI.framework
-      d. JavaScriptCore.framework
-      e. libstdc++.dylib
+   > *  libz.dylib
+   > *  libicucore.dylib
+   > *  MessageUI.framework
+   > * JavaScriptCore.framework
+   > * libstdc++.dylib
 
-    Optional
+  Optional
 
-      a.  AddressBook.framework （Needed by the AddressBook foundation）
-      b.  AddressBookUI.framework（Needed by the AddressBook foundation）
+   > *  AddressBook.framework （Needed by the AddressBook foundation）
+   > *  AddressBookUI.framework（Needed by the AddressBook foundation）
 
   Show you like this：
 ![](http://ww2.sinaimg.cn/mw690/9fbf66d3gw1f6qr5n18q8j20yv0gowkr.jpg)
@@ -54,29 +53,28 @@ Yeah, you are right,it's over using cocoaPods to import SMSSDK. The next is to i
 ##Step4: Add the initialization code
 
 
-    1.Import the header file of the SDK  in this appDelegate  file of your project
+ > * Import the header file of the SDK  in this appDelegate  file of your project
 
-       #import <SMS_SDK/SMSSDK.h>
+           #import <SMS_SDK/SMSSDK.h>
 
-    2. Add register SDK method
+ > * Add register SDK method
 
-       In your project ,add register SDK method in this method,like this:
-         - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-   //初始化应用，appKey和appSecret从后台申请得
-   [SMSSDK registerApp:appKey
-            withSecret:appSecret];
-}
+        In your project ,add register SDK method in this method,like this:
+          - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+          {
+            //初始化应用，appKey和appSecret从后台申请得
+             [SMSSDK registerApp:appKey withSecret:appSecret];
+          }
 
     AppKey and appSerect:
     
-   (1) Register as a Mob developers  
+ > * Register as a Mob developers  
    
-[Click to register](http://www.mob.com/#/reg)
+  [Click to register](http://www.mob.com/#/reg)
    
-   (2) New application,the steps of new application,please reference:
+ > * New application,the steps of new application,please reference:
    
-[Document for getting appkey and appSerect](http://bbs.mob.com/forum.php?mod=viewthread&tid=8212&extra=page%3D1)
+   [Document for getting appkey and appSerect](http://bbs.mob.com/forum.php?mod=viewthread&tid=8212&extra=page%3D1)
 
 ##Step5: Using API 
 ![](http://ww4.sinaimg.cn/mw690/9fbf66d3gw1f6qr5nkcndj219j0hrjxa.jpg)

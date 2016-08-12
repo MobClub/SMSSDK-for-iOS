@@ -2,11 +2,15 @@
 
 SMSSDK is the most popular social SDK for apps and mobile games ! We've already supported over 1000 country or zone in global world  until now. And also it’s easily to use in your app.now, I will tell you the steps liking this:
 
-If you use cocoaPods ,now ,it's easily to do liking this:
+If you use cocoaPods ,now ,it's easily to import SMSSDK liking this:
+
 ##cocoapods import：
- >*main module(necessary)
- >*pod "SMSSDK"
- >*POD "MOBFoundation_IDFA"
+
+ > * main module(necessary)
+ 
+ > * pod "SMSSDK"
+ 
+ > * POD "MOBFoundation_IDFA"
 
 Yeah, you are right,it's over using cocoaPods to import SMSSDK.
 

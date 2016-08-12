@@ -68,13 +68,10 @@ Yeah, you are right,it's over using cocoaPods to import SMSSDK. The next is to i
 
     AppKey and appSerect:
     
- > * Register as a Mob developers  
-   
-     [Click to register](http://www.mob.com/#/reg)
-   
- > * New application,the steps of new application,please reference:
-   
-     [Document for getting appkey and appSerect](http://bbs.mob.com/forum.php?mod=viewthread&tid=8212&extra=page%3D1)
+> * Register as a Mob developers  
+[Click to register](http://www.mob.com/#/reg)
+> * New application,the steps of new application,please reference:
+[Document for getting appkey and appSerect](http://bbs.mob.com/forum.php?mod=viewthread&tid=8212&extra=page%3D1)
 
 ##Step5: Using API 
 ![](http://ww4.sinaimg.cn/mw690/9fbf66d3gw1f6qr5nkcndj219j0hrjxa.jpg)

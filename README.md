@@ -5,7 +5,7 @@ SMSSDK is the most popular social SDK for apps and mobile games ! We've already 
 ### [SMSSDK for iOS](http://www.mob.com/#/downloadDetail/SMS/ios)
         
  When you download the SDK, you will get something liking this:
- ![](http://wiki.mob.com/wp-content/uploads/2014/09/SMSSDK.jpg)
+ ![](http://ww2.sinaimg.cn/mw690/9fbf66d3gw1f6qr5l038zj20h50brjrx.jpg)
 
   It’s contain the three parties:
 
@@ -17,7 +17,7 @@ SMSSDK is the most popular social SDK for apps and mobile games ! We've already 
 ##Step2：Import the SDK
 
         Drag  SMSSDK this folder into the project,like this:
-![](http://wiki.mob.com/wp-content/uploads/2014/09/SMS_SKD-drag.png)
+![](http://ww1.sinaimg.cn/mw690/9fbf66d3gw1f6qr5m7cohj20yj0rpdrl.jpg)
   
 ##Step3: Add libraries 
 
@@ -35,7 +35,7 @@ SMSSDK is the most popular social SDK for apps and mobile games ! We've already 
       b.  AddressBookUI.framework（Needed by the AddressBook foundation）
 
   Show you like this：
-![](http://wiki.mob.com/wp-content/uploads/2014/09/SMSSDKAddFramework.png)
+![](http://ww2.sinaimg.cn/mw690/9fbf66d3gw1f6qr5n18q8j20yv0gowkr.jpg)
   
 ##Step4: Add the initialization code
 
@@ -62,7 +62,7 @@ SMSSDK is the most popular social SDK for apps and mobile games ! We've already 
 ### [新建应用参考文档](http://bbs.mob.com/forum.php?mod=viewthread&tid=8212&extra=page%3D1)
 
 ##Step5: Using API 
-![](http://wiki.mob.com/wp-content/uploads/2014/09/%E7%9F%AD%E4%BF%A1%E4%BB%A3%E7%A0%81.jpg)
+![](http://ww4.sinaimg.cn/mw690/9fbf66d3gw1f6qr5nkcndj219j0hrjxa.jpg)
 
 In the SMSSDK file ,it contains all the API in the SDK, and here,you can use anyone that you wanted liking this:
 

@@ -12,7 +12,7 @@ If you use cocoaPods ,now ,it's easily to import SMSSDK liking this:
  
  > * POD "MOBFoundation_IDFA"
 
-Yeah, you are right,it's over using cocoaPods to import SMSSDK. The next is to import the file's header and use the API of the SMSSDK.
+Yeah, you are right,it's over using cocoaPods to import SMSSDK. The next is to import the file's header and use the API of the SMSSDK what you wanted.
 
 ## Now,tell you the steps of importing SMSSDK manually.
 

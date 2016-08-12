@@ -5,7 +5,7 @@ SMSSDK is the most popular social SDK for apps and mobile games ! We've already 
 ### [SMSSDK for iOS](http://www.mob.com/#/downloadDetail/SMS/ios)
         
  When you download the SDK, you will get something liking this:
-![](http://wiki.mob.com/wp-content/uploads/2014/09/SMSSDK.jpg)
+ ![image](https://github.com/ButBueatiful/dotvim/raw/master/screenshots/vim-screenshot.jpg)
 
   It’s contain the three parties:
 

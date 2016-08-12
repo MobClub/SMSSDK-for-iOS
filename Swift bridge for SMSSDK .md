@@ -2,7 +2,7 @@
 In this document ,I will tell you the  bridge method to import the SMSSDK that was completed by objective-c language. Before this, I think that you have also know  the method to import the SMSSDK, if no, the other document is right for you firstly. It’s link is:[Document of importing the SMSSDK](https://github.com/MobClub/SMSSDK-for-iOS/blob/master/README.md).
 
 ##Pre-preparation work：
-1. the SDK that had downloaded ([Download the SMSSDK](https://github.com/MobClub/SMSSDK-for-iOS/blob/master/README.md)) and unzip it,when you unzip it ,it's like this:
+1. the SDK that had downloaded ([Download the SMSSDK](http://www.mob.com/#/downloadDetail/SMS/ios)) and unzip it,when you unzip it ,it's like this:
 
   ![](http://ww2.sinaimg.cn/mw690/9fbf66d3gw1f6qr5l038zj20h50brjrx.jpg)
   

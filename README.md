@@ -29,7 +29,7 @@ Yeah, you are right,it's over using cocoaPods to import SMSSDK. The next is to i
 
 ##Step2：Import the SDK
 
-        Drag  SMSSDK this folder into the project,like this:
+ Drag  this folder of the SMSSDK into the project,like this:
 ![](http://ww1.sinaimg.cn/mw690/9fbf66d3gw1f6qr5m7cohj20yj0rpdrl.jpg)
   
 ##Step3: Add libraries 

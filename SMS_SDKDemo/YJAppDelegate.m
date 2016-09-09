@@ -29,7 +29,7 @@
   
     [SMSSDK registerApp:appkey
              withSecret:app_secrect];
-  //[SMSSDK enableAppContactFriends:NO];
+    [SMSSDK enableAppContactFriends:NO];
     
     YJViewController* yj = [[YJViewController alloc] init];
     self.window.rootViewController = yj;

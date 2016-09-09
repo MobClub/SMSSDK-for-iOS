@@ -341,7 +341,10 @@
             {
                 NSLog(@"get the area code sucessfully");
                 //区号数据
-                regViewController.areaArray = [NSMutableArray arrayWithArray:zonesArray];
+                if ([zonesArray isKindOfClass:[NSArray class]])
+                {
+                    regViewController.areaArray = [NSMutableArray arrayWithArray:zonesArray];
+                }
                 //获取到国家列表数据后对进行缓存
                 [[MOBFDataService sharedInstance] setCacheData:regViewController.areaArray forKey:@"countryCodeArray" domain:nil];
                 //设置缓存时间

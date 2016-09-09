@@ -118,4 +118,5 @@
 "477description" = "The current phone number send messages over the limit";
 "478description" = "The current phone number in the current application sends messages over the limit";
 "479description" = "Please use the MOBFoundation.framework with idfa";
+"480description" = "SDK not submit aeskey in the interface of the access token";
 "500description" = "Server Error";

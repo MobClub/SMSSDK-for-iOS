@@ -116,5 +116,6 @@
 "477description" = "当前手机号发送短信的数量超过当天限额";
 "478description" = "当前手机号在当前应用内发送超过限额";
 "479description" = "请使用idfa版本的公共库";
+"480description" = "SDK没有提交aes-key";
 "500description" = "服务器内部错误";
 

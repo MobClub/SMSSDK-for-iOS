@@ -43,6 +43,7 @@
  477    当前手机号发送短信的数量超过当天限额   当前手机号码在SMSSDK平台内每天最多可发送短信10条，包括客户端发送和WebApi发送
  478    当前手机号在当前应用内发送超过限额     当前手机号码在当前应用下12小时内最多可发送文本验证码5条
  479    SDK使用的公共库版本错误              当前SDK使用的公共库版本为非IDFA版本，需要更换为IDFA版本
+ 480    SDK没有提交AES-KEY                 客户端在获取令牌的接口中没有传递aesKey。
  500    服务器内部错误                     服务器程序报错
  */
 ///#end
@@ -81,6 +82,7 @@
  477    The current phone number send messages over the limit
  478    The current phone number in the current application sends messages over the limit
  479    The MOBFoundation.framework's version is wrong, please use it with idfa
+ 480    SDK not submit aeskey in the interface of the access token
  500    Server Error                                       Server Error
  */
 ///#end

@@ -13,7 +13,7 @@
 #import <MessageUI/MessageUI.h>
 
 /**
- * @brief 核心类（Core class）v2.0.6
+ * @brief 核心类（Core class）v2.0.7
  */
 @interface SMSSDK : NSObject <MFMessageComposeViewControllerDelegate>
 

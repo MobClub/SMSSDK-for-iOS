@@ -73,32 +73,40 @@ static int count = 0;
     }
     else
     {
-        [SMSSDK commitVerificationCode:self.verifyCodeField.text phoneNumber:_phone zone:_areaCode result:^(NSError *error)
-        {
-            if (!error)
+//        [SMSSDK commitVerificationCode:self.verifyCodeField.text phoneNumber:_phone zone:_areaCode result:^(NSError *error)
+//        ];
+        [SMSSDK commitVerificationCode:self.verifyCodeField.text phoneNumber:_phone zone:_areaCode result:^(SMSSDKUserInfo *userInfo, NSError *error) {
+            
             {
-                NSLog(@"验证成功");
-                verifyError = error;
-                NSString* str = [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"verifycoderightmsg", @"Localizable", _bundle, nil)];
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"verifycoderighttitle", @"Localizable", _bundle, nil)
-                                                                message:str
-                                                               delegate:self
-                                                      cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil)
-                                                      otherButtonTitles:nil, nil];
-                [alert show];
-                alert.tag = COMMITCODE_SUCCES_ALERTVIEW_TAG;
+                if (!error)
+                {
+                    userInfo.nickname = @"David";
+                    userInfo.uid = @"010";
+                    userInfo.avatar = @"www.mob.com";
+                    NSLog(@"验证成功");
+                    verifyError = error;
+                    NSString* str = [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"verifycoderightmsg", @"Localizable", _bundle, nil)];
+                    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"verifycoderighttitle", @"Localizable", _bundle, nil)
+                                                                    message:str
+                                                                   delegate:self
+                                                          cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil)
+                                                          otherButtonTitles:nil, nil];
+                    [alert show];
+                    alert.tag = COMMITCODE_SUCCES_ALERTVIEW_TAG;
+                }
+                else
+                {
+                    NSLog(@"验证失败");
+                    NSString *messageStr = [NSString stringWithFormat:@"%zidescription",error.code];
+                    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"verifycodeerrortitle", @"Localizable", _bundle, nil)
+                                                                    message:NSLocalizedStringFromTableInBundle(messageStr, @"Localizable", _bundle, nil)
+                                                                   delegate:self
+                                                          cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil)
+                                                          otherButtonTitles:nil, nil];
+                    [alert show];
+                }
             }
-            else
-            {
-                NSLog(@"验证失败");
-                NSString *messageStr = [NSString stringWithFormat:@"%zidescription",error.code];
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"verifycodeerrortitle", @"Localizable", _bundle, nil)
-                                                                message:NSLocalizedStringFromTableInBundle(messageStr, @"Localizable", _bundle, nil)
-                                                               delegate:self
-                                                      cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", _bundle, nil)
-                                                      otherButtonTitles:nil, nil];
-                [alert show];
-            }
+            
         }];
     }
 }

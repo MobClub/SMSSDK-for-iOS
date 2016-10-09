@@ -33,4 +33,9 @@
  */
 @property(nonatomic,copy) NSString* phone;
 
+/**
+ * @brief 国家或地区代码
+ */
+@property(nonatomic,copy) NSString* zone;
+
 @end

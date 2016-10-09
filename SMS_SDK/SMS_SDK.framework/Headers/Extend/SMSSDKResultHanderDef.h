@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class SMSSDKUserInfo;
 ///#begin zh-cn
 /**
  *	@brief	错误代码，如果为调用API出错则应该参考API错误码对照表。错误码对照表如下：
@@ -112,11 +112,12 @@ typedef enum SMSGetCodeMethod
 typedef void (^SMSGetCodeResultHandler) (NSError *error);
 
 /**
- * @from  v1.1.1
+ * @from  v2.0.7
  * @brief 验证码验证回调
+ * @param userInfo 用来设置用户个人资料
  * @param error 当error为空时表示成功
  */
-typedef void (^SMSCommitCodeResultHandler) (NSError *error);
+typedef void (^SMSCommitCodeResultHandler) (SMSSDKUserInfo *userInfo,NSError *error);
 
 /**
  * @brief 验证码验证回调

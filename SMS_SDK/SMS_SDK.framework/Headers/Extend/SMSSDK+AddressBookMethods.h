@@ -21,7 +21,7 @@
 
 
 /**
- * @from          v1.1.1
+ * @from          v2.0.5
  * @brief         向服务端请求获取通讯录好友信息(Get the data of address book which save in the server)
  *
  * @param  result 请求结果回调(Results of the request)

@@ -32,13 +32,10 @@
 - (instancetype)initVerificationCodeViewWithMethod:(SMSGetCodeMethod)whichMethod
 {
     
-    if (self = [super init]) {
-        
-        
+    if (self = [super init])
+    {
         _getCodeMethod = whichMethod;
-        
     }
-    
     return self;
 }
 
@@ -64,28 +61,34 @@
     
     registerViewBySMS.verificationCodeResult = ^(enum SMSUIResponseState state,NSString *phoneNumber,NSString *zone,NSError *error){
         
-        if (state == SMSUIResponseStateCancel) {
+        if (state == SMSUIResponseStateCancel)
+        {
             
-            if (verificationCodeVC.verificationCodeResult) {
+            if (verificationCodeVC.verificationCodeResult)
+            {
                 
                 verificationCodeVC.verificationCodeResult (SMSUIResponseStateCancel ,phoneNumber,zone,error);
                 
             }
             
-        } else if (state == SMSUIResponseStateSuccess ) {
+        }
+        else if (state == SMSUIResponseStateSuccess )
+        {
             
-            if (verificationCodeVC.verificationCodeResult) {
+            if (verificationCodeVC.verificationCodeResult)
+            {
                 
                 verificationCodeVC.verificationCodeResult (SMSUIResponseStateSuccess,phoneNumber,zone,error);
             }
             
             
-        } else if (state == SMSUIResponseStateFail ) {
+        }
+        else if (state == SMSUIResponseStateFail )
+        {
             
-            if (verificationCodeVC.verificationCodeResult) {
-                
+            if (verificationCodeVC.verificationCodeResult)
+            {
                 verificationCodeVC.verificationCodeResult (SMSUIResponseStateFail,phoneNumber,zone,error);
-                
             }
         }
         

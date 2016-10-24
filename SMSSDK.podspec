@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name                = "SMSSDK"
-s.version             = "2.0.7"
+s.version             = "2.0.8"
 s.summary             = 'mob.com免费短信验证码SDK'
 s.license             = 'Copyright © 2012-2015 mob.com'
 s.author              = { "liyuansheng" => "763497804@qq.com" }

@@ -73,8 +73,6 @@ static int count = 0;
     }
     else
     {
-//        [SMSSDK commitVerificationCode:self.verifyCodeField.text phoneNumber:_phone zone:_areaCode result:^(NSError *error)
-//        ];
         [SMSSDK commitVerificationCode:self.verifyCodeField.text phoneNumber:_phone zone:_areaCode result:^(SMSSDKUserInfo *userInfo, NSError *error) {
             
             {

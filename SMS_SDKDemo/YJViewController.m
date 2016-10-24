@@ -9,9 +9,7 @@
 #import "YJViewController.h"
 #import "SMS_HYZBadgeView.h"
 #import <AddressBook/AddressBook.h>
-#import <SMS_SDK/SMSSDK.h>
 #import <SMS_SDK/Extend/SMSSDK+AddressBookMethods.h>
-#import <SMS_SDK/Extend/SMSSDK+DeprecatedMethods.h>
 #import <SMS_SDK/Extend/SMSSDK+ExtexdMethods.h>
 #import "SMSSDKUI.h"
 
@@ -152,21 +150,19 @@
     [SMSSDKUI showVerificationCodeViewWithMetohd:SMSGetCodeMethodVoice result:^(enum SMSUIResponseState state,NSString *phoneNumber,NSString *zone, NSError *error) {
         
     }];
-    
 }
 
 
 - (void)getAddressBookFriends
 {
-    
     [_testView setNumber:0];
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SMSSDKUI" ofType:@"bundle"];
     NSBundle *bundle = [[NSBundle alloc] initWithPath:filePath];
     [YJLocalCountryData showMessag:NSLocalizedStringFromTableInBundle(@"loading", @"Localizable", bundle, nil) toView:self.view];
     
-    [SMSSDK getAllContactFriends:^(NSError *error, NSArray *friendsArray) {
-        
+    [SMSSDK getAllContactFriends:^(NSError *error, NSArray *friendsArray)
+    {
         if (!error)
         {
             [SMSSDKUI showGetContactsFriendsViewWithNewFriends:[NSMutableArray arrayWithArray:friendsArray] newFriendClock:_friendsBlock result:^{
@@ -187,16 +183,6 @@
         
     }];
     
-    if(ABAddressBookGetAuthorizationStatus() != kABAuthorizationStatusAuthorized)
-    {
-        NSString* str = [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"authorizedcontact", @"Localizable", bundle, nil)];
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"notice", @"Localizable", bundle, nil)
-                                                        message:str
-                                                       delegate:self
-                                              cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", bundle, nil)
-                                              otherButtonTitles:nil, nil];
-        [alert show];
-    }
 }
 
 

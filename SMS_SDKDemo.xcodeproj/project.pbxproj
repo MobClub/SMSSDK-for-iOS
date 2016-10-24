@@ -13,6 +13,7 @@
 		7B80CB861C96BC9600B067C3 /* button5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B80CB851C96BC9600B067C3 /* button5.png */; };
 		7B80CB881C96D7E800B067C3 /* SMSSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B80CB871C96D7E800B067C3 /* SMSSDKUI.bundle */; };
 		7B9890EC1BC7A19A0072626D /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9890EB1BC7A19A0072626D /* libstdc++.dylib */; };
+		7BA875151DB8699D0065F97E /* MOBFoundationEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA875141DB8699D0065F97E /* MOBFoundationEx.framework */; };
 		7BF9FC411BC7A0AC007DDBC2 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF9FC401BC7A0AC007DDBC2 /* MOBFoundation.framework */; };
 		7BF9FC451BC7A2CA007DDBC2 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF9FC441BC7A2CA007DDBC2 /* JavaScriptCore.framework */; };
 		F318BF0D19B04E23008E03EB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318BF0C19B04E23008E03EB /* MessageUI.framework */; };
@@ -56,6 +57,7 @@
 		7B80CB871C96D7E800B067C3 /* SMSSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SMSSDKUI.bundle; sourceTree = "<group>"; };
 		7B9890EB1BC7A19A0072626D /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		7B9BE8C41DA8E11F00495F52 /* SMS_SDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SMS_SDKDemo.entitlements; sourceTree = "<group>"; };
+		7BA875141DB8699D0065F97E /* MOBFoundationEx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundationEx.framework; sourceTree = "<group>"; };
 		7BF9FC401BC7A0AC007DDBC2 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		7BF9FC441BC7A2CA007DDBC2 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F318BF0C19B04E23008E03EB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -100,6 +102,7 @@
 				36E671B01A80B6CD00CAA2F0 /* SMS_SDK.framework in Frameworks */,
 				F3F34AC819AED773004CA430 /* UIKit.framework in Frameworks */,
 				F3F34AC419AED773004CA430 /* Foundation.framework in Frameworks */,
+				7BA875151DB8699D0065F97E /* MOBFoundationEx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +112,7 @@
 		36E671AA1A80B6CD00CAA2F0 /* SMS_SDK */ = {
 			isa = PBXGroup;
 			children = (
+				7BA875141DB8699D0065F97E /* MOBFoundationEx.framework */,
 				7BF9FC401BC7A0AC007DDBC2 /* MOBFoundation.framework */,
 				36E671AD1A80B6CD00CAA2F0 /* SMS_SDK.framework */,
 			);

@@ -58,7 +58,7 @@
             startingLineNumber = "343"
             endingLineNumber = "343"
             landmarkName = "-viewDidLoad"
-            landmarkType = "7">
+            landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -106,7 +106,7 @@
             startingLineNumber = "345"
             endingLineNumber = "345"
             landmarkName = "-viewDidLoad"
-            landmarkType = "7">
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -122,7 +122,7 @@
             startingLineNumber = "361"
             endingLineNumber = "361"
             landmarkName = "-viewDidLoad"
-            landmarkType = "7">
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

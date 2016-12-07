@@ -11,7 +11,6 @@
 #import "SectionsViewController.h"
 #import <SMS_SDK/SMSSDK.h>
 #import <SMS_SDK/Extend/SMSSDKCountryAndAreaCode.h>
-#import <SMS_SDK/Extend/SMSSDK+DeprecatedMethods.h>
 #import <SMS_SDK/Extend/SMSSDK+ExtexdMethods.h>
 #import <MOBFoundation/MOBFoundation.h>
 #import "YJLocalCountryData.h"
@@ -132,7 +131,12 @@
         NSString* str2 = [self.areaCodeField.text stringByReplacingOccurrencesOfString:@"+" withString:@""];
         
         [self getVerificationCodeByMethod:self.getCodeMethod phoneNumber:self.telField.text zone:str2];
-        
+    }
+    else
+    {
+        NSString *imageString = [_bundle pathForResource:@"button4" ofType:@"png"];
+        self.nextButton.enabled = YES;
+        [self.nextButton setBackgroundImage:[[UIImage alloc] initWithContentsOfFile:imageString] forState:UIControlStateNormal];
     }
 }
 

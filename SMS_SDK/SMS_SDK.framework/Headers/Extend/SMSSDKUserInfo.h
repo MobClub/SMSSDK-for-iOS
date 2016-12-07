@@ -16,26 +16,26 @@
 /**
  * @brief 用户头像地址
  */
-@property(nonatomic,copy) NSString* avatar;
+@property (nonatomic, copy) NSString *avatar;
 
 /**
  * @brief 用户id 用户自行定义
  */
-@property(nonatomic,copy) NSString* uid;
+@property (nonatomic, copy) NSString *uid;
 
 /**
  * @brief 用户名
  */
-@property(nonatomic,copy) NSString* nickname;
+@property (nonatomic, copy) NSString *nickname;
 
 /**
  * @brief 电话
  */
-@property(nonatomic,copy) NSString* phone;
+@property (nonatomic, copy) NSString *phone;
 
 /**
  * @brief 国家或地区代码
  */
-@property(nonatomic,copy) NSString* zone;
+@property (nonatomic, copy) NSString *zone;
 
 @end

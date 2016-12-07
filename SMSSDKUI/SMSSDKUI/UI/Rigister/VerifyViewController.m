@@ -12,7 +12,6 @@
 #import <SMS_SDK/SMSSDK.h>
 #import <SMS_SDK/Extend/SMSSDKUserInfo.h>
 #import <SMS_SDK/Extend/SMSSDKAddressBook.h>
-#import <SMS_SDK/Extend/SMSSDK+DeprecatedMethods.h>
 
 
 #define TRY_AGAIN_GETSMSCODE_ALERTVIEW_TAG    10

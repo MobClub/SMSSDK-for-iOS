@@ -159,29 +159,51 @@
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SMSSDKUI" ofType:@"bundle"];
     NSBundle *bundle = [[NSBundle alloc] initWithPath:filePath];
-    [YJLocalCountryData showMessag:NSLocalizedStringFromTableInBundle(@"loading", @"Localizable", bundle, nil) toView:self.view];
     
-    [SMSSDK getAllContactFriends:^(NSError *error, NSArray *friendsArray)
-    {
-        if (!error)
-        {
-            [SMSSDKUI showGetContactsFriendsViewWithNewFriends:[NSMutableArray arrayWithArray:friendsArray] newFriendClock:_friendsBlock result:^{
-                
-            }];
-        }
-        else
-        {
-            NSString *messageStr = [NSString stringWithFormat:@"%zidescription",error.code];
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"codesenderrtitle", @"Localizable", bundle, nil)
-                                                            message:NSLocalizedStringFromTableInBundle(messageStr, @"Localizable", bundle, nil)
-                                                           delegate:self
-                                                  cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", bundle, nil)
-                                                  otherButtonTitles:nil, nil];
-            [alert show];
+    //判断是否在plist文件中设置了通讯录访问key，在已经设置的情况下允许访问获取通讯录好友
+    NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];
+    BOOL hadSettingContractKey = NO;
+    
+    for (NSString *object in [infoDic allKeys]) {
+        
+        if ([@"NSContactsUsageDescription" isEqualToString:object]) {
+            
+            hadSettingContractKey = YES;
+            
+            [YJLocalCountryData showMessag:NSLocalizedStringFromTableInBundle(@"loading", @"Localizable", bundle, nil) toView:self.view];
+            [SMSSDK getAllContactFriends:^(NSError *error, NSArray *friendsArray)
+             {
+                 if (!error)
+                 {
+                     [SMSSDKUI showGetContactsFriendsViewWithNewFriends:[NSMutableArray arrayWithArray:friendsArray] newFriendClock:_friendsBlock result:^{
+                         
+                     }];
+                 }
+                 else
+                 {
+                     NSString *messageStr = [NSString stringWithFormat:@"%zidescription",error.code];
+                     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"codesenderrtitle", @"Localizable", bundle, nil)
+                                                                     message:NSLocalizedStringFromTableInBundle(messageStr, @"Localizable", bundle, nil)
+                                                                    delegate:self
+                                                           cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", bundle, nil)
+                                                           otherButtonTitles:nil, nil];
+                     [alert show];
+                     
+                 }
+                 
+             }];
             
         }
-        
-    }];
+    }
+    
+    if (!hadSettingContractKey) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"notice", @"Localizable", bundle, nil)
+                                                            message:NSLocalizedStringFromTableInBundle(@"pleaseSettingContractKey", @"Localizable", bundle, nil)
+                                                           delegate:nil
+                                                  cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", bundle, nil)
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }
     
 }
 

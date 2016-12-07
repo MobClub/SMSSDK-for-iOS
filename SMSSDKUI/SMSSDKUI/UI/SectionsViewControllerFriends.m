@@ -7,7 +7,6 @@
 #import "YJLocalCountryData.h"
 #import <SMS_SDK/SMSSDK.h>
 #import <SMS_SDK/Extend/SMSSDKAddressBook.h>
-#import <SMS_SDK/Extend/SMSSDK+DeprecatedMethods.h>
 #import <SMS_SDK/Extend/SMSSDK+ExtexdMethods.h>
 #import <SMS_SDK/Extend/SMSSDK+AddressBookMethods.h>
 
@@ -252,7 +251,6 @@
         [self presentViewController:invit animated:YES completion:^{
             ;
         }];
-
     }
 }
 

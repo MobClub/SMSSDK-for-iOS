@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		36C07FDC1A7F453800C1642D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36C07FDB1A7F453800C1642D /* LaunchScreen.xib */; };
 		36E671B01A80B6CD00CAA2F0 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E671AD1A80B6CD00CAA2F0 /* SMS_SDK.framework */; };
+		7B094AAC1DDB1B2700034038 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B094AAB1DDB1B2700034038 /* SystemConfiguration.framework */; };
+		7B094AAE1DDB1B2F00034038 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B094AAD1DDB1B2F00034038 /* CoreTelephony.framework */; };
+		7B094AB01DDB1B3600034038 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B094AAF1DDB1B3600034038 /* AdSupport.framework */; };
 		7B4910E81C96A38D00EDD0D0 /* libSMSSDUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4910E21C96987600EDD0D0 /* libSMSSDUI.a */; };
 		7B80CB861C96BC9600B067C3 /* button5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B80CB851C96BC9600B067C3 /* button5.png */; };
 		7B80CB881C96D7E800B067C3 /* SMSSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B80CB871C96D7E800B067C3 /* SMSSDKUI.bundle */; };
@@ -52,6 +55,9 @@
 /* Begin PBXFileReference section */
 		36C07FDB1A7F453800C1642D /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		36E671AD1A80B6CD00CAA2F0 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		7B094AAB1DDB1B2700034038 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7B094AAD1DDB1B2F00034038 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7B094AAF1DDB1B3600034038 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		7B4910DD1C96987600EDD0D0 /* SMSSDUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SMSSDUI.xcodeproj; path = SMSSDKUI/SMSSDUI.xcodeproj; sourceTree = "<group>"; };
 		7B80CB851C96BC9600B067C3 /* button5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button5.png; sourceTree = "<group>"; };
 		7B80CB871C96D7E800B067C3 /* SMSSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SMSSDKUI.bundle; sourceTree = "<group>"; };
@@ -88,6 +94,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B094AB01DDB1B3600034038 /* AdSupport.framework in Frameworks */,
+				7B094AAE1DDB1B2F00034038 /* CoreTelephony.framework in Frameworks */,
+				7B094AAC1DDB1B2700034038 /* SystemConfiguration.framework in Frameworks */,
 				7B4910E81C96A38D00EDD0D0 /* libSMSSDUI.a in Frameworks */,
 				7BF9FC451BC7A2CA007DDBC2 /* JavaScriptCore.framework in Frameworks */,
 				7B9890EC1BC7A19A0072626D /* libstdc++.dylib in Frameworks */,
@@ -150,6 +159,9 @@
 		F3F34AC219AED773004CA430 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B094AAF1DDB1B3600034038 /* AdSupport.framework */,
+				7B094AAD1DDB1B2F00034038 /* CoreTelephony.framework */,
+				7B094AAB1DDB1B2700034038 /* SystemConfiguration.framework */,
 				7BF9FC441BC7A2CA007DDBC2 /* JavaScriptCore.framework */,
 				7B9890EB1BC7A19A0072626D /* libstdc++.dylib */,
 				F318BF8619B07914008E03EB /* Security.framework */,

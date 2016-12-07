@@ -21,6 +21,7 @@
 "countrychoose"="Choose the country";
 
 "notice"="Notice";
+"pleaseSettingContractKey" = "Please setting the key：NSContactsUsageDescription key in the info.plist";
 "errorphonenumber"="Phone number is invalid";
 "sure"="OK";
 
@@ -77,6 +78,9 @@
 "phonecode"="Phone";
 "smsmessage"="Join SMS_SDK, for http://mob.com web site";
 "choosephonenumber"="Choose to send invitation number";
+"close" = "Close";
+"versionNotice" = "The iOS'version is too low,it's need iOS4.0 or later for sending sms";
+"deviceFoundation" = "This device had no this foundation for sending sms";
 
 "voiceCallMsgLabel" = "You can also try this:";
 "try voice call" = "Get verification code by voice call";
@@ -95,6 +99,9 @@
 "259description" = "Unknown error";
 "260description" = "Unknown error";
 "261description" = "Data is error of the unknown reason";
+"262description" = "The Internet connection appears to be offline";
+"263description" = "Data is error of the unknown reason";
+"264description" = "Data is error of the unknown reason";
 "400description" = "Invalid request";
 "406description" = "Invalid appkey";
 "408description" = "Invalid parameter";

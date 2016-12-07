@@ -16,115 +16,115 @@
 /**
  * @brief 姓名
  */
-@property(nonatomic,copy) NSString* name;
+@property (nonatomic, copy) NSString *name;
 
 /**
  * @brief 通讯录id
  */
-@property(nonatomic,copy) NSString* recordid;
+@property (nonatomic, copy) NSString *recordid;
 
 /**
  * @brief 姓名前缀
  */
-@property(nonatomic,copy) NSString* prefixname;
+@property (nonatomic, copy) NSString *prefixname;
 
 /**
  * @brief 姓名后缀
  */
-@property(nonatomic,copy) NSString* suffixname;
+@property (nonatomic, copy) NSString *suffixname;
 
 /**
  * @brief 最后的姓名
  */
-@property(nonatomic,copy) NSString* lastname;
+@property (nonatomic, copy) NSString *lastname;
 
 /**
  * @brief 最前的姓名
  */
-@property(nonatomic,copy) NSString* firstname;
+@property (nonatomic, copy) NSString *firstname;
 
 /**
  * @brief 中间名
  */
-@property(nonatomic,copy) NSString* middlename;
+@property (nonatomic, copy) NSString *middlename;
 
 /**
  * @brief 昵称
  */
-@property(nonatomic,copy) NSString* nickname;
+@property (nonatomic, copy) NSString *nickname;
 
 /**
  * @brief 显示的名字
  */
-@property(nonatomic,copy) NSString* displayname;
+@property (nonatomic, copy) NSString *displayname;
 
 /**
  * @brief 公司
  */
-@property(nonatomic,copy) NSString* company;
+@property (nonatomic, copy) NSString *company;
 
 /**
  * @brief 职位
  */
-@property(nonatomic,copy) NSString* position;
+@property (nonatomic, copy) NSString *position;
 
 /**
  * @brief 电话
  */
-@property(nonatomic,copy) NSString* phones;
+@property (nonatomic, copy) NSString *phones;
 
 /**
  * @brief 邮箱
  */
-@property(nonatomic,copy) NSString* mails;
+@property (nonatomic, copy) NSString *mails;
 
 /**
  * @brief 地址
  */
-@property(nonatomic,copy) NSString* addresses;
+@property (nonatomic, copy) NSString *addresses;
 
 /**
  * @brief 特殊日子
  */
-@property(nonatomic,copy) NSString* specialdata;
+@property (nonatomic, copy) NSString *specialdata;
 
 /**
  * @brief ims
  */
-@property(nonatomic,copy) NSString* ims;
+@property (nonatomic, copy) NSString *ims;
 
 /**
  * @brief 群组
  */
-@property(nonatomic,copy) NSString* group;
+@property (nonatomic, copy) NSString *group;
 
 /**
  * @brief 备注
  */
-@property(nonatomic,copy) NSString* remarks;
+@property (nonatomic, copy) NSString *remarks;
 
 /**
  * @brief 个人站点
  */
-@property(nonatomic,copy) NSString* websites;
+@property (nonatomic, copy) NSString *websites;
 
 /**
  * @brief 关系
  */
-@property(nonatomic,copy) NSString* relations;
+@property (nonatomic, copy) NSString *relations;
 
 /**
  * @brief 其他
  */
-@property(nonatomic,copy) NSString* others;
+@property (nonatomic, copy) NSString *others;
 
 /**
  * @brief 第二个电话
  */
-@property(nonatomic,copy) NSString* phone2;
+@property (nonatomic, copy) NSString *phone2;
 
 /**
  * @brief 所有电话列表
  */
-@property(nonatomic,strong) NSMutableArray* phonesEx;
+@property (nonatomic, strong) NSMutableArray *phonesEx;
 @end

@@ -21,7 +21,12 @@
  258    操作过于频繁                       操作过于频繁
  259    未知错误                          未知错误
  260    未知错误                          未知错误
+ 261    数据错误                          数据未知错误
+ 262    请检查网络授权                     请检查网络授权设置
+ 263    数据错误                          数据未知错误
+ 264    数据错误                          数据未知错误
  400	无效请求	                         客户端请求不能被识别。
+ 406    AppKey错误                        请求的AppKey不存在。
  408	无效参数                          无效的请求参数
  456	手机号码为空	                     提交的手机号或者区号为空
  457	手机号码格式错误	                 提交的手机号格式不正确(包括手机的区号)
@@ -60,7 +65,12 @@
  258    Action is too frequent                             Action is too frequent
  259    Unknown error                                      Unknown error
  260    Unknown error                                      Unknown error
+ 261    Data is error                                      Data is error of the unknown reason
+ 262    Internet is error                                  The Internet connection appears to be offline
+ 263    Data is error                                      Data is error of the unknown reason";
+ 264    Data is error                                      Data is error of the unknown reason";
  400    Invalid request                                    The request could not be identified
+ 406    AppKey is error                                    The AppKey is not exist
  408    Invalid parameter                                  The parameters are invalid in the request
  456    Phone number is empty                              The submitted phone number or country code is empty
  457    Phone number is illegal                            The submitted phone number or country code is incorrect
@@ -71,7 +81,7 @@
  462    Sending messages limited per minute                Sending text message already hit its time limit
  463    Sending messages limited everyday                  Sending text message to the phone number already hit its limit
  464    Sending text message hits limit                    Sending text message to the device already hit its limit
- 465    Sending text message hits limit                    Sending text message to the device already hit the app\'s limit
+ 465    Sending text message hits limit                    Sending text message to the device already hit the app's limit
  466    The verification code is empty                     The submitted verification code is empty
  467    Too frequently                                     Check validation code too frequently
  468    Invalid validation code                            Invalid validation code

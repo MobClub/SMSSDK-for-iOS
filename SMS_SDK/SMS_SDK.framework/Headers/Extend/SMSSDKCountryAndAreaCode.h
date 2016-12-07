@@ -16,16 +16,16 @@
 /**
  * @brief 国家中文名称
  */
-@property(nonatomic,copy) NSString* countryName;
+@property (nonatomic, copy) NSString *countryName;
 
 /**
  * @brief 国家码
  */
-@property(nonatomic,copy) NSString* areaCode;
+@property (nonatomic, copy) NSString *areaCode;
 
 /**
  * @brief 国家拼音名字
  */
-@property(nonatomic,copy) NSString* pinyinName;
+@property (nonatomic, copy) NSString *pinyinName;
 
 @end

@@ -10,12 +10,11 @@
 
 #import <SMS_SDK/Extend/SMSSDKResultHanderDef.h>
 #import <SMS_SDK/Extend/SMSSDKUserInfo.h>
-#import <MessageUI/MessageUI.h>
 
 /**
- * @brief 核心类（Core class）v2.0.8
+ * @brief 核心类（Core class）v2.0.9
  */
-@interface SMSSDK : NSObject <MFMessageComposeViewControllerDelegate>
+@interface SMSSDK : NSObject
 
 /**
  *
@@ -26,7 +25,7 @@
  *  @param   appKey          在Mob官网(http://mob.com/ )中注册的应用Key。(The appKey of mob Application. Log in to http://mob.com/ to register to be a Mob developer and create a application if you don't have one)
  *  @param   appSecret       在Mob官网(http://mob.com/ )中注册的应用秘钥。(The appSecret of mob Application. Log in to http://mob.com/ to register to be a Mob developer and create a application if you don't have one)
  */
-+(void)registerApp:(NSString*)appKey withSecret:(NSString*)appSecret;
++ (void) registerApp:(NSString*)appKey withSecret:(NSString*)appSecret;
 
 
 #pragma mark - 支持获取验证码和提交验证码 (get the verification code and commit verifacation code)
@@ -40,7 +39,7 @@
  *  @param customIdentifier  自定义短信模板标识 该标识需从官网http://www.mob.com上申请，审核通过后获得。(Custom model of SMS.  The identifier can get it  from http://www.mob.com  when the application had approved)
  *  @param result            请求结果回调(Results of the request)
  */
-+(void)getVerificationCodeByMethod:(SMSGetCodeMethod)method
++ (void) getVerificationCodeByMethod:(SMSGetCodeMethod)method
                        phoneNumber:(NSString *)phoneNumber
                               zone:(NSString *)zone
                   customIdentifier:(NSString *)customIdentifier
@@ -56,7 +55,7 @@
  * @param zone              区域号，不要加"+"号(Area code)
  * @param result            请求结果回调(Results of the request)
  */
-+(void)commitVerificationCode:(NSString *)code
++ (void) commitVerificationCode:(NSString *)code
                   phoneNumber:(NSString *)phoneNumber
                          zone:(NSString *)zone
                        result:(SMSCommitCodeResultHandler)result;
@@ -64,7 +63,6 @@
  * @from                    v2.0.1
  * @return                  返回SDK版本号(Return the version number of this SDK)
  */
-+(NSString *)SMSSDKVersion;
-
++ (NSString *) SMSSDKVersion;
 
 @end

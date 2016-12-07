@@ -7,11 +7,10 @@
 //
 
 #import "InvitationViewControllerEx.h"
-
+#import <MessageUI/MessageUI.h>
 #import <SMS_SDK/SMSSDK.h>
-#import <SMS_SDK/Extend/SMSSDK+DeprecatedMethods.h>
 
-@interface InvitationViewControllerEx ()
+@interface InvitationViewControllerEx ()<MFMessageComposeViewControllerDelegate>
 {
     NSString* _name;
     NSString* _phone;
@@ -19,6 +18,8 @@
     
     NSBundle *_bundle;
 }
+
+@property (nonatomic ,strong) UIWindow* window;
 
 @end
 
@@ -45,34 +46,118 @@
 -(void)sendInvite
 {
     //发送短信
-    NSLog(@"send invitational message");
-    if ([_phone2 length]>0)
+    if ([_phone2 length] > 0)
     {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"notice", @"Localizable", _bundle, nil)
-                                                      message:NSLocalizedStringFromTableInBundle(@"choosephonenumber", @"Localizable", _bundle, nil)
-                                                     delegate:self
-                                            cancelButtonTitle:_phone
-                                            otherButtonTitles:_phone2, nil];
+                                                        message:NSLocalizedStringFromTableInBundle(@"choosephonenumber", @"Localizable", _bundle, nil)
+                                                       delegate:self
+                                              cancelButtonTitle:_phone
+                                              otherButtonTitles:_phone2, nil];
         [alert show];
     }
     else
     {
-        [SMSSDK sendSMS:_phone?_phone:@"" AndMessage:NSLocalizedStringFromTableInBundle(@"smsmessage", @"Localizable", _bundle, nil)];
+        [self sendSMS:_phone ? _phone : @"" message:NSLocalizedStringFromTableInBundle(@"smsmessage", @"Localizable", _bundle, nil)];
     }
 }
 
+#pragma mark - UIAlertViewDelegate
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (1 == buttonIndex)
     {
-        [SMSSDK sendSMS:_phone?_phone:@"" AndMessage:NSLocalizedStringFromTableInBundle(@"smsmessage", @"Localizable", _bundle, nil)];
+        [self sendSMS:_phone2 ? _phone2 : _phone message:NSLocalizedStringFromTableInBundle(@"smsmessage", @"Localizable", _bundle, nil)];
         
     }
-    if (0 == buttonIndex)
+    else if (0 == buttonIndex)
     {
-        [SMSSDK sendSMS:_phone?_phone:@"" AndMessage:NSLocalizedStringFromTableInBundle(@"smsmessage", @"Localizable", _bundle, nil)];
+        [self sendSMS:_phone ? _phone : @"" message:NSLocalizedStringFromTableInBundle(@"smsmessage", @"Localizable", _bundle, nil)];
     }
 }
+
+
+- (void)sendSMS:(NSString *)phoneNumber message:(NSString *)message
+{
+    Class messageClass = (NSClassFromString(@"MFMessageComposeViewController"));
+    if (messageClass != nil)
+    {
+        if ([messageClass canSendText])
+        {
+            [self _displaySMSComposerSheet:phoneNumber AndMessage:message];
+        }
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"notice", @"Localizable", _bundle, nil)
+                                                            message:NSLocalizedStringFromTableInBundle(@"deviceFoundation", @"Localizable", _bundle, nil)
+                                                           delegate:nil
+                                                  cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"close", @"Localizable", _bundle, nil)
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedStringFromTableInBundle(@"notice", @"Localizable", _bundle, nil)
+                                                       message:NSLocalizedStringFromTableInBundle(@"versionNotice", @"Localizable", _bundle, nil)
+                                                      delegate:nil
+                                             cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"close", @"Localizable", _bundle, nil)
+                                             otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+
+#pragma mark - 短信代理相关方法
+/**
+ *  发送短信状态 代理函数
+ */
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller
+                 didFinishWithResult:(MessageComposeResult)result
+{
+    switch (result)
+    {
+        case MessageComposeResultCancelled:
+//            YJLog(@"发送取消");
+            break;
+        case MessageComposeResultSent:
+//            YJLog(@"发送成功");
+            break;
+        case MessageComposeResultFailed:
+//            YJLog(@"发送失败");
+            break;
+        default:
+//            YJLog(@"其它");
+            break;
+    }
+    [self.window.rootViewController dismissViewControllerAnimated:YES completion:^{
+        self.window.hidden=YES;
+    }];
+}
+
+
+/**
+ *  显示短信窗口和信息
+ */
+-(void)_displaySMSComposerSheet:(NSString*)tel AndMessage:(NSString*)msg
+{
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.windowLevel = UIWindowLevelNormal;
+    self.window.hidden = NO;
+    
+    UIViewController *rootViewController = [[UIViewController alloc] init];
+    self.window.rootViewController = rootViewController;
+    
+    MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
+    picker.messageComposeDelegate = self;
+    
+    NSArray *array = [NSArray arrayWithObject:tel];
+    picker.recipients = array;
+    picker.body = msg;
+    [self.window.rootViewController presentViewController:picker animated:YES completion:^{
+        
+    }];
+}
+
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -92,7 +177,7 @@
     
     cell.textLabel.text = _name;
     cell.imageView.image = [UIImage imageNamed:@"2.png"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@:%@ %@",NSLocalizedStringFromTableInBundle(@"phonecode", @"Localizable", _bundle, nil),_phone?_phone:@"",_phone2?_phone2:@""];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@:%@ %@",NSLocalizedStringFromTableInBundle(@"phonecode", @"Localizable", _bundle, nil),_phone ? _phone : @"", _phone2 ? _phone2 : @"2"];
     return cell;
 }
 

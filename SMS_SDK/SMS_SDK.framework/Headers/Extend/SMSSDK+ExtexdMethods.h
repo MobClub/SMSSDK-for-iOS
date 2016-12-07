@@ -16,7 +16,7 @@
  *
  * @param result 请求结果回调(Results of the request)
  */
-+(void)getCountryZone:(SMSGetZoneResultHandler)result;
++ (void) getCountryZone:(SMSGetZoneResultHandler)result;
 
 /**
  * @from          v1.1.1
@@ -25,7 +25,7 @@
  * @param user    用户信息(User information)
  * @param result  请求结果回调(Results of the request)
  */
-+(void)submitUserInfoHandler:(SMSSDKUserInfo*)userInfo
++ (void) submitUserInfoHandler:(SMSSDKUserInfo *)userInfo
                       result:(SMSSubmitUserInfoResultHandler)result;
 
 @end

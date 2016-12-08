@@ -11,4 +11,5 @@ s.frameworks          = "MessageUI", "AddressBook", "AddressBookUI", "JavaScript
 s.libraries           = "icucore", "z", "stdc++"
 s.vendored_frameworks = 'SMS_SDK/SMS_SDK.framework'
 s.resources           = 'SMSSDKUI.bundle','SMS_SDK/SMSSDK.bundle'
+s.pod_target_xcconfig = { 'SWIFT_VERSION' => '2.3' }
 end

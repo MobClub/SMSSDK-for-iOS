@@ -10,6 +10,7 @@ s.platform            = :ios
 s.ios.deployment_target = "6.0"
 s.frameworks          = "MessageUI", "AddressBook", "AddressBookUI", "JavaScriptCore"
 s.libraries           = "icucore", "z", "stdc++"
+s.default_subspecs    = 'SMSSDK'
 s.vendored_frameworks = 'SMS_SDK/SMS_SDK.framework'
 s.resources           = 'SMSSDKUI.bundle','SMS_SDK/SMSSDK.bundle'
 end

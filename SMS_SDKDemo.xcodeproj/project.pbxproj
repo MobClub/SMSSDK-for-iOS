@@ -12,13 +12,11 @@
 		7B094AAC1DDB1B2700034038 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B094AAB1DDB1B2700034038 /* SystemConfiguration.framework */; };
 		7B094AAE1DDB1B2F00034038 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B094AAD1DDB1B2F00034038 /* CoreTelephony.framework */; };
 		7B094AB01DDB1B3600034038 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B094AAF1DDB1B3600034038 /* AdSupport.framework */; };
+		7B4910E81C96A38D00EDD0D0 /* libSMSSDUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4910E21C96987600EDD0D0 /* libSMSSDUI.a */; };
 		7B80CB861C96BC9600B067C3 /* button5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B80CB851C96BC9600B067C3 /* button5.png */; };
 		7B80CB881C96D7E800B067C3 /* SMSSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B80CB871C96D7E800B067C3 /* SMSSDKUI.bundle */; };
+		7B9890EC1BC7A19A0072626D /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9890EB1BC7A19A0072626D /* libstdc++.dylib */; };
 		7BA875151DB8699D0065F97E /* MOBFoundationEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA875141DB8699D0065F97E /* MOBFoundationEx.framework */; };
-		7BB676FC1DF7E68700A749AD /* libSMSSDUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4910E21C96987600EDD0D0 /* libSMSSDUI.a */; };
-		7BB677081DF7E73700A749AD /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB677021DF7E6AE00A749AD /* libstdc++.tbd */; };
-		7BD3328A1DF7E78300D0549A /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD332891DF7E78300D0549A /* libicucore.tbd */; };
-		7BD3328C1DF7E79B00D0549A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD3328B1DF7E79B00D0549A /* libz.tbd */; };
 		7BF9FC411BC7A0AC007DDBC2 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF9FC401BC7A0AC007DDBC2 /* MOBFoundation.framework */; };
 		7BF9FC451BC7A2CA007DDBC2 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF9FC441BC7A2CA007DDBC2 /* JavaScriptCore.framework */; };
 		F318BF0D19B04E23008E03EB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318BF0C19B04E23008E03EB /* MessageUI.framework */; };
@@ -33,6 +31,8 @@
 		F3F34AD019AED773004CA430 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F34ACF19AED773004CA430 /* main.m */; };
 		F3F34AD419AED773004CA430 /* YJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F34AD319AED773004CA430 /* YJAppDelegate.m */; };
 		F3F34AD619AED773004CA430 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F34AD519AED773004CA430 /* Images.xcassets */; };
+		F3F34B1C19AEDD10004CA430 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F34B1B19AEDD10004CA430 /* libz.dylib */; };
+		F3F34B1E19AEDD1D004CA430 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F34B1D19AEDD1D004CA430 /* libicucore.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,16 +61,9 @@
 		7B4910DD1C96987600EDD0D0 /* SMSSDUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SMSSDUI.xcodeproj; path = SMSSDKUI/SMSSDUI.xcodeproj; sourceTree = "<group>"; };
 		7B80CB851C96BC9600B067C3 /* button5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button5.png; sourceTree = "<group>"; };
 		7B80CB871C96D7E800B067C3 /* SMSSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SMSSDKUI.bundle; sourceTree = "<group>"; };
+		7B9890EB1BC7A19A0072626D /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		7B9BE8C41DA8E11F00495F52 /* SMS_SDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SMS_SDKDemo.entitlements; sourceTree = "<group>"; };
 		7BA875141DB8699D0065F97E /* MOBFoundationEx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundationEx.framework; sourceTree = "<group>"; };
-		7BB676FA1DF7E4F400A749AD /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		7BB676FE1DF7E6AE00A749AD /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
-		7BB676FF1DF7E6AE00A749AD /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
-		7BB677001DF7E6AE00A749AD /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
-		7BB677011DF7E6AE00A749AD /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
-		7BB677021DF7E6AE00A749AD /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		7BD332891DF7E78300D0549A /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
-		7BD3328B1DF7E79B00D0549A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		7BF9FC401BC7A0AC007DDBC2 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		7BF9FC441BC7A2CA007DDBC2 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F318BF0C19B04E23008E03EB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -90,6 +83,9 @@
 		F3F34AD219AED773004CA430 /* YJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJAppDelegate.h; sourceTree = "<group>"; };
 		F3F34AD319AED773004CA430 /* YJAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJAppDelegate.m; sourceTree = "<group>"; };
 		F3F34AD519AED773004CA430 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F3F34ADC19AED773004CA430 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F3F34B1B19AEDD10004CA430 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F3F34B1D19AEDD1D004CA430 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		F3F51D0919D4FCE100FC5A04 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,19 +94,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD3328C1DF7E79B00D0549A /* libz.tbd in Frameworks */,
-				7BD3328A1DF7E78300D0549A /* libicucore.tbd in Frameworks */,
-				7BB677081DF7E73700A749AD /* libstdc++.tbd in Frameworks */,
-				7BB676FC1DF7E68700A749AD /* libSMSSDUI.a in Frameworks */,
 				7B094AB01DDB1B3600034038 /* AdSupport.framework in Frameworks */,
 				7B094AAE1DDB1B2F00034038 /* CoreTelephony.framework in Frameworks */,
 				7B094AAC1DDB1B2700034038 /* SystemConfiguration.framework in Frameworks */,
+				7B4910E81C96A38D00EDD0D0 /* libSMSSDUI.a in Frameworks */,
 				7BF9FC451BC7A2CA007DDBC2 /* JavaScriptCore.framework in Frameworks */,
+				7B9890EC1BC7A19A0072626D /* libstdc++.dylib in Frameworks */,
 				F318BF8719B07914008E03EB /* Security.framework in Frameworks */,
 				7BF9FC411BC7A0AC007DDBC2 /* MOBFoundation.framework in Frameworks */,
 				F318BF0D19B04E23008E03EB /* MessageUI.framework in Frameworks */,
 				F35B886F19B018D800C67215 /* AddressBook.framework in Frameworks */,
 				F35B887019B018D800C67215 /* AddressBookUI.framework in Frameworks */,
+				F3F34B1E19AEDD1D004CA430 /* libicucore.dylib in Frameworks */,
+				F3F34B1C19AEDD10004CA430 /* libz.dylib in Frameworks */,
 				F3F34AC619AED773004CA430 /* CoreGraphics.framework in Frameworks */,
 				36E671B01A80B6CD00CAA2F0 /* SMS_SDK.framework in Frameworks */,
 				F3F34AC819AED773004CA430 /* UIKit.framework in Frameworks */,
@@ -163,25 +159,21 @@
 		F3F34AC219AED773004CA430 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7BD3328B1DF7E79B00D0549A /* libz.tbd */,
-				7BD332891DF7E78300D0549A /* libicucore.tbd */,
-				7BB676FE1DF7E6AE00A749AD /* libc++.1.tbd */,
-				7BB676FF1DF7E6AE00A749AD /* libc++abi.tbd */,
-				7BB677001DF7E6AE00A749AD /* libstdc++.6.0.9.tbd */,
-				7BB677011DF7E6AE00A749AD /* libstdc++.6.tbd */,
-				7BB677021DF7E6AE00A749AD /* libstdc++.tbd */,
-				7BB676FA1DF7E4F400A749AD /* libc++.tbd */,
 				7B094AAF1DDB1B3600034038 /* AdSupport.framework */,
 				7B094AAD1DDB1B2F00034038 /* CoreTelephony.framework */,
 				7B094AAB1DDB1B2700034038 /* SystemConfiguration.framework */,
 				7BF9FC441BC7A2CA007DDBC2 /* JavaScriptCore.framework */,
+				7B9890EB1BC7A19A0072626D /* libstdc++.dylib */,
 				F318BF8619B07914008E03EB /* Security.framework */,
 				F318BF0C19B04E23008E03EB /* MessageUI.framework */,
 				F35B886D19B018D800C67215 /* AddressBook.framework */,
 				F35B886E19B018D800C67215 /* AddressBookUI.framework */,
+				F3F34B1D19AEDD1D004CA430 /* libicucore.dylib */,
+				F3F34B1B19AEDD10004CA430 /* libz.dylib */,
 				F3F34AC319AED773004CA430 /* Foundation.framework */,
 				F3F34AC519AED773004CA430 /* CoreGraphics.framework */,
 				F3F34AC719AED773004CA430 /* UIKit.framework */,
+				F3F34ADC19AED773004CA430 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -377,13 +369,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5fcbe628-3dd9-4344-af66-4663a156ea6d";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 armv7 armv7s i386";
 			};
 			name = Debug;
 		};
@@ -417,14 +407,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5fcbe628-3dd9-4344-af66-4663a156ea6d";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "arm64 armv7 armv7s i386";
 			};
 			name = Release;
 		};
@@ -447,14 +434,11 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SMS_SDKDemo/SMS_SDKDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.SMSSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5fcbe628-3dd9-4344-af66-4663a156ea6d";
 				PROVISIONING_PROFILE_SPECIFIER = SMSSDK;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -478,14 +462,11 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SMS_SDKDemo/SMS_SDKDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.SMSSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5fcbe628-3dd9-4344-af66-4663a156ea6d";
 				PROVISIONING_PROFILE_SPECIFIER = SMSSDK;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

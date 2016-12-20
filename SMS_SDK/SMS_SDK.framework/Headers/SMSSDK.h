@@ -12,7 +12,7 @@
 #import <SMS_SDK/Extend/SMSSDKUserInfo.h>
 
 /**
- * @brief 核心类（Core class）v2.0.9
+ * @brief 核心类（Core class）v2.1.0
  */
 @interface SMSSDK : NSObject
 
@@ -40,10 +40,10 @@
  *  @param result            请求结果回调(Results of the request)
  */
 + (void) getVerificationCodeByMethod:(SMSGetCodeMethod)method
-                       phoneNumber:(NSString *)phoneNumber
-                              zone:(NSString *)zone
-                  customIdentifier:(NSString *)customIdentifier
-                            result:(SMSGetCodeResultHandler)result;
+                         phoneNumber:(NSString *)phoneNumber
+                                zone:(NSString *)zone
+                    customIdentifier:(NSString *)customIdentifier
+                              result:(SMSGetCodeResultHandler)result;
 
 
 /**
@@ -56,9 +56,9 @@
  * @param result            请求结果回调(Results of the request)
  */
 + (void) commitVerificationCode:(NSString *)code
-                  phoneNumber:(NSString *)phoneNumber
-                         zone:(NSString *)zone
-                       result:(SMSCommitCodeResultHandler)result;
+                    phoneNumber:(NSString *)phoneNumber
+                           zone:(NSString *)zone
+                         result:(SMSCommitCodeResultHandler)result;
 /**
  * @from                    v2.0.1
  * @return                  返回SDK版本号(Return the version number of this SDK)

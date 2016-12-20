@@ -11,4 +11,6 @@ s.frameworks          = "MessageUI", "AddressBook", "AddressBookUI", "JavaScript
 s.libraries           = "icucore", "z", "stdc++"
 s.vendored_frameworks = 'SMS_SDK/SMS_SDK.framework'
 s.resources           = 'SMSSDKUI.bundle','SMS_SDK/SMSSDK.bundle'
+#依赖Mob公共库
+s.dependency 'MOBFoundation'
 end

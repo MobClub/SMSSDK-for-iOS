@@ -67,7 +67,7 @@ static YJLocalCountryData *localCountryData = nil;
             
             if ([areaCode isEqualToString:@"86"]) {
                 
-                codeDic = [NSDictionary dictionaryWithObjectsAndKeys:areaCode,@"zone",@"^0{0,1}(13[0-9]|15[3-9]|15[0-2]|18[0-9]|17[5-8]|14[0-9]|170|171)[0-9]{8}$",@"rule", nil];
+                codeDic = [NSDictionary dictionaryWithObjectsAndKeys:areaCode,@"zone",@"^1(3|5|7|8|4)\\d{9}",@"rule", nil];
             }
             else
             {

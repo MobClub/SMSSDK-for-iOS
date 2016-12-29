@@ -12,7 +12,7 @@
 #import <SMS_SDK/Extend/SMSSDKUserInfo.h>
 
 /**
- * @brief 核心类（Core class）v2.1.0
+ * @brief 核心类（Core class）v2.1.1
  */
 @interface SMSSDK : NSObject
 

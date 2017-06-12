@@ -1,0 +1,29 @@
+-x
+objective-c
+-arch
+armv7
+-std=gnu99
+-fobjc-arc
+-fmodules
+-gmodules
+-fmodules-cache-path=/Users/youzu/Library/Developer/Xcode/DerivedData/ModuleCache
+-fbuild-session-file=/Users/youzu/Library/Developer/Xcode/DerivedData/ModuleCache/Session.modulevalidation
+-fpascal-strings
+-Os
+-DNS_BLOCK_ASSERTIONS=1
+-isysroot
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk
+-miphoneos-version-min=6.0
+-g
+-fvisibility=hidden
+-iquote
+-iquote
+-I/Users/youzu/Desktop/SMSSDK iOS 3.0.0 （文档、新旧版ipa、demo和SDK）/MobProducts/Sample/SMSSDKDemo/Build/Products/Release-iphoneos/include
+-F/Users/youzu/Desktop/SMSSDK iOS 3.0.0 （文档、新旧版ipa、demo和SDK）/MobProducts/Sample/SMSSDKDemo/Build/Products/Release-iphoneos
+-F../../SDK
+-F../../SDK/Required
+-F../../SDK/SMSSDK
+arm-apple-darwin16.6.0
+"4.2.1 Compatible Apple LLVM 8.1.0 (clang-802.0.42)"
+SDK_PRODUCT_BUILD_VERSION=14E8301
+14E8301

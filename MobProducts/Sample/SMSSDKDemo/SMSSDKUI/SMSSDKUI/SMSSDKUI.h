@@ -2,35 +2,21 @@
 //  SMSSDKUI.h
 //  SMSSDKUI
 //
-//  Created by 李愿生 on 15/12/30.
-//  Copyright © 2015年 zhangtaokeji. All rights reserved.
+//  Created by youzu_Max on 2017/5/25.
+//  Copyright © 2017年 youzu. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <SMS_SDK/SMSSDKUserInfo.h>
-#import <SMS_SDK/SMSSDKResultHanderDef.h>
-#import "SMSUIVerificationCodeViewController.h"
-#import "SMSUIContactsFriendsViewController.h"
+#ifndef MOB_SMSSDKUI_h
+#define MOB_SMSSDKUI_h
 
+#import "SMSSDKUIGetCodeViewController.h"
+#import "SMSSDKUICommitCodeViewController.h"
 
-@interface SMSSDKUI : NSObject
+#import "SMSSDKUIContactFriendsViewController.h"
 
-/**
- *  显示操作界面
- *  @param whichMethod 获取验证码方法 (The method of getting verificationCode )
- *  @param result      展示操作界面结果回调(Results of the showView )
- */
+#import "SMSSDKUIZonesViewController.h"
+#import "SMSSDKUIInviteViewController.h"
 
-+ (SMSUIVerificationCodeViewController *)showVerificationCodeViewWithMethod:(SMSGetCodeMethod)whichMethod result:(SMSUIVerificationCodeResultHandler)result;
+#import "SMSSDKUIProcessHUD.h"
 
-
-
-/**
- * @brief 向服务端请求获取通讯录好友信息(Get the data of address book which save in the server)
- * @param result 请求结果回调(Results of the request)
- */
-
-+ (SMSUIContactsFriendsViewController *)showGetContactsFriendsViewWithNewFriends:(NSMutableArray *)newFriends newFriendClock:(SMSShowNewFriendsCountBlock)newFriendsCountBlock  result:(SMSUIOnCloseResultHandler)result;
-
-
-@end
+#endif

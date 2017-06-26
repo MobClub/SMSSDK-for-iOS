@@ -1,5 +1,5 @@
 //
-//  SMSSDK+AddressBookMethods.h
+//  SMSSDK+ContactFriends.h
 //  SMS_SDK
 //
 //  Created by 李愿生 on 15/8/25.

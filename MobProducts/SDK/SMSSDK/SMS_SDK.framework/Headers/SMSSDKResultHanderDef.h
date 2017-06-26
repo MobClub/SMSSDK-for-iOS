@@ -9,16 +9,7 @@
 #import <Foundation/Foundation.h>
 @class SMSSDKUserInfo;
 
-/**
- * @brief 返回状态。
- */
-enum SMSResponseState
-{
-    SMSResponseStateSuccess = 0,
-    SMSResponseStateFail = 1,
-    SMSResponseStateCancel = 2
-};
-
+// 短信发送方式
 typedef enum SMSGetCodeMethod
 {
     SMSGetCodeMethodSMS = 0,  //文本短信方式

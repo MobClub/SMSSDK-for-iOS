@@ -1,0 +1,16 @@
+//
+//  SMSSDKUIGetCodeViewController.h
+//  SMSSDKUI
+//
+//  Created by youzu_Max on 2017/5/31.
+//  Copyright © 2017年 youzu. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface SMSSDKUIGetCodeViewController : UIViewController
+
+- (instancetype)initWithMethod:(SMSGetCodeMethod)methodType;
+
+@end
+

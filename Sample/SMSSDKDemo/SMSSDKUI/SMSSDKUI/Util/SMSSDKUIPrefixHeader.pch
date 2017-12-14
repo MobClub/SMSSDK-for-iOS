@@ -1,0 +1,32 @@
+//
+//  SMSSDKUIPrefixHeader.pch
+//  SMSSDKUI
+//
+//  Created by youzu_Max on 2017/5/31.
+//  Copyright © 2017年 youzu. All rights reserved.
+//
+
+#ifndef SMSSDKUIPrefixHeader_pch
+#define SMSSDKUIPrefixHeader_pch
+
+#import <SMS_SDK/SMSSDK.h>
+
+#define SMSSDKUIBundle [[NSBundle alloc] initWithPath:[[NSBundle mainBundle] pathForResource:@"SMSSDKUI" ofType:@"bundle"]]
+
+#define SMSLocalized(_S_) NSLocalizedStringFromTableInBundle((_S_), @"Localizable", SMSSDKUIBundle, nil)
+
+#define StatusBarHeight [UIApplication sharedApplication].statusBarFrame.size.height
+
+#ifdef DEBUG
+
+#define SMSUILog(s, ...) NSLog(@"\n\n---------------------------------------------------\n %s[line:%d] \n %@ \n---------------------------------------------------\n", __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
+
+#else
+
+#define SMSUILog(s, ...)
+
+#endif
+
+#define SMSSDKAlert(_S_, ...)     [[[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"notice", @"Localizable", SMSSDKUIBundle, nil) message:[NSString stringWithFormat:(_S_), ##__VA_ARGS__] delegate:nil cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", SMSSDKUIBundle, nil) otherButtonTitles:nil] show]
+
+#endif /* SMSSDKUIPrefixHeader_pch */

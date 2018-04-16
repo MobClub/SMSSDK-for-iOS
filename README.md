@@ -1,5 +1,18 @@
-# SMSSDK-for-iOS
+# SMSSDK-For-iOS
 
+### [SMSSDK](http://sms.mob.com/) is the most popular social SDK for apps and mobile games ! We've already supported over 1000 country or zone in global world  until now.[中文官网](http://sms.mob.com/)
+
+**Current SMSSDK version**
+
+- iOS v3.1.2
+
+**中文集成文档**
+
+- [iOS](http://wiki.mob.com/%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90-11/)
+
+- - - - -
+
+## Usage
 SMSSDK is the most popular social SDK for apps and mobile games ! We've already supported over 1000 country or zone in global world  until now. And also it’s easily to use in your app.now, I will tell you the steps liking this:
 
 If you use cocoaPods ,now ,it's easily to import SMSSDK liking this:
@@ -86,3 +99,5 @@ else
 ```
 
 ## If you want to see the chinese document,please [click here](http://wiki.mob.com/sdk-sms-ios-3-0/) !
+
+

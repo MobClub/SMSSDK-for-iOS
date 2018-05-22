@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import <SMS_SDK/SMSSDK.h>
 #import <SMS_SDK/SMSSDK+ContactFriends.h>
+#import <MOBFoundation/MOBFoundation.h>
 
 @interface SMSSDKDemoTests : XCTestCase
 
@@ -31,20 +32,23 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    
+    NSLog(@"---%@ version ---%@",[MobSDK version],[SMSSDK sdkVersion]);
 }
 
 #pragma mark - 发送验证码
 
-// 正常发送短信验证码
+// 正常发送短信验证码 18588558175
 - (void)testSendCodeText
 {
     XCTestExpectation *expectation = [self expectationWithDescription:@"testSendCodeText"];
     
-    [SMSSDK getVerificationCodeByMethod:0 phoneNumber:@"18021058213" zone:@"86" result:^(NSError *error) {
+    [SMSSDK getVerificationCodeByMethod:0 phoneNumber:@"18588558175" zone:@"86" result:^(NSError *error) {
         
         SMSLog(@"%@",error);
         
-        XCTAssert(!error);
+       XCTAssert(!error);
         
         [expectation fulfill];
     }];
@@ -59,11 +63,11 @@
 {
     XCTestExpectation *expectation = [self expectationWithDescription:@"testSendCodeText"];
     
-    [SMSSDK getVerificationCodeByMethod:0 phoneNumber:@"18021058213" zone:@"86" template:@"1319972" result:^(NSError *error) {
+    [SMSSDK getVerificationCodeByMethod:0 phoneNumber:@"18588558175" zone:@"86" template:@"1319972" result:^(NSError *error) {
         
         SMSLog(@"%@",error);
         
-        XCTAssert(!error);
+         XCTAssert(!error);
         
         [expectation fulfill];
     }];
@@ -79,11 +83,11 @@
 {
     XCTestExpectation *expectation = [self expectationWithDescription:@"testSendCodeVoice"];
     
-    [SMSSDK getVerificationCodeByMethod:1 phoneNumber:@"18021058213" zone:@"86" result:^(NSError *error) {
+    [SMSSDK getVerificationCodeByMethod:1 phoneNumber:@"18588558175" zone:@"86" result:^(NSError *error) {
         
         SMSLog(@"%@",error);
         
-        XCTAssert(!error);
+          XCTAssert(!error);
         
         [expectation fulfill];
     }];
@@ -98,7 +102,7 @@
 {
     XCTestExpectation *expectation = [self expectationWithDescription:@"testSendCodeNSNumberTypePhone"];
     
-    [SMSSDK getVerificationCodeByMethod:0 phoneNumber:@18021058213 zone:@86 result:^(NSError *error) {
+    [SMSSDK getVerificationCodeByMethod:0 phoneNumber:@18588558175 zone:@86 result:^(NSError *error) {
         
         SMSLog(@"%@",error);
         
@@ -117,12 +121,10 @@
 {
     XCTestExpectation *expectation = [self expectationWithDescription:@"testSendCodeZoneRandom"];
     
-    [SMSSDK getVerificationCodeByMethod:0 phoneNumber:@"18021058213" zone:@"+1" result:^(NSError *error) {
+    [SMSSDK getVerificationCodeByMethod:0 phoneNumber:@"18588558175" zone:@"+86" result:^(NSError *error) {
         
         SMSLog(@"%@",error);
-        
         XCTAssert(!error);
-        
         [expectation fulfill];
     }];
     
@@ -136,9 +138,9 @@
 {
     XCTestExpectation *expectation = [self expectationWithDescription:@"testSendCodeNoBlock"];
     
-    [SMSSDK getVerificationCodeByMethod:0 phoneNumber:@"18021058213" zone:@"+86" result:nil];
+    [SMSSDK getVerificationCodeByMethod:0 phoneNumber:@"18588558175" zone:@"+86" result:nil];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(9 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [expectation fulfill];
     });
     
@@ -155,7 +157,7 @@
     __block NSInteger flag = 0;
     for (NSInteger i=0; i<100; i++)
     {
-        [SMSSDK getVerificationCodeByMethod:0 phoneNumber:@"18021058213" zone:@"86" result:^(NSError *error) {
+        [SMSSDK getVerificationCodeByMethod:0 phoneNumber:@"18588558175" zone:@"86" result:^(NSError *error) {
             
             SMSLog(@"%@",error);
             flag++;
@@ -187,9 +189,9 @@
     
     XCTestExpectation *expectation = [self expectationWithDescription:@"testCommitCode"];
     
-    NSString *code = @"5867";
+    NSString *code = @"5141";
     
-    [SMSSDK commitVerificationCode:code phoneNumber:@"18021058213" zone:@"86" result:^(NSError *error) {
+    [SMSSDK commitVerificationCode:code phoneNumber:@"18588558175" zone:@"86" result:^(NSError *error) {
         SMSLog(@"%@",error);
         XCTAssert(!error);
         [expectation fulfill];
@@ -206,9 +208,9 @@
     
     XCTestExpectation *expectation = [self expectationWithDescription:@"testCommitCodeNSNumber"];
     
-    NSString *code = @2074;
+    NSString *code = @1121;
     
-    [SMSSDK commitVerificationCode:code phoneNumber:@18021058213 zone:@86 result:^(NSError *error) {
+    [SMSSDK commitVerificationCode:code phoneNumber:@18588558175 zone:@86 result:^(NSError *error) {
         SMSLog(@"%@",error);
         XCTAssert(!error);
         [expectation fulfill];
@@ -226,12 +228,12 @@
     
     XCTestExpectation *expectation = [self expectationWithDescription:@"testCommitCodeNoBlock"];
     
-    NSString *code = @"5559";
+    NSString *code = @"5818";
     
-    [SMSSDK commitVerificationCode:code phoneNumber:@"18021058213" zone:@"86" result:nil];
+    [SMSSDK commitVerificationCode:code phoneNumber:@"18588558175" zone:@"86" result:nil];
     
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(9 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [expectation fulfill];
     });
     
@@ -247,13 +249,13 @@
     
     //    [self testSendCodeText];
     
-    NSString *code = @"7960";
+    NSString *code = @"5141";
     
     __block NSInteger flag = 0;
     
     for (NSInteger i=0; i<100; i++)
     {
-        [SMSSDK commitVerificationCode:code phoneNumber:@"18021058213" zone:@"86" result:^(NSError *error) {
+        [SMSSDK commitVerificationCode:code phoneNumber:@"18588558175" zone:@"86" result:^(NSError *error) {
             
             SMSLog(@"%@",error);
             
@@ -297,7 +299,7 @@
     
     [SMSSDK getCountryZone:nil];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(9 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [expectation fulfill];
     });
     
@@ -344,7 +346,7 @@
 {
     XCTestExpectation *expectation = [self expectationWithDescription:@"testSubmitUser"];
     SMSSDKUserInfo *user = [[SMSSDKUserInfo alloc] init];
-    user.phone = @"18021058213";
+    user.phone = @"18588558175";
     user.zone = @"86";
     user.avatar = @"http://b.hiphotos.baidu.com/baike/w%3D268%3Bg%3D0/sign=92e00c9b8f5494ee8722081f15ce87c3/29381f30e924b899c83ff41c6d061d950a7bf697.jpg";
     [SMSSDK submitUserInfo:user result:^(NSError *error) {
@@ -469,7 +471,7 @@
     
     [SMSSDK submitUserInfo:user result:nil];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(9 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [expectation fulfill];
     });
     
@@ -534,7 +536,7 @@
     
     [SMSSDK getAllContactFriends:nil];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(9 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [expectation fulfill];
     });
     

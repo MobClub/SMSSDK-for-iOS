@@ -15,6 +15,7 @@ typedef NS_ENUM(NSUInteger, SMSGetCodeMethod)
     SMSGetCodeMethodVoice = 1 //语音方式
 };
 
+
 /**
  *  @brief 验证码获取回调
  *  @param error 当error为空时表示成功

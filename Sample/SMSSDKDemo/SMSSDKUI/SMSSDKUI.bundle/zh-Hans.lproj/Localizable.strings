@@ -8,21 +8,26 @@
 "smssdk" = "短信SDK";
 "welcome"="点击屏幕继续...";
 "RegisterBySMS"="短信验证码注册";
+"RegisterByPhoneNumber"="手机号验证";
 "addressbookfriends"="通讯录好友";
 "getUserinfo" = "获取用户数据";
 "submitUserInfo" = "提交用户资料";
+"myInfo" = "我的资料";
 "register"="注册";
 "RegisterByVoiceCall" = "语音验证码注册";
 "back"="返回";
-"labelnotice"="请确认你的国家或地区并输入手机号";
+"labelnotice"="请输入你的手机号";
 "telfield"="请填写手机号码";
+"nicknamefield"="请填写你的昵称";
+"submitinfo"="提交资料";
 "nextbtn"="下一步";
-"countrylable"="国家和地区";
+"countrylable"="国家/地区";
 "countrychoose"="选择国家或地区";
 
 "notice"="提示";
 "pleaseSettingContractKey" = "请在info.plist里面配置请求访问通讯录的key：NSContactsUsageDescription";
-"errorphonenumber"="手机号码非法，请重新填写";
+"errorphonenumber"="手机号码错误";
+"errorphonenumberenter"="你输入的是一个无效的手机号码";
 "sure"="好";
 "alertContactAuth"="未开启通讯录访问权限,现在设置？";
 "goset"="去设置";
@@ -40,12 +45,13 @@
 "codetoooftenmsg"="客户端请求发送短信验证过于频繁";
 "Code" = "验证码";
 "verifycode"="请输入验证码";
-"verifylabel"="我们已发送验证码到这个号码";
+"verifylabel"="短信验证码已发送，请填写验证码";
 "timelabel"="接受短信大约需要60秒";
 "repeatsms"="收不到短信验证码？";
-"submit"="提交";
+"submit"="提交认证";
 "sendingin"="正在发送中...";
 "timelablemsg"="接收验证码大约需要";
+"resendmsg"="重新发送";
 "second"=" 秒";
 
 "verifycoderightmsg"="验证码正确";
@@ -62,8 +68,8 @@
 "doesnotsupportarea"="暂时不支持该地区";
 
 "addfriends"="添加";
-"invitefriends"="邀请";
-"hasjoined"="已加入的用户";
+"invite"="邀请";
+"toaddusers"="待添加好友";
 "toinvitefriends"="待邀请的好友";
 "phonecontacts"="手机联系人";
 
@@ -71,11 +77,13 @@
 "sendingRequest"="正在请求验证码...";
 "requestSuccess"="请求成功!";
 "commitingCode"="正在验证...";
-"commitSuccess"="验证成功 ！";
+"commitSuccess"="认证成功 ！";
 "authorizedcontact"="您未授权访问联系人，请在【设置>隐私>通讯录】中授权访问，就可以看到通讯录好友了哦";
 
 "addfriendstitle"="添加好友";
 "addfriendsmsg"="已经发送添加好友信息,请耐心等待好友回复";
+"fillyourinfo"="请填写您的资料";
+"nickname"="昵称";
 
 "sendinvite"="发送邀请";
 "notjoined"="还未加入";
@@ -85,10 +93,22 @@
 "deviceFoundation" = "该设备没有短信功能";
 "close" = "关闭";
 "versionNotice" = "iOS版本过低,iOS4.0以上才支持程序内发送短信";
-"voiceCallMsgLabel" = "您也可以选择电话收听语音验证码：";
+"voiceCallMsgLabel" = "请尝试语音验证码";
+"voiceCall" = "语音验证码";
+
+
 "try voice call" = "收听语音验证码";
 
-"verificationByVoiceCallConfirm" = "确定后将致电您的手机号，语音播报验证码。如不希望被来电打扰请使用短信验证码。";
+"verificationByVoiceCallConfirm" = "我们将以电话的方式告诉你验证码,请注意接听";
 
 
+"empty" = "文本不能为空";
+"bindinfo"="绑定资料";
+"rebind"="重新绑定";
+"avatarchoose"="点击选择头像";
+"addressbook"="通讯录";
+"finished"="完成";
+"invitefriends"="邀请好友";
+"nonetwork"="网络不给力,请稍后重试";
+"phoneverifyrightmsg"="手机号验证成功";
 

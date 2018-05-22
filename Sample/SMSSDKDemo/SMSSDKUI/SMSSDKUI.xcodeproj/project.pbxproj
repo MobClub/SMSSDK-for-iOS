@@ -22,6 +22,17 @@
 		449540791EEAA7B40075BEA4 /* SMSSDKUIInviteViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 449540621EEAA4750075BEA4 /* SMSSDKUIInviteViewController.h */; };
 		4495407A1EEAA7B40075BEA4 /* SMSSDKUIZonesViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 449540641EEAA4750075BEA4 /* SMSSDKUIZonesViewController.h */; };
 		4495407B1EEAA7B40075BEA4 /* SMSSDKUIProcessHUD.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4495406B1EEAA4750075BEA4 /* SMSSDKUIProcessHUD.h */; };
+		8D168C392050E1D200AB965B /* SMSUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D168C382050E1D200AB965B /* SMSUserManager.m */; };
+		8D168C3C2050F32200AB965B /* SMSSDKAvatarSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D168C3B2050F32200AB965B /* SMSSDKAvatarSelectViewController.m */; };
+		8D168C3F2050F3DE00AB965B /* SMSSDKUISelectAvatarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D168C3E2050F3DE00AB965B /* SMSSDKUISelectAvatarCell.m */; };
+		8D168C432050F49000AB965B /* SMSSDKUIAvatarFLowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D168C422050F49000AB965B /* SMSSDKUIAvatarFLowLayout.m */; };
+		8D4C7D67204FEAC100023509 /* SMSSDKUIBindUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C7D66204FEAC100023509 /* SMSSDKUIBindUserInfoViewController.m */; };
+		8D73E54220576C4300B656E3 /* SMSSDKUIBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D73E54120576C4300B656E3 /* SMSSDKUIBaseViewController.m */; };
+		8D73E54420576D4200B656E3 /* SMSSDKUIBaseViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D73E54020576C4200B656E3 /* SMSSDKUIBaseViewController.h */; };
+		8D95A1AE2056220F005B3067 /* SMSSDKUIZonesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A1AD2056220F005B3067 /* SMSSDKUIZonesCell.m */; };
+		8D95A1B120567BFF005B3067 /* SMSSDKUIZonesResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A1B020567BFF005B3067 /* SMSSDKUIZonesResultViewController.m */; };
+		8D95A1B420568FAC005B3067 /* SMSSDKUIFriendsResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A1B320568FAC005B3067 /* SMSSDKUIFriendsResultViewController.m */; };
+		8DF35E2E205BC8520042ACE3 /* SMSDefines.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DF35E2D205BC79F0042ACE3 /* SMSDefines.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +42,8 @@
 			dstPath = include;
 			dstSubfolderSpec = 16;
 			files = (
+				8DF35E2E205BC8520042ACE3 /* SMSDefines.h in CopyFiles */,
+				8D73E54420576D4200B656E3 /* SMSSDKUIBaseViewController.h in CopyFiles */,
 				449540761EEAA7B40075BEA4 /* SMSSDKUICommitCodeViewController.h in CopyFiles */,
 				449540771EEAA7B40075BEA4 /* SMSSDKUIContactFriendsViewController.h in CopyFiles */,
 				449540781EEAA7B40075BEA4 /* SMSSDKUIGetCodeViewController.h in CopyFiles */,
@@ -63,6 +76,27 @@
 		4495406A1EEAA4750075BEA4 /* SMSSDKUIPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSSDKUIPrefixHeader.pch; sourceTree = "<group>"; };
 		4495406B1EEAA4750075BEA4 /* SMSSDKUIProcessHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSSDKUIProcessHUD.h; sourceTree = "<group>"; };
 		4495406C1EEAA4750075BEA4 /* SMSSDKUIProcessHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSSDKUIProcessHUD.m; sourceTree = "<group>"; };
+		8D168C372050E1D200AB965B /* SMSGlobalManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSGlobalManager.h; sourceTree = "<group>"; };
+		8D168C382050E1D200AB965B /* SMSUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSUserManager.m; sourceTree = "<group>"; };
+		8D168C3A2050F32200AB965B /* SMSSDKAvatarSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSSDKAvatarSelectViewController.h; sourceTree = "<group>"; };
+		8D168C3B2050F32200AB965B /* SMSSDKAvatarSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSSDKAvatarSelectViewController.m; sourceTree = "<group>"; };
+		8D168C3D2050F3DE00AB965B /* SMSSDKUISelectAvatarCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSSDKUISelectAvatarCell.h; sourceTree = "<group>"; };
+		8D168C3E2050F3DE00AB965B /* SMSSDKUISelectAvatarCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSSDKUISelectAvatarCell.m; sourceTree = "<group>"; };
+		8D168C412050F49000AB965B /* SMSSDKUIAvatarFLowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSSDKUIAvatarFLowLayout.h; sourceTree = "<group>"; };
+		8D168C422050F49000AB965B /* SMSSDKUIAvatarFLowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSSDKUIAvatarFLowLayout.m; sourceTree = "<group>"; };
+		8D4C7D65204FEAC100023509 /* SMSSDKUIBindUserInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSSDKUIBindUserInfoViewController.h; sourceTree = "<group>"; };
+		8D4C7D66204FEAC100023509 /* SMSSDKUIBindUserInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSSDKUIBindUserInfoViewController.m; sourceTree = "<group>"; };
+		8D55ECEC208845C60096FCE7 /* SMSSDKUIGetCodeViewController_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSSDKUIGetCodeViewController_Private.h; sourceTree = "<group>"; };
+		8D55ECED208846070096FCE7 /* SMSSDKUICommitCodeViewController_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSSDKUICommitCodeViewController_Private.h; sourceTree = "<group>"; };
+		8D73E54020576C4200B656E3 /* SMSSDKUIBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSSDKUIBaseViewController.h; sourceTree = "<group>"; };
+		8D73E54120576C4300B656E3 /* SMSSDKUIBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSSDKUIBaseViewController.m; sourceTree = "<group>"; };
+		8D95A1AC2056220F005B3067 /* SMSSDKUIZonesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSSDKUIZonesCell.h; sourceTree = "<group>"; };
+		8D95A1AD2056220F005B3067 /* SMSSDKUIZonesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSSDKUIZonesCell.m; sourceTree = "<group>"; };
+		8D95A1AF20567BFF005B3067 /* SMSSDKUIZonesResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSSDKUIZonesResultViewController.h; sourceTree = "<group>"; };
+		8D95A1B020567BFF005B3067 /* SMSSDKUIZonesResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSSDKUIZonesResultViewController.m; sourceTree = "<group>"; };
+		8D95A1B220568FAC005B3067 /* SMSSDKUIFriendsResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSSDKUIFriendsResultViewController.h; sourceTree = "<group>"; };
+		8D95A1B320568FAC005B3067 /* SMSSDKUIFriendsResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSSDKUIFriendsResultViewController.m; sourceTree = "<group>"; };
+		8DF35E2D205BC79F0042ACE3 /* SMSDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +129,14 @@
 		448BEA2B1ED6D4170081B15A /* SMSSDKUI */ = {
 			isa = PBXGroup;
 			children = (
+				8D168C402050F47A00AB965B /* Layout */,
 				449540661EEAA4750075BEA4 /* SMSSDKUI.h */,
 				4495405B1EEAA4750075BEA4 /* Controllers */,
 				449540581EEAA4750075BEA4 /* Cell */,
 				449540671EEAA4750075BEA4 /* Util */,
+				8D168C372050E1D200AB965B /* SMSGlobalManager.h */,
+				8D168C382050E1D200AB965B /* SMSUserManager.m */,
+				8DF35E2D205BC79F0042ACE3 /* SMSDefines.h */,
 			);
 			path = SMSSDKUI;
 			sourceTree = "<group>";
@@ -108,6 +146,10 @@
 			children = (
 				449540591EEAA4750075BEA4 /* SMSSDKUIContactTableViewCell.h */,
 				4495405A1EEAA4750075BEA4 /* SMSSDKUIContactTableViewCell.m */,
+				8D168C3D2050F3DE00AB965B /* SMSSDKUISelectAvatarCell.h */,
+				8D168C3E2050F3DE00AB965B /* SMSSDKUISelectAvatarCell.m */,
+				8D95A1AC2056220F005B3067 /* SMSSDKUIZonesCell.h */,
+				8D95A1AD2056220F005B3067 /* SMSSDKUIZonesCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -115,6 +157,8 @@
 		4495405B1EEAA4750075BEA4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8D73E54020576C4200B656E3 /* SMSSDKUIBaseViewController.h */,
+				8D73E54120576C4300B656E3 /* SMSSDKUIBaseViewController.m */,
 				449540601EEAA4750075BEA4 /* SMSSDKUIGetCodeViewController.h */,
 				449540611EEAA4750075BEA4 /* SMSSDKUIGetCodeViewController.m */,
 				4495405C1EEAA4750075BEA4 /* SMSSDKUICommitCodeViewController.h */,
@@ -125,6 +169,16 @@
 				449540631EEAA4750075BEA4 /* SMSSDKUIInviteViewController.m */,
 				449540641EEAA4750075BEA4 /* SMSSDKUIZonesViewController.h */,
 				449540651EEAA4750075BEA4 /* SMSSDKUIZonesViewController.m */,
+				8D4C7D65204FEAC100023509 /* SMSSDKUIBindUserInfoViewController.h */,
+				8D4C7D66204FEAC100023509 /* SMSSDKUIBindUserInfoViewController.m */,
+				8D168C3A2050F32200AB965B /* SMSSDKAvatarSelectViewController.h */,
+				8D168C3B2050F32200AB965B /* SMSSDKAvatarSelectViewController.m */,
+				8D95A1AF20567BFF005B3067 /* SMSSDKUIZonesResultViewController.h */,
+				8D95A1B020567BFF005B3067 /* SMSSDKUIZonesResultViewController.m */,
+				8D95A1B220568FAC005B3067 /* SMSSDKUIFriendsResultViewController.h */,
+				8D95A1B320568FAC005B3067 /* SMSSDKUIFriendsResultViewController.m */,
+				8D55ECEC208845C60096FCE7 /* SMSSDKUIGetCodeViewController_Private.h */,
+				8D55ECED208846070096FCE7 /* SMSSDKUICommitCodeViewController_Private.h */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -139,6 +193,15 @@
 				4495406A1EEAA4750075BEA4 /* SMSSDKUIPrefixHeader.pch */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		8D168C402050F47A00AB965B /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				8D168C412050F49000AB965B /* SMSSDKUIAvatarFLowLayout.h */,
+				8D168C422050F49000AB965B /* SMSSDKUIAvatarFLowLayout.m */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,13 +262,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D95A1AE2056220F005B3067 /* SMSSDKUIZonesCell.m in Sources */,
 				449540731EEAA4750075BEA4 /* SMSSDKUIHelper.m in Sources */,
+				8D4C7D67204FEAC100023509 /* SMSSDKUIBindUserInfoViewController.m in Sources */,
 				4495406D1EEAA4750075BEA4 /* SMSSDKUIContactTableViewCell.m in Sources */,
 				449540741EEAA4750075BEA4 /* SMSSDKUIProcessHUD.m in Sources */,
 				449540721EEAA4750075BEA4 /* SMSSDKUIZonesViewController.m in Sources */,
+				8D168C432050F49000AB965B /* SMSSDKUIAvatarFLowLayout.m in Sources */,
+				8D95A1B120567BFF005B3067 /* SMSSDKUIZonesResultViewController.m in Sources */,
 				4495406E1EEAA4750075BEA4 /* SMSSDKUICommitCodeViewController.m in Sources */,
+				8D168C3C2050F32200AB965B /* SMSSDKAvatarSelectViewController.m in Sources */,
+				8D168C3F2050F3DE00AB965B /* SMSSDKUISelectAvatarCell.m in Sources */,
 				4495406F1EEAA4750075BEA4 /* SMSSDKUIContactFriendsViewController.m in Sources */,
+				8D73E54220576C4300B656E3 /* SMSSDKUIBaseViewController.m in Sources */,
+				8D95A1B420568FAC005B3067 /* SMSSDKUIFriendsResultViewController.m in Sources */,
 				449540711EEAA4750075BEA4 /* SMSSDKUIInviteViewController.m in Sources */,
+				8D168C392050E1D200AB965B /* SMSUserManager.m in Sources */,
 				449540701EEAA4750075BEA4 /* SMSSDKUIGetCodeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

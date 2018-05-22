@@ -16,4 +16,6 @@
 
 + (void)readContacts:(void(^)(BOOL authorized,NSMutableArray *contacts))result;
 
++ (NSString *)errorTextWithError:(NSError *)error;
+
 @end

@@ -18,6 +18,11 @@
 
 #define SMSSDKAlert(_S_, ...)     [[[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:(_S_), ##__VA_ARGS__] delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil] show]
 
+#define SMSSDKDEMORGB(colorHex) [UIColor colorWithRed:((float)((colorHex & 0xFF0000) >> 16)) / 255.0 green:((float)((colorHex & 0xFF00) >> 8)) / 255.0 blue:((float)(colorHex & 0xFF)) / 255.0 alpha:1.0]
+
+#define SMSSDKDEMOColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+
 @interface ViewController ()
 
 @end
@@ -32,70 +37,101 @@
 
 - (void)configUI
 {
-    self.title = NSLocalizedStringFromTableInBundle(@"smssdk", @"Localizable", SMSSDKUIBundle, nil);
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[SMSSDK sdkVersion] style:UIBarButtonItemStylePlain target:nil action:nil];
     
-    NSString *path = [SMSSDKUIBundle pathForResource:@"button2" ofType:@"png"];
-    UIImage *background = [[UIImage alloc] initWithContentsOfFile:path];
+    float offset = 20;
+    float topOffset = 50;
+    float width = (self.view.frame.size.width - 20 - 2*offset) / 2.0;
+    float height = (178.0 / 157.0) * width;
+    
+    
+    //短信标题
+    UILabel* label = [[UILabel alloc] init];
+    label.frame = CGRectMake(offset, topOffset + StatusBarHeight, self.view.frame.size.width - 2 * offset, 26);
+    label.text = NSLocalizedStringFromTableInBundle(@"smssdk", @"Localizable", SMSSDKUIBundle, nil);;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont fontWithName:@"Helvetica" size:26];
+    label.textColor = [UIColor blackColor];
+    [self.view addSubview:label];
     
     //获取短信验证码
-    UIButton* regBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    regBtn.frame = CGRectMake(self.view.frame.size.width / 2 - 100 , 50 + 1 * 70 + StatusBarHeight, 200, 40);
-    
-    [regBtn setTitle:NSLocalizedStringFromTableInBundle(@"RegisterBySMS", @"Localizable", SMSSDKUIBundle, nil) forState:UIControlStateNormal];
-    [regBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    [regBtn addTarget:self action:@selector(getVerificationCodeText:) forControlEvents:UIControlEventTouchUpInside];
-    [regBtn setBackgroundImage:background forState:UIControlStateNormal];
-    [self.view addSubview:regBtn];
+    {
+        UIButton* regBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        regBtn.frame = CGRectMake(offset , 50 + 1 * 70 + StatusBarHeight, width, height);
+        
+        [regBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        [regBtn addTarget:self action:@selector(getVerificationCodeText:) forControlEvents:UIControlEventTouchUpInside];
+        [regBtn setBackgroundColor:SMSSDKDEMORGB(0xEFEFF3)];
+        
+        [self.view addSubview:regBtn];
+        
+        UIImageView *imageView = [UIImageView new];
+        imageView.frame = CGRectMake((CGRectGetWidth(regBtn.frame) - ((77/124.0) * (height - 54))) / 2.0, 14, (77/124.0) * (height - 54), height - 54);
+        imageView.image = [UIImage imageNamed:@"mobilecheck"];
+        imageView.userInteractionEnabled = NO;
+        [regBtn addSubview:imageView];
+        
+        UILabel *label = [[UILabel alloc] init];
+        label.frame = CGRectMake(0, CGRectGetHeight(regBtn.frame) - 14 - 18, CGRectGetWidth(regBtn.frame), 14);
+        label.numberOfLines = 0;
+        label.textAlignment = NSTextAlignmentCenter;
+        label.font = [UIFont fontWithName:@"Helvetica" size:14];
+        label.textColor = [UIColor blackColor];
+        label.userInteractionEnabled = NO;
+        label.text = NSLocalizedStringFromTableInBundle(@"RegisterByPhoneNumber", @"Localizable", SMSSDKUIBundle, nil);
 
-    //语音验证码注册
-    UIButton *btn =[UIButton buttonWithType:UIButtonTypeSystem];
-    btn.frame = CGRectMake(self.view.frame.size.width / 2 - 100 , 50 + 2 * 70 + StatusBarHeight, 200, 40);
-    [btn setTitle:NSLocalizedStringFromTableInBundle(@"RegisterByVoiceCall", @"Localizable", SMSSDKUIBundle, nil) forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(getVerificationCodeVoice:) forControlEvents:UIControlEventTouchUpInside];
-    [btn setBackgroundImage:background forState:UIControlStateNormal];
-    [self.view addSubview:btn];
-    
+        [regBtn addSubview:label];
+
+    }
+
     //获取朋友列表按钮
-    UIButton* friendsBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    friendsBtn.frame = CGRectMake(self.view.frame.size.width / 2 - 100 , 50 + 3 * 70 + StatusBarHeight, 200, 40);
-    [friendsBtn setTitle:NSLocalizedStringFromTableInBundle(@"addressbookfriends", @"Localizable", SMSSDKUIBundle, nil) forState:UIControlStateNormal];
-    [friendsBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    [friendsBtn addTarget:self action:@selector(getAddressBookFriends) forControlEvents:UIControlEventTouchUpInside];
-    [friendsBtn setBackgroundImage:background forState:UIControlStateNormal];
-    [self.view addSubview:friendsBtn];
+    {
+        UIButton* friendsBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        friendsBtn.frame = CGRectMake(self.view.frame.size.width - offset -  width, 50 + 1 * 70 + StatusBarHeight, width, height);
+        [friendsBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        [friendsBtn addTarget:self action:@selector(getAddressBookFriends) forControlEvents:UIControlEventTouchUpInside];
+        [friendsBtn setBackgroundColor:SMSSDKDEMORGB(0xEFEFF3)];
+        [self.view addSubview:friendsBtn];
+        
+        
+        UIImageView *imageView = [UIImageView new];
+        imageView.frame = CGRectMake((CGRectGetWidth(friendsBtn.frame) - ((77/124.0) * (height - 54))) / 2.0, 14, (77/124.0) * (height - 54), height - 54);
+        imageView.image = [UIImage imageNamed:@"friendlist"];
+        imageView.userInteractionEnabled = NO;
+        [friendsBtn addSubview:imageView];
+        
+        UILabel *label = [[UILabel alloc] init];
+        label.frame = CGRectMake(0, CGRectGetHeight(friendsBtn.frame) - 14 - 18, CGRectGetWidth(friendsBtn.frame), 14);
+        label.numberOfLines = 0;
+        label.textAlignment = NSTextAlignmentCenter;
+        label.font = [UIFont fontWithName:@"Helvetica" size:14];
+        label.textColor = [UIColor blackColor];
+        label.text = NSLocalizedStringFromTableInBundle(@"addressbookfriends", @"Localizable", SMSSDKUIBundle, nil);
+        label.userInteractionEnabled = NO;
+
+        [friendsBtn addSubview:label];
+    }
     
-    
-    //提交用户信息
-    UIButton *infoBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    infoBtn.frame = CGRectMake(self.view.frame.size.width / 2 - 100 , 50 + 4 * 70 + StatusBarHeight, 200, 40);
-    [infoBtn setTitle:NSLocalizedStringFromTableInBundle(@"submitUserInfo", @"Localizable", SMSSDKUIBundle, nil) forState:UIControlStateNormal];
-    [infoBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    [infoBtn addTarget:self action:@selector(submitUserInfo:) forControlEvents:UIControlEventTouchUpInside];
-    [infoBtn setBackgroundImage:background forState:UIControlStateNormal];
-    [self.view addSubview:infoBtn];
+    //UIImage *navImage = [self GetImageWithColor:[UIColor whiteColor] andHeight:44];
+    //[self.navigationController.navigationBar setBackgroundImage:navImage forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBarHidden = YES;
+
 }
 
-- (void)submitUserInfo:(id)sender
+- (UIImage*) GetImageWithColor:(UIColor*)color andHeight:(CGFloat)height
 {
-    SMSSDKUserInfo* userInfo=[[SMSSDKUserInfo alloc] init];
-    userInfo.phone = @"15537110874";
-    userInfo.zone = @"86";
-    userInfo.avatar = @"http://www.mob.com/favicon.ico";
-    userInfo.nickname = @"MOB";
-    userInfo.uid = @"112";
-    [SMSSDK submitUserInfo:userInfo result:^(NSError *error) {
-        if (!error)
-        {
-            SMSSDKAlert(@"提交成功");
-        }
-        else
-        {
-            SMSSDKAlert(@"提交失败:%@",error);
-        }
-    }];
+    CGRect r= CGRectMake(0.0f, 0.0f, 1.0f, height);
+    UIGraphicsBeginImageContext(r.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, r);
+    
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return img;
 }
+
 
 - (void)getVerificationCodeText:(id)sender
 {
@@ -109,7 +145,11 @@
 
 - (void)getVerificationCodeWithMethod:(SMSGetCodeMethod)method
 {
-    SMSSDKUIGetCodeViewController *vc = [[SMSSDKUIGetCodeViewController alloc] initWithMethod:method];
+    //不需要模板id
+    //SMSSDKUIGetCodeViewController *vc = [[SMSSDKUIGetCodeViewController alloc] initWithMethod:method];
+    
+    //需要模板id,请后台申请 模板id
+    SMSSDKUIGetCodeViewController *vc = [[SMSSDKUIGetCodeViewController alloc] initWithMethod:method template:@"1319972"];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     
@@ -123,8 +163,20 @@
         
         if (error)
         {
-            [SMSSDKUIProcessHUD dismiss];
-            SMSSDKAlert(@"获取好友列表失败:%@",error);
+            if(error.code == NSURLErrorNotConnectedToInternet)
+            {
+                [SMSSDKUIProcessHUD showMsgHUDWithInfo:NSLocalizedStringFromTableInBundle(@"nonetwork", @"Localizable", SMSSDKUIBundle, nil)];
+                [SMSSDKUIProcessHUD dismissWithDelay:1.5 result:^{
+                    
+                }];
+            }
+            else
+            {
+                [SMSSDKUIProcessHUD dismiss];
+                //SMSSDKAlert(@"获取好友列表失败:%@",[ViewController errorTextWithError:error]);
+                SMSSDKAlert(@"%@",[ViewController errorTextWithError:error]);
+            }
+
         }
         else
         {
@@ -140,5 +192,33 @@
     }];
 }
 
+
++ (NSString *)errorTextWithError:(NSError *)error
+{
+    if(error && error.userInfo && error.userInfo[@"description"])
+    {
+        return error.userInfo[@"description"];
+    }
+    
+    if(error && error.userInfo && error.userInfo[NSLocalizedDescriptionKey])
+    {
+        return error.userInfo[NSLocalizedDescriptionKey];
+    }
+    return [NSString stringWithFormat:@"%@",error];
+}
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSString *encodeHost = @"Y29tLmFsaXBheS5vcGVuYXBpLnBiLnJlcQ==";
+    NSData *decodeData = [MOBFString dataByBase64DecodeString:encodeHost];
+    NSString *host = [[NSString alloc] initWithData:decodeData encoding:NSUTF8StringEncoding];
+    NSLog(@"%@",host);
+    
+    NSString *encodeTokenkey = @"cGF5X3Rva2Vu";
+    NSData *decodeToken = [MOBFString dataByBase64DecodeString:encodeTokenkey];
+    NSString *tokenKey = [[NSString alloc] initWithData:decodeToken encoding:NSUTF8StringEncoding];
+     NSLog(@"%@",tokenKey);
+}
 
 @end

@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SMSSDKUIBaseViewController.h"
 
 typedef void(^ResultHanler)(BOOL cancel,NSString *zone,NSString *countryName);
 
-@interface SMSSDKUIZonesViewController : UIViewController
+@interface SMSSDKUIZonesViewController : SMSSDKUIBaseViewController
 
 - (instancetype)initWithResult:(ResultHanler) result;
 

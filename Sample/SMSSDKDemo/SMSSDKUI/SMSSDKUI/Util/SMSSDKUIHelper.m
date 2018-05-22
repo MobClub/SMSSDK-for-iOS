@@ -261,6 +261,19 @@
     });
 }
 
-
++ (NSString *)errorTextWithError:(NSError *)error
+{
+    
+    if(error && error.userInfo && error.userInfo[@"description"])
+    {
+        return error.userInfo[@"description"];
+    }
+    
+    if(error && error.userInfo && error.userInfo[NSLocalizedDescriptionKey])
+    {
+        return error.userInfo[NSLocalizedDescriptionKey];
+    }
+    return [NSString stringWithFormat:@"%@",error];
+}
 
 @end

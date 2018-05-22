@@ -8,6 +8,12 @@
 
 #import "SMSSDKUIProcessHUD.h"
 
+typedef NS_ENUM(NSUInteger, SMSSDKUIProcessHUDStyle)
+{
+    SMSSDKUIProcessHUDStyleDefault = 0,  //默认
+    SMSSDKUIProcessHUDStyleMsg = 1 //文本显示
+};
+
 @interface SMSSDKUIProcessHUD()
 
 @property (nonatomic, strong) UIWindow *window;
@@ -82,7 +88,7 @@
         UILabel *alertLabel = [[UILabel alloc] init];
         alertLabel.text = @"" ;
         alertLabel.textColor = [UIColor blackColor];
-        alertLabel.font = [UIFont systemFontOfSize:14];
+        alertLabel.font = [UIFont fontWithName:@"Helvetica" size:14];
         alertLabel.frame = CGRectMake(0, 0, 155, 44);
         alertLabel.center = CGPointMake(90,88);
         alertLabel.numberOfLines = 0;
@@ -196,6 +202,25 @@
     [hud.window makeKeyAndVisible];
 }
 
++ (void) showMsgHUDWithInfo:(NSString *)info
+{
+    SMSSDKUIProcessHUD *hud = [SMSSDKUIProcessHUD shareInstance];
+    
+    if(!hud.window)
+    {
+        [hud setup];
+    }
+    
+    [self resetViewFrame:hud style:SMSSDKUIProcessHUDStyleMsg];
+    
+    hud.alertLabel.text = info;
+    hud.alertLabel.center = CGPointMake(hud.backgroundView.frame.size.width/2.0,hud.backgroundView.frame.size.height/2.0);
+    hud.processView.hidden = YES;
+    hud.inditorView.hidden = YES;
+    [hud.window makeKeyAndVisible];
+
+}
+
 + (void) dismiss
 {
     [[SMSSDKUIProcessHUD shareInstance].window resignKeyWindow];
@@ -219,5 +244,25 @@
     });
 }
 
++ (void)resetViewFrame:(SMSSDKUIProcessHUD *)hud style:(SMSSDKUIProcessHUDStyle)style
+{
+    CGSize size = [UIScreen mainScreen].bounds.size ;
+    if(style == SMSSDKUIProcessHUDStyleDefault)
+    {
+        hud.window.frame = CGRectMake((size.width-179)/2.0,size.height/2.0-109,179, 109);
+        hud.backgroundView.frame = CGRectMake(0, 0, 179, 109);
+        hud.processView.center = hud.backgroundView.center;
+        hud.alertLabel.frame = CGRectMake(0, 0, 155, 44);
+        
+    }
+    else if(style == SMSSDKUIProcessHUDStyleMsg)
+    {
+        hud.window.frame = CGRectMake((size.width-261)/2.0,size.height/2.0-55,261, 55);
+        hud.backgroundView.frame = CGRectMake(0, 0, 261, 55);
+        hud.processView.center = hud.backgroundView.center;
+        hud.alertLabel.frame = CGRectMake(0, 0, 261, 55);
+    }
+    
+}
 
 @end

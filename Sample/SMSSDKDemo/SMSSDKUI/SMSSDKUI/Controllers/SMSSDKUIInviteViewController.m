@@ -36,50 +36,67 @@
 - (void)configUI
 {
     
+    self.title = SMSLocalized(@"invitefriends");
+    
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:SMSLocalized(@"back") style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:SMSLocalized(@"back") style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
     
-    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, 0, 0)];
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, self.view.frame.size.width-40, 36)];
     nameLabel.text = _contact.name;
-    nameLabel.font = [UIFont systemFontOfSize:17];
-    [nameLabel sizeToFit];
+    nameLabel.font = [UIFont fontWithName:@"Helvetica" size:36];
+    nameLabel.textAlignment = NSTextAlignmentCenter;
+    nameLabel.textColor = SMSCommonColor();
     [self.view addSubview:nameLabel];
     
     UILabel *lastPhoneLabel;
+    UIView *lastLine;
     for (NSInteger i=0; i<_contact.phonesEx.count; i++)
     {
-        UILabel *phoneLabel = [[UILabel alloc] initWithFrame:CGRectMake(20,CGRectGetMaxY(nameLabel.frame)+(5+15)*i+5, self.view.frame.size.width-40, 15)];
-        phoneLabel.text = [NSString stringWithFormat:@"%@:%@",SMSLocalized(@"phonecode"),_contact.phones];
-        phoneLabel.font = [UIFont systemFontOfSize:12];
+        
+        UILabel *phoneTitle = [[UILabel alloc] initWithFrame:CGRectMake(15,CGRectGetMaxY(nameLabel.frame)+(5+45)*i+20, self.view.frame.size.width-40, 45)];
+        phoneTitle.font = [UIFont fontWithName:@"Helvetica" size:13];
+        [self.view addSubview:phoneTitle];
+        
+        if(i ==0)
+        {
+            phoneTitle.text = SMSLocalized(@"phonecode");
+        }
+        else
+        {
+            phoneTitle.text = [NSString stringWithFormat:@"%@%zd",SMSLocalized(@"phonecode"),i+1];
+        }
+        
+        UILabel *phoneLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 200 - 15,CGRectGetMinY(phoneTitle.frame), 200, 45)];
+        phoneLabel.text = _contact.phones;
+        phoneLabel.font = [UIFont fontWithName:@"Helvetica" size:13];
+        phoneLabel.textColor = SMSRGB(0xC7C7C7);
+        phoneLabel.textAlignment = NSTextAlignmentRight;
         [self.view addSubview:phoneLabel];
+        
+        UIView *line = [[UIView alloc] initWithFrame:CGRectMake(15, CGRectGetMaxY(phoneLabel.frame) - 1, self.view.frame.size.width-30, 1)];
+        line.backgroundColor = [UIColor lightGrayColor];
+        line.alpha = 0.5;
+        [self.view addSubview:line];
+        
         if (i==_contact.phonesEx.count-1)
         {
             lastPhoneLabel = phoneLabel;
+            lastLine = line;
         }
+        
+
     }
-    
-    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(lastPhoneLabel.frame)+20, self.view.frame.size.width-20, 1)];
-    line.backgroundColor = [UIColor lightGrayColor];
-    line.alpha = 0.5;
-    [self.view addSubview:line];
-    
-    UILabel *alertLabel = [[UILabel alloc] init];
-    alertLabel.font = [UIFont systemFontOfSize:14];
-    alertLabel.text = [_contact.name stringByAppendingFormat:@" %@",SMSLocalized(@"notjoined")];
-    [alertLabel sizeToFit];
-    alertLabel.center = CGPointMake(self.view.center.x, CGRectGetMaxY(line.frame)+33);
-    [self.view addSubview:alertLabel];
     
     
     UIButton *sendInvite = [UIButton buttonWithType:UIButtonTypeSystem];
-    sendInvite.frame = CGRectMake(20, CGRectGetMaxY(alertLabel.frame)+33, self.view.frame.size.width - 40, 44);
+    sendInvite.frame = CGRectMake(20, CGRectGetMaxY(lastLine.frame)+25, self.view.frame.size.width - 40, 44);
     [sendInvite setTitle:SMSLocalized(@"sendinvite") forState:UIControlStateNormal];
-    NSString *path = [SMSSDKUIBundle pathForResource:@"button4" ofType:@"png"];
-    [sendInvite setBackgroundImage:[[UIImage alloc] initWithContentsOfFile:path] forState:UIControlStateNormal];
-
+    [sendInvite setBackgroundColor:SMSRGB(0x00D69C)];
+    [sendInvite.titleLabel setFont:[UIFont fontWithName:@"Helvetica" size:18]];
+    sendInvite.layer.cornerRadius = 4;
     [sendInvite setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [sendInvite addTarget:self action:@selector(sendInvite:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:sendInvite];
@@ -132,7 +149,7 @@
     }
 }
 
-- (void)back:(id)sender
+- (void)dismiss:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
 }

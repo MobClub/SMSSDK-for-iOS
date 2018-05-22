@@ -18,5 +18,6 @@
 #import "SMSSDKUIInviteViewController.h"
 
 #import "SMSSDKUIProcessHUD.h"
+#import "SMSDefines.h"
 
 #endif

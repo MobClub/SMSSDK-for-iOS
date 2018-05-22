@@ -16,6 +16,9 @@
 
 + (void) showProcessHUDWithInfo:(NSString *)info;
 
++ (void) showMsgHUDWithInfo:(NSString *)info;
+
+
 + (void) dismiss;
 
 + (void) dismissWithResult:(void (^)())result;

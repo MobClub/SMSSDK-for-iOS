@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SMSSDKUIBaseViewController.h"
+
 @class SMSSDKAddressBook;
 
-@interface SMSSDKUIInviteViewController : UIViewController
+@interface SMSSDKUIInviteViewController : SMSSDKUIBaseViewController
 
 - (instancetype)initWithContact:(SMSSDKAddressBook *)contact;
 

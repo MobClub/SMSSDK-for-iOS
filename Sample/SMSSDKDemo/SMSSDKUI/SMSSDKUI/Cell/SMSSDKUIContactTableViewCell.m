@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UIImageView *headIcon;
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UILabel *nameDescLabel;
+@property (nonatomic, strong) UIView *lineBottom;
 @property (nonatomic, strong) UIButton *inviteBtn;
 
 @end
@@ -35,7 +36,10 @@
     self.headIcon =
     ({
         UIImageView *imageView = [[UIImageView alloc] init];
-        imageView.frame = CGRectMake(15, 5, 50, 50);
+        imageView.frame = CGRectMake(15, 10, 40, 40);
+        
+        imageView.layer.cornerRadius = 40/2.0;
+        imageView.clipsToBounds = YES;
         
         NSString *path = [SMSSDKUIBundle pathForResource:@"sms_ui_default_avatar" ofType:@"png"];
         imageView.image = [UIImage imageWithContentsOfFile:path];
@@ -46,34 +50,54 @@
     self.nameLabel =
     ({
         UILabel *nameLabel = [[UILabel alloc] init];
-        nameLabel.frame = CGRectMake(73, 19, 200, 20);
-        nameLabel.font = [UIFont fontWithName:@"Helvetica" size:14];
+        nameLabel.frame = CGRectMake(65, 23, 200, 13);
+        nameLabel.font = [UIFont fontWithName:@"Helvetica" size:13];
         [self.contentView addSubview:nameLabel];
         nameLabel;
     });
     
-    self.nameDescLabel =
-    ({
-        UILabel *nameDescLabel = [[UILabel alloc] init];
-        nameDescLabel.frame = CGRectMake(73, 40, 200, 15);
-        nameDescLabel.font = [UIFont fontWithName:@"Helvetica" size:12];
-        [self.contentView addSubview:nameDescLabel];
-        nameDescLabel;
-    });
+//    self.nameDescLabel =
+//    ({
+//        UILabel *nameDescLabel = [[UILabel alloc] init];
+//        nameDescLabel.frame = CGRectMake(65, 40, 200, 13);
+//        nameDescLabel.font = [UIFont fontWithName:@"Helvetica" size:12];
+//        [self.contentView addSubview:nameDescLabel];
+//        nameDescLabel;
+//    });
     
     self.inviteBtn =
     ({
         CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
         UIButton *inviteBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-        inviteBtn.frame = CGRectMake(screenWidth-80, 15, 65, 30);
+        inviteBtn.frame = CGRectMake(screenWidth- 83 - 15 , 14, 83, 32);
         [inviteBtn addTarget:self action:@selector(invite:) forControlEvents:UIControlEventTouchUpInside];
         [inviteBtn setTitle:@"邀请" forState:UIControlStateNormal];
-        [inviteBtn setBackgroundImage:[UIImage imageWithContentsOfFile:[SMSSDKUIBundle pathForResource:@"button3" ofType:@"png"]] forState:UIControlStateNormal];
-        [inviteBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        [inviteBtn.titleLabel setFont:[UIFont fontWithName:@"Helvetica" size:13]];
+        [inviteBtn setTitleColor:SMSCommonColor() forState:UIControlStateNormal];
+        inviteBtn.layer.borderColor = SMSCommonColor().CGColor;
+        inviteBtn.layer.borderWidth = 0.5;
+        inviteBtn.layer.cornerRadius = 5;
+
         [self.contentView addSubview:inviteBtn];
         inviteBtn;
     });
+    
+    self.lineBottom =
+    ({
+        UIView *lineBottom = [[UIView alloc] initWithFrame:CGRectMake(15, 59, self.frame.size.width - 15,1)];
+        lineBottom.backgroundColor = SMSRGB(0xE0E0E6);
+        [self.contentView addSubview:lineBottom];
+        
+        lineBottom;
+    });
 }
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    self.lineBottom.frame = CGRectMake(15, 59, self.frame.size.width - 30,1);
+}
+
 
 - (void)invite:(id)sender
 {
@@ -87,8 +111,9 @@
 {
     _contact = contact;
     _nameLabel.text = contact.name;
-    _nameDescLabel.text = @"";
+//    _nameDescLabel.text = @"";
     _userInfo = nil;
+    
 }
 
 - (void)setActionType:(SMSSDKUIContactActionType)actionType
@@ -100,12 +125,21 @@
     
     if (actionType == SMSSDKUIContactActionTypeInvite)
     {
-        [_inviteBtn setTitle:SMSLocalized(@"invitefriends") forState:UIControlStateNormal];
+        [_inviteBtn setTitle:SMSLocalized(@"sendinvite") forState:UIControlStateNormal];
+        [_inviteBtn setTitleColor:SMSCommonColor() forState:UIControlStateNormal];
+        [_inviteBtn setBackgroundColor:[UIColor whiteColor]];
+
     }
     else
     {
-        [_inviteBtn setTitle:SMSLocalized(@"addfriends") forState:UIControlStateNormal];
+        [_inviteBtn setTitle:SMSLocalized(@"addfriendstitle") forState:UIControlStateNormal];
+        [_inviteBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_inviteBtn setBackgroundColor:SMSCommonColor()];
+
+
     }
+    
+    self.lineBottom.frame = CGRectMake(15, 59, self.frame.size.width - 30,1);
 }
 
 - (void) setUserInfo:(NSDictionary *)userInfo
@@ -127,7 +161,7 @@
     if ([nickname isKindOfClass:NSString.class])
     {
         _nameLabel.text = nickname;
-        _nameDescLabel.text = _contact.name;
+//        _nameDescLabel.text = _contact.name;
         [self updateFrameWithDescExist:YES];
     }
 }
@@ -136,13 +170,13 @@
 {
     if (exist)
     {
-        _nameLabel.frame = CGRectMake(73, 13, 200, 20);
+//        _nameLabel.frame = CGRectMake(73, 13, 200, 20);
         _nameDescLabel.frame = CGRectMake(73, 33, 200, 15);
     }
     else
     {
         _nameLabel.frame = CGRectMake(73, 19, 200, 20);
-        _nameDescLabel.frame = CGRectMake(73, 40, 200, 15);
+//        _nameDescLabel.frame = CGRectMake(73, 40, 200, 15);
     }
 }
 

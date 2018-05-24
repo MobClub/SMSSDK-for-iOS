@@ -256,7 +256,6 @@
 				TargetAttributes = {
 					448BE9DB1ED6D2470081B15A = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = LW5266U92D;
 						ProvisioningStyle = Automatic;
 					};
 					448BE9F41ED6D2470081B15A = {

@@ -93,6 +93,8 @@
 
 + (void)readContacts:(void(^)(BOOL authorized,NSMutableArray *contacts))result
 {
+    
+    
     NSMutableArray *addressBookArray = [NSMutableArray array];
     
     ABAddressBookRef addressBooks =  ABAddressBookCreateWithOptions(NULL, NULL);

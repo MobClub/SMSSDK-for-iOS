@@ -145,11 +145,7 @@
 
 - (void)getVerificationCodeWithMethod:(SMSGetCodeMethod)method
 {
-    //不需要模板id
-    //SMSSDKUIGetCodeViewController *vc = [[SMSSDKUIGetCodeViewController alloc] initWithMethod:method];
-    
-    //需要模板id,请后台申请 模板id
-    SMSSDKUIGetCodeViewController *vc = [[SMSSDKUIGetCodeViewController alloc] initWithMethod:method template:@"1319972"];
+    SMSSDKUIGetCodeViewController *vc = [[SMSSDKUIGetCodeViewController alloc] initWithMethod:method];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     

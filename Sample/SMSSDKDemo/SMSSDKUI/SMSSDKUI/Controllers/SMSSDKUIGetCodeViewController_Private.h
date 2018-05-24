@@ -6,6 +6,7 @@
 //  Copyright © 2018年 youzu. All rights reserved.
 //
 
+#import "SMSDefines.h"
 
 @interface SMSSDKUIGetCodeViewController()
 

@@ -71,7 +71,7 @@ In the SMSSDK file ,it contains all the API in the SDK, and here,you can use any
 
 if (!error)
 {
-// 请求成功
+// 请求成功 
 }
 else
 {

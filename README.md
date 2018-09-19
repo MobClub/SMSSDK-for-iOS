@@ -48,8 +48,8 @@ Drag  this folder into the project:
 Required:
 
 > *  libz.dylib
-> * libstdc++.dylib
-
+> * libc++.dylib ==(libstdc++.dylib这个库在XCode10之后找不到，已经被废弃，以libc++替代)
+==
 Show you like this：
 ![](http://upload-images.jianshu.io/upload_images/4131265-6644e7b04dfd6235.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 

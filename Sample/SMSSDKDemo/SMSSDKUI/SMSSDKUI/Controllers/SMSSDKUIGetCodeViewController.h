@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "SMSSDKUIBaseViewController.h"
-#import "SMSDefines.h"
 
 @interface SMSSDKUIGetCodeViewController : SMSSDKUIBaseViewController
 

@@ -17,8 +17,8 @@
 		448BE9EF1ED6D2470081B15A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448BE9ED1ED6D2470081B15A /* LaunchScreen.storyboard */; };
 		448BE9FA1ED6D2470081B15A /* SMSSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 448BE9F91ED6D2470081B15A /* SMSSDKDemoTests.m */; };
 		448BEA1D1ED6D3E10081B15A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 448BEA1C1ED6D3E10081B15A /* libz.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
-		448BEA1F1ED6D3E90081B15A /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 448BEA1E1ED6D3E90081B15A /* libstdc++.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
 		4495403F1EEA76F50075BEA4 /* SMSSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4495403E1EEA76F50075BEA4 /* SMSSDKUI.bundle */; };
+		8DF6E368214CE6B8005711BC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DF6E367214CE6B8005711BC /* libc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +65,8 @@
 		448BEA1E1ED6D3E90081B15A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		4495403E1EEA76F50075BEA4 /* SMSSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SMSSDKUI.bundle; path = ../SMSSDKUI/SMSSDKUI.bundle; sourceTree = "<group>"; };
 		449540861EEABA440075BEA4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		8DD5D35E214B964A006614BC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		8DF6E367214CE6B8005711BC /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DF6E368214CE6B8005711BC /* libc++.tbd in Frameworks */,
 				4431E5F61EFBBFEB0008CB41 /* libSMSSDKUI.a in Frameworks */,
-				448BEA1F1ED6D3E90081B15A /* libstdc++.tbd in Frameworks */,
 				4431E5FA1EFBC0380008CB41 /* MOBFoundation.framework in Frameworks */,
 				448BEA1D1ED6D3E10081B15A /* libz.tbd in Frameworks */,
 				444590411F7B3B2C0090FE24 /* SMS_SDK.framework in Frameworks */,
@@ -101,6 +103,8 @@
 		444590401F7B3B2C0090FE24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DF6E367214CE6B8005711BC /* libc++.tbd */,
+				8DD5D35E214B964A006614BC /* CoreTelephony.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -256,7 +260,8 @@
 				TargetAttributes = {
 					448BE9DB1ED6D2470081B15A = {
 						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = Q87QUX3533;
+						ProvisioningStyle = Manual;
 					};
 					448BE9F41ED6D2470081B15A = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -466,9 +471,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Q87QUX3533;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../SDK\"/**";
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SMSSDKDemo/Info.plist;
@@ -476,8 +482,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.SMSSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "b5bc4c24-a83f-4442-b7a0-9cf9700ab2c6";
+				PROVISIONING_PROFILE_SPECIFIER = MobProvisioningProfiles;
 			};
 			name = Debug;
 		};
@@ -485,9 +491,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou ZhangTao Network Technology Co., Ltd.";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = LW5266U92D;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../SDK\"/**";
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SMSSDKDemo/Info.plist;
@@ -495,8 +502,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.SMSSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "3807aac7-5c27-488f-a865-268eb1dd8043";
+				PROVISIONING_PROFILE_SPECIFIER = SMSSDK;
 			};
 			name = Release;
 		};
@@ -504,12 +511,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LW5266U92D;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../SDK\"/**";
 				INFOPLIST_FILE = SMSSDKDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = youzu.SMSSDKDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMSSDKDemo.app/SMSSDKDemo";
 			};
 			name = Debug;
@@ -518,12 +529,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LW5266U92D;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../SDK\"/**";
 				INFOPLIST_FILE = SMSSDKDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = youzu.SMSSDKDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMSSDKDemo.app/SMSSDKDemo";
 			};
 			name = Release;

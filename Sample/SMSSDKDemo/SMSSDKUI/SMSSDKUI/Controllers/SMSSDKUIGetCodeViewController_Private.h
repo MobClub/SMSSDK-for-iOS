@@ -5,7 +5,7 @@
 //  Created by hower on 2018/4/19.
 //  Copyright © 2018年 youzu. All rights reserved.
 //
-
+#import <UIKit/UIKit.h>
 #import "SMSDefines.h"
 
 @interface SMSSDKUIGetCodeViewController()

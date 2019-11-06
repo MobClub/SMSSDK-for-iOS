@@ -276,9 +276,15 @@
         
         [self matchContacts];
         
-        SMSSDKUIFriendsResultViewController *resultVC = (SMSSDKUIFriendsResultViewController *)self.searchController.searchResultsController;
-        resultVC.contactList = _contactList;
-        resultVC.contactFriends = _contactFriends;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            SMSSDKUIFriendsResultViewController *resultVC = (SMSSDKUIFriendsResultViewController *)self.searchController.searchResultsController;
+            resultVC.contactList = _contactList;
+            resultVC.contactFriends = _contactFriends;
+            
+        });
+
         
     }];
 }
@@ -309,7 +315,11 @@
         }
     }
     
-    [_contactsTableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [_contactsTableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
+
+    });
 }
 
 

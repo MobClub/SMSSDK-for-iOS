@@ -260,7 +260,7 @@
 				TargetAttributes = {
 					448BE9DB1ED6D2470081B15A = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = Q87QUX3533;
+						DevelopmentTeam = LW5266U92D;
 						ProvisioningStyle = Manual;
 					};
 					448BE9F41ED6D2470081B15A = {
@@ -276,8 +276,10 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 448BE9D31ED6D2470081B15A;
 			productRefGroup = 448BE9DD1ED6D2470081B15A /* Products */;
@@ -471,10 +473,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 永超 李 (6L4556Q7ET)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = Q87QUX3533;
+				DEVELOPMENT_TEAM = LW5266U92D;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../SDK\"/**";
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SMSSDKDemo/Info.plist;
@@ -482,8 +484,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.SMSSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b5bc4c24-a83f-4442-b7a0-9cf9700ab2c6";
-				PROVISIONING_PROFILE_SPECIFIER = MobProvisioningProfiles;
+				PROVISIONING_PROFILE = "9ca8ebb1-0581-4482-a54e-2fe444ea9b07";
+				PROVISIONING_PROFILE_SPECIFIER = SMSSDKDevelopment;
 			};
 			name = Debug;
 		};
@@ -491,10 +493,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou ZhangTao Network Technology Co., Ltd.";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = LW5266U92D;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../SDK\"/**";
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SMSSDKDemo/Info.plist;

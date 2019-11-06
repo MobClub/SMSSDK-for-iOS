@@ -171,7 +171,8 @@
         self.zone =
         ({
             UILabel *zone = [[UILabel alloc] initWithFrame:CGRectMake(0, 1, (self.view.frame.size.width - 30)/4, 40 + StatusBarHeight/4)];
-            zone.text = @"+86";
+            //zone.text = @"+86";
+            zone.text = [SMSSDKUIHelper currentZone];
             zone.textAlignment = NSTextAlignmentLeft;
             zone.font = [UIFont fontWithName:@"Helvetica" size:14];
             [phoneEditView addSubview:zone];

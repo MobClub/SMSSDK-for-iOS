@@ -52,7 +52,19 @@ typedef void (^SMSGetContactsFriendsResultHandler)(NSError *error,NSArray *frien
  */
 typedef void (^SMSSubmitUserInfoResultHandler) (NSError *error);
 
+/**
+ 联系人授权接受与拒绝回调
+ 
+ @param noMoreInquiries 不需要再显示
+ */
+typedef void(^SMSSDKDialogViewHandler)(BOOL noMoreInquiries);
 
+/**
+ 联系人授权是否能显示
+ 
+ @param canShow 能显示
+ */
+typedef void(^SMSSDKDialogViewShowHandler)(BOOL canShow);
 
 
 

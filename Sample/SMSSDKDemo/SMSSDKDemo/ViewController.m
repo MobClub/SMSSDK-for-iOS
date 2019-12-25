@@ -12,6 +12,7 @@
 #import "SMSSDKUI.h"
 #import <MOBFoundation/MOBFoundation.h>
 
+
 #define SMSSDKUIBundle [[NSBundle alloc] initWithPath:[[NSBundle mainBundle] pathForResource:@"SMSSDKUI" ofType:@"bundle"]]
 
 #define StatusBarHeight [UIApplication sharedApplication].statusBarFrame.size.height
@@ -33,6 +34,24 @@
 {
     [super viewDidLoad];
     [self configUI];
+}
+
+static BOOL hasShow = NO;
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if(!hasShow)
+    {
+        hasShow = YES;
+        [SMSSDK showContactsServiceDialog:^(BOOL noMoreInquiries) {
+            
+        } accept:^(BOOL noMoreInquiries) {
+            
+        } canShowDialog:^(BOOL canShow) {
+            
+        }];
+    }
 }
 
 - (void)configUI
@@ -145,6 +164,7 @@
 
 - (void)getVerificationCodeWithMethod:(SMSGetCodeMethod)method
 {
+    
     SMSSDKUIGetCodeViewController *vc = [[SMSSDKUIGetCodeViewController alloc] initWithMethod:method];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];

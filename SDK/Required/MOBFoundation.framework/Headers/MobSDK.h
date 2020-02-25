@@ -2,7 +2,7 @@
 //  MobSDK.h
 //  MOBFoundation
 //
-//  Created by 冯鸿杰 on 17/2/23.
+//  Created by liyc on 17/2/23.
 //  Copyright © 2017年 MOB. All rights reserved.
 //
 

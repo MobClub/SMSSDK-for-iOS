@@ -1,0 +1,39 @@
+/*
+ Localizable.strings
+ SMS_SDKDemo
+ 
+ Created by 掌淘科技 on 14-9-26.
+ Copyright (c) 2014年 掌淘科技. All rights reserved.
+ */
+"smssdk" = "SMSSDK";
+"curversion"="version";
+"textverify"="sms";
+"voiceverify"="voice";
+"phonecode"="Phone";
+"Code" = "Code";
+"getcode"="get code";
+"verify"="verify";
+"timelablemsg"="Getting the verification code almost need ";
+"second"=" seconds";
+"surephonenumber"="Phone Number Confirmation";
+"cannotgetsmsmsg"="We will re send verification code SMS to it";
+"cancel"="Cancel";
+"sure"="OK";
+"sendingRequest"="Requesting verification code";
+"nonetwork"="Network suck, please try again later";
+"requestSuccess"="Request Success!";
+"commitingCode"="Verify...";
+"searchplaceholder"="Chinese\\alphabet\\number";
+"countrychoose"="Choose the country";
+"back"="Back";
+"Revalidation"="Revalidation";
+"ConsultationCustomerService"="Consultation Customer Service";
+"CustomerServiceTelephone"="Customer Service Telephone";
+"hasselected"="selected";
+
+"loginsucess"="login sucess";
+"byMobTechSDK"="by MobTech SDK";
+
+"loginfail"="login fail";
+"timeconsuming"="time consuming";
+"startverify"= "start verify";

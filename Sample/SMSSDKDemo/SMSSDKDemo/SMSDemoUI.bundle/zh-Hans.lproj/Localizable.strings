@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  SMS_SDKDemo
+
+  Created by 掌淘科技 on 14-9-26.
+  Copyright (c) 2014年 掌淘科技. All rights reserved.
+*/
+"smssdk" = "短信SDK";
+"curversion"="当前版本：";
+"textverify"="短信验证";
+"voiceverify"="语音验证";
+"phonecode"="手机号";
+"Code" = "验证码";
+"getcode"="获取验证码";
+"verify"="验证";
+"timelablemsg"="接收验证码大约需要";
+"second"=" 秒";
+"surephonenumber"="确认手机号码";
+"cannotgetsmsmsg"="我们将重新发送验证码短信到这个号码";
+"cancel"="取消";
+"sure"="好";
+"sendingRequest"="正在请求验证码...";
+"nonetwork"="网络不给力,请稍后重试";
+"requestSuccess"="请求成功!";
+"commitingCode"="正在验证...";
+"searchplaceholder"="请输入中文\字母\数字";
+"countrychoose"="选择国家或地区";
+"back"="返回";
+"Revalidation"="再次验证";
+"ConsultationCustomerService"="咨询客服";
+"CustomerServiceTelephone"="客服电话";
+"hasselected"="已选择";
+"loginsucess"="登录成功";
+"byMobTechSDK"="本服务由MobTech SDK提供";
+"loginfail"="喔噢,登录失败";
+"timeconsuming"="验证码发送耗时";
+"startverify"= "开始验证";
+

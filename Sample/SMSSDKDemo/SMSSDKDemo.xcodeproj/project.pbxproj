@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CF3263F23ED3DEF0043DDBA /* SMSDemoPolicyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3263E23ED3DEF0043DDBA /* SMSDemoPolicyManager.m */; };
+		3CF3264223ED5D6C0043DDBA /* SMSDemoPolicyWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3264123ED5D6C0043DDBA /* SMSDemoPolicyWebVC.m */; };
 		4431E5F61EFBBFEB0008CB41 /* libSMSSDKUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4431E5F31EFBBFDB0008CB41 /* libSMSSDKUI.a */; };
 		4431E5FA1EFBC0380008CB41 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4431E5F91EFBC0380008CB41 /* MOBFoundation.framework */; };
 		448BE9E11ED6D2470081B15A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 448BE9E01ED6D2470081B15A /* main.m */; };
@@ -17,7 +19,17 @@
 		448BE9FA1ED6D2470081B15A /* SMSSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 448BE9F91ED6D2470081B15A /* SMSSDKDemoTests.m */; };
 		448BEA1D1ED6D3E10081B15A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 448BEA1C1ED6D3E10081B15A /* libz.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
 		4495403F1EEA76F50075BEA4 /* SMSSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4495403E1EEA76F50075BEA4 /* SMSSDKUI.bundle */; };
+		8D2F150123BD88EF005474D2 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F14FF23BD88EF005474D2 /* HomeVC.m */; };
+		8D2F150223BD88EF005474D2 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F150023BD88EF005474D2 /* HomeVC.xib */; };
+		8D2F150723BD9700005474D2 /* SMSDemoCommitCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F150623BD9700005474D2 /* SMSDemoCommitCodeVC.m */; };
+		8D2F150E23BDBDF0005474D2 /* SMSDemoZonesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F150D23BDBDF0005474D2 /* SMSDemoZonesVC.m */; };
+		8D2F151123BDBE19005474D2 /* SMSDemoZonesResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F151023BDBE19005474D2 /* SMSDemoZonesResultVC.m */; };
+		8D2F151323BDC002005474D2 /* SMSDemoUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F151223BDC002005474D2 /* SMSDemoUI.bundle */; };
+		8D2F151A23BDD1DF005474D2 /* SMSDemoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F151923BDD1DF005474D2 /* SMSDemoHelper.m */; };
 		8D6B449D239FC5E300272970 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6B449C239FC5E300272970 /* SMS_SDK.framework */; };
+		8D83798A23C2DD7600EF5BE7 /* SMSDemoProcessHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D83798923C2DD7600EF5BE7 /* SMSDemoProcessHUD.m */; };
+		8DEA272B23BEE9E200F8EB82 /* SMSDemoZonesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA272A23BEE9E200F8EB82 /* SMSDemoZonesCell.m */; };
+		8DEA272E23BF127C00F8EB82 /* SMSDemoResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA272D23BF127C00F8EB82 /* SMSDemoResultVC.m */; };
 		8DF6E368214CE6B8005711BC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DF6E367214CE6B8005711BC /* libc++.tbd */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +58,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CF3263D23ED3DEF0043DDBA /* SMSDemoPolicyManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSDemoPolicyManager.h; sourceTree = "<group>"; };
+		3CF3263E23ED3DEF0043DDBA /* SMSDemoPolicyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSDemoPolicyManager.m; sourceTree = "<group>"; };
+		3CF3264023ED5D6C0043DDBA /* SMSDemoPolicyWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSDemoPolicyWebVC.h; sourceTree = "<group>"; };
+		3CF3264123ED5D6C0043DDBA /* SMSDemoPolicyWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSDemoPolicyWebVC.m; sourceTree = "<group>"; };
 		4431E5EE1EFBBFDB0008CB41 /* SMSSDKUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SMSSDKUI.xcodeproj; path = SMSSDKUI/SMSSDKUI.xcodeproj; sourceTree = "<group>"; };
 		4431E5F91EFBC0380008CB41 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		448BE9DC1ED6D2470081B15A /* SMSSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMSSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,9 +79,29 @@
 		448BEA1C1ED6D3E10081B15A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		448BEA1E1ED6D3E90081B15A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		4495403E1EEA76F50075BEA4 /* SMSSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SMSSDKUI.bundle; path = ../SMSSDKUI/SMSSDKUI.bundle; sourceTree = "<group>"; };
-		449540861EEABA440075BEA4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		8D2F14FE23BD88EF005474D2 /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		8D2F14FF23BD88EF005474D2 /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		8D2F150023BD88EF005474D2 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		8D2F150523BD9700005474D2 /* SMSDemoCommitCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSDemoCommitCodeVC.h; sourceTree = "<group>"; };
+		8D2F150623BD9700005474D2 /* SMSDemoCommitCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSDemoCommitCodeVC.m; sourceTree = "<group>"; };
+		8D2F150923BDA6B6005474D2 /* SMSDemoDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSDemoDefines.h; sourceTree = "<group>"; };
+		8D2F150C23BDBDF0005474D2 /* SMSDemoZonesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSDemoZonesVC.h; sourceTree = "<group>"; };
+		8D2F150D23BDBDF0005474D2 /* SMSDemoZonesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSDemoZonesVC.m; sourceTree = "<group>"; };
+		8D2F150F23BDBE19005474D2 /* SMSDemoZonesResultVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSDemoZonesResultVC.h; sourceTree = "<group>"; };
+		8D2F151023BDBE19005474D2 /* SMSDemoZonesResultVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSDemoZonesResultVC.m; sourceTree = "<group>"; };
+		8D2F151223BDC002005474D2 /* SMSDemoUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SMSDemoUI.bundle; sourceTree = "<group>"; };
+		8D2F151823BDD1DF005474D2 /* SMSDemoHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSDemoHelper.h; sourceTree = "<group>"; };
+		8D2F151923BDD1DF005474D2 /* SMSDemoHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSDemoHelper.m; sourceTree = "<group>"; };
 		8D6B449C239FC5E300272970 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		8D83798823C2DD7500EF5BE7 /* SMSDemoProcessHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSDemoProcessHUD.h; sourceTree = "<group>"; };
+		8D83798923C2DD7600EF5BE7 /* SMSDemoProcessHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSDemoProcessHUD.m; sourceTree = "<group>"; };
 		8DD5D35E214B964A006614BC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		8DE8BCE423BDFDE300F3DBD4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8DE8BCE523BDFDFA00F3DBD4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		8DEA272923BEE9E200F8EB82 /* SMSDemoZonesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSDemoZonesCell.h; sourceTree = "<group>"; };
+		8DEA272A23BEE9E200F8EB82 /* SMSDemoZonesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSDemoZonesCell.m; sourceTree = "<group>"; };
+		8DEA272C23BF127C00F8EB82 /* SMSDemoResultVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSDemoResultVC.h; sourceTree = "<group>"; };
+		8DEA272D23BF127C00F8EB82 /* SMSDemoResultVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSDemoResultVC.m; sourceTree = "<group>"; };
 		8DF6E367214CE6B8005711BC /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -92,6 +128,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CF3263C23ED38B60043DDBA /* Policy */ = {
+			isa = PBXGroup;
+			children = (
+				3CF3263D23ED3DEF0043DDBA /* SMSDemoPolicyManager.h */,
+				3CF3263E23ED3DEF0043DDBA /* SMSDemoPolicyManager.m */,
+				3CF3264023ED5D6C0043DDBA /* SMSDemoPolicyWebVC.h */,
+				3CF3264123ED5D6C0043DDBA /* SMSDemoPolicyWebVC.m */,
+			);
+			path = Policy;
+			sourceTree = "<group>";
+		};
 		4431E5EF1EFBBFDB0008CB41 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,11 +180,15 @@
 		448BE9DE1ED6D2470081B15A /* SMSSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8D2F150323BD9451005474D2 /* SMSDemoUI */,
 				448BE9E21ED6D2470081B15A /* AppDelegate.h */,
 				448BE9E31ED6D2470081B15A /* AppDelegate.m */,
 				448BE9E51ED6D2470081B15A /* ViewController.h */,
 				448BE9E61ED6D2470081B15A /* ViewController.m */,
 				448BE9DF1ED6D2470081B15A /* Supporting Files */,
+				8D2F14FE23BD88EF005474D2 /* HomeVC.h */,
+				8D2F14FF23BD88EF005474D2 /* HomeVC.m */,
+				8D2F150023BD88EF005474D2 /* HomeVC.xib */,
 			);
 			path = SMSSDKDemo;
 			sourceTree = "<group>";
@@ -201,12 +252,60 @@
 			path = SMSSDKDemo;
 			sourceTree = "<group>";
 		};
+		8D2F150323BD9451005474D2 /* SMSDemoUI */ = {
+			isa = PBXGroup;
+			children = (
+				3CF3263C23ED38B60043DDBA /* Policy */,
+				8DEA272823BEE9CF00F8EB82 /* cell */,
+				8D2F151423BDC1C0005474D2 /* Util */,
+				8D2F151223BDC002005474D2 /* SMSDemoUI.bundle */,
+				8D2F150423BD96A3005474D2 /* Controllers */,
+				8D2F150923BDA6B6005474D2 /* SMSDemoDefines.h */,
+			);
+			name = SMSDemoUI;
+			sourceTree = "<group>";
+		};
+		8D2F150423BD96A3005474D2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8D2F150523BD9700005474D2 /* SMSDemoCommitCodeVC.h */,
+				8D2F150623BD9700005474D2 /* SMSDemoCommitCodeVC.m */,
+				8D2F150C23BDBDF0005474D2 /* SMSDemoZonesVC.h */,
+				8D2F150D23BDBDF0005474D2 /* SMSDemoZonesVC.m */,
+				8D2F150F23BDBE19005474D2 /* SMSDemoZonesResultVC.h */,
+				8D2F151023BDBE19005474D2 /* SMSDemoZonesResultVC.m */,
+				8DEA272C23BF127C00F8EB82 /* SMSDemoResultVC.h */,
+				8DEA272D23BF127C00F8EB82 /* SMSDemoResultVC.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8D2F151423BDC1C0005474D2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8D83798823C2DD7500EF5BE7 /* SMSDemoProcessHUD.h */,
+				8D83798923C2DD7600EF5BE7 /* SMSDemoProcessHUD.m */,
+				8D2F151823BDD1DF005474D2 /* SMSDemoHelper.h */,
+				8D2F151923BDD1DF005474D2 /* SMSDemoHelper.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		8D6B449B239FC5E300272970 /* SMSSDK */ = {
 			isa = PBXGroup;
 			children = (
 				8D6B449C239FC5E300272970 /* SMS_SDK.framework */,
 			);
 			path = SMSSDK;
+			sourceTree = "<group>";
+		};
+		8DEA272823BEE9CF00F8EB82 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				8DEA272923BEE9E200F8EB82 /* SMSDemoZonesCell.h */,
+				8DEA272A23BEE9E200F8EB82 /* SMSDemoZonesCell.m */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,8 +376,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
-				en,
 				Base,
+				en,
 				"zh-Hans",
 			);
 			mainGroup = 448BE9D31ED6D2470081B15A;
@@ -314,6 +413,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				448BE9EF1ED6D2470081B15A /* LaunchScreen.storyboard in Resources */,
+				8D2F151323BDC002005474D2 /* SMSDemoUI.bundle in Resources */,
+				8D2F150223BD88EF005474D2 /* HomeVC.xib in Resources */,
 				4495403F1EEA76F50075BEA4 /* SMSSDKUI.bundle in Resources */,
 				448BE9EC1ED6D2470081B15A /* Assets.xcassets in Resources */,
 			);
@@ -333,8 +434,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DEA272E23BF127C00F8EB82 /* SMSDemoResultVC.m in Sources */,
+				8D2F151123BDBE19005474D2 /* SMSDemoZonesResultVC.m in Sources */,
 				448BE9E71ED6D2470081B15A /* ViewController.m in Sources */,
+				8D2F151A23BDD1DF005474D2 /* SMSDemoHelper.m in Sources */,
+				8D2F150123BD88EF005474D2 /* HomeVC.m in Sources */,
+				3CF3263F23ED3DEF0043DDBA /* SMSDemoPolicyManager.m in Sources */,
 				448BE9E41ED6D2470081B15A /* AppDelegate.m in Sources */,
+				8D83798A23C2DD7600EF5BE7 /* SMSDemoProcessHUD.m in Sources */,
+				8DEA272B23BEE9E200F8EB82 /* SMSDemoZonesCell.m in Sources */,
+				8D2F150723BD9700005474D2 /* SMSDemoCommitCodeVC.m in Sources */,
+				3CF3264223ED5D6C0043DDBA /* SMSDemoPolicyWebVC.m in Sources */,
+				8D2F150E23BDBDF0005474D2 /* SMSDemoZonesVC.m in Sources */,
 				448BE9E11ED6D2470081B15A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +478,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				448BE9EE1ED6D2470081B15A /* Base */,
-				449540861EEABA440075BEA4 /* zh-Hans */,
+				8DE8BCE423BDFDE300F3DBD4 /* en */,
+				8DE8BCE523BDFDFA00F3DBD4 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -477,11 +589,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 永超 李 (6L4556Q7ET)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = LW5266U92D;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../SDK\"/**";
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SMSSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.SMSSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9ca8ebb1-0581-4482-a54e-2fe444ea9b07";
@@ -497,11 +611,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou ZhangTao Network Technology Co., Ltd.";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../SDK\"/**";
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SMSSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.SMSSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3807aac7-5c27-488f-a865-268eb1dd8043";

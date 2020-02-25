@@ -4,7 +4,7 @@
 
 **Current SMSSDK version**
 
-- iOS v3.2.5
+- iOS v3.2.6
 
 **中文集成文档**
 
@@ -60,8 +60,112 @@ Show you like this：
 
 ## Step5: Using API 
 
-In the SMSSDK file ,it contains all the API in the SDK, and here,you can use anyone that you wanted liking this:
+##1. Access to privacy agreement
 
+According to the requirements of national laws and regulations (for details, please refer to the printed and distributed by the network security administration of the Ministry of industry and information technology of the people's Republic of China  <font color="Red"> notice of [identification method for illegal collection and use of personal information by app] (http://www.miit.gov.cn/n1146285/n1146352/n3054355/n3057724/n3057729/c7591259 / content. HTML) </font>). When developers use SDK products provided by mobtech, they need to show the privacy service agreement of mobtech to end users and obtain the authorization of users.
+</br>
+</br> mobtech provides the corresponding interface of privacy service for developers to use. </br>
+Note: all developers are required to access the mobtech privacy service process according to this document, otherwise, the relevant services provided by each SDK of mobtech may not be used. </br></font>
+
+### 1.1 Description</br>
+
+The privacy process of mobtech mainly includes the functions of "privacy agreement authorization" and "privacy agreement secondary confirmation", involving the following interfaces:</br>
+<font color="Red"> it is suggested that developers should attach mobtech's privacy protocol in a prominent position (e.g. in the application's own service agreement pop-up box), users
+Click to view the agreement.) </br></font>
+
+**</br> (1) show the mobtech privacy protocol to the end user and return the user authorization result</br>
+</br> (2) privacy secondary confirmation box switch setting</br>
+</br> (3) user defined privacy secondary confirmation box UI</br>
+</br> (4) query the content of mobtech privacy agreement </br>**
+
+###</br> 1.2 access process</br>
+
+####</br> 1. Import the latest version of sms_sdk.framework, mobfoundation.framework and mob privacy protocol related interfaces in mobsdk + privacy. H, including 4 interfaces</br>
+
+####Import header file:
+
+```objective-c
+
+#import <MOBFoundation/MobSDK+Privacy.h>
+
+```
+
+
+
+Show mobtech privacy agreement</br>
+</br> developers need to show mobtech privacy policy first. It is suggested to show it in the following ways:</br>
+
+**</br> (1) embed the URL of mobtech privacy agreement into the description of the app's own privacy agreement</br>
+</br> (2) add the title of mobtech privacy agreement in the prominent position of the app privacy agreement authorization box, and click to view the content of the agreement</br>
+</br> (3) embed the content of mobtech privacy agreement in the app's own privacy agreement </br>**
+
+####</br> 2. Query the content of mobtech privacy agreement</br>
+
+</br> developers should attach mobtech's privacy protocol in a prominent position (for example, in the application's own service agreement pop-up box), and users can view the content of the protocol by clicking. The function of querying the privacy protocol provides two options: synchronous and asynchronous. </br>
+
+```objective-c
+* *
+Get user privacy agreement
+@Param type protocol type (1 = URL type, 2 = rich text type)
+@Param data title = title, content = content (type = 1, return URL, return rich text when type = 2)
+* /
++ (void)getPrivacyPolicy:(NSString * _Nullable)type
+compeletion:(void (^ _Nullable)(NSDictionary * _Nullable data,NSErro
+R
+* _Nullable error))result;
+```
+
+**The following values are available for </br> type:</br>
+</br> (1) obtain the URL address of the privacy agreement, which is used to display the privacy agreement through the web page</br>
+</br> (2) obtain the complete content of the privacy agreement, which is used to display the privacy agreement through the rich version </br>**
+
+####</br> 3. Upload privacy agreement authorization status</br>
+
+</br> upload the user's authorization status of the privacy agreement. When the user operates the authorization of the privacy agreement (whether authorized or denied), the status will be correctly fed back to mobtech, so that mobtech can identify whether the corresponding service content can be provided</br>
+
+```objective-c
+* *
+Upload privacy agreement authorization status
+@Whether param isagree agrees (the result of user authorization)
+* /
++ (void)uploadPrivacyPermissionStatus:(BOOL)isAgree
+onResult:(void (^_Nullable)(BOOL success))handler;
+```
+#####The scenario is as follows:</br>
+
+<img src="http://download.sdk.mob.com/2020/02/18/20/1582030309701/834_1614_408.23.png" width="300">
+
+
+####</br> 4. Setting of privacy secondary confirmation box switch (not required)</br>
+
+```objective-c
+
+* *
+Set whether pop ups are allowed
+@Whether param show allows to display the secondary pop-up window of the privacy protocol (preferably set to yes, otherwise some functions of mobtech may not be able to
+Yes by default)
+* /
++ (void)setAllowShowPrivacyWindow:(BOOL)show;
+```
+**It is better to call when application: didfinishlaunchingwithoptions: is used during application initialization to avoid late call and ineffective setting effect. </br>
+
+
+####</br> 5. User defined privacy secondary confirmation box UI (not required)</br>
+
+```objective-c
+* *
+Set privacy protocol pop-up tone
+@Param backcolorb pop up background color
+@Param colors pop-up button tone array (⾸ element is reject button tone, the second element is agree button tone)
+* /
++ (void)setPrivacyBackgroundColor:(UIColor *_Nullable)backColor
+operationButtonColor:(NSArray <UIColor *>*_Nullable)colors;
+```
+
+
+
+##2. Import header file
+`#import <SMS_SDK/SMSSDK.h>`
 
 - **Get verificationCode**
 
@@ -99,5 +203,4 @@ else
 ```
 
 ## If you want to see the chinese document,please [click here](http://wiki.mob.com/sdk-sms-ios-3-0/) !
-
 

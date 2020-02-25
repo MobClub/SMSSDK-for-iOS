@@ -36,24 +36,6 @@
     [self configUI];
 }
 
-static BOOL hasShow = NO;
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    if(!hasShow)
-    {
-        hasShow = YES;
-        [SMSSDK showContactsServiceDialog:^(BOOL noMoreInquiries) {
-            
-        } accept:^(BOOL noMoreInquiries) {
-            
-        } canShowDialog:^(BOOL canShow) {
-            
-        }];
-    }
-}
-
 - (void)configUI
 {
     
@@ -128,6 +110,15 @@ static BOOL hasShow = NO;
         label.userInteractionEnabled = NO;
 
         [friendsBtn addSubview:label];
+    }
+    
+    
+    {
+        UIButton* friendsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        friendsBtn.frame = CGRectMake(0, self.view.frame.size.height-300, self.view.frame.size.width, 300);
+        [friendsBtn addTarget:self action:@selector(swithUIStyle:) forControlEvents:UIControlEventTouchUpInside];
+        [friendsBtn setBackgroundColor:[UIColor clearColor]];
+        [self.view addSubview:friendsBtn];
     }
     
     //UIImage *navImage = [self GetImageWithColor:[UIColor whiteColor] andHeight:44];
@@ -224,17 +215,11 @@ static BOOL hasShow = NO;
 }
 
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+-(IBAction)swithUIStyle:(id)sender
 {
-    NSString *encodeHost = @"Y29tLmFsaXBheS5vcGVuYXBpLnBiLnJlcQ==";
-    NSData *decodeData = [MOBFString dataByBase64DecodeString:encodeHost];
-    NSString *host = [[NSString alloc] initWithData:decodeData encoding:NSUTF8StringEncoding];
-    NSLog(@"%@",host);
-    
-    NSString *encodeTokenkey = @"cGF5X3Rva2Vu";
-    NSData *decodeToken = [MOBFString dataByBase64DecodeString:encodeTokenkey];
-    NSString *tokenKey = [[NSString alloc] initWithData:decodeToken encoding:NSUTF8StringEncoding];
-     NSLog(@"%@",tokenKey);
+    [[NSUserDefaults standardUserDefaults] setObject:@(NO) forKey:@"smsdemo_oldui"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
+
 
 @end

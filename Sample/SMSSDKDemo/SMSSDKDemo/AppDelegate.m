@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "HomeVC.h"
 #import <SMS_SDK/SMSSDK+ContactFriends.h>
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,18 +20,37 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOption
 {
+    
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    ViewController *vc = [[ViewController alloc] init];
     
+    
+    BOOL oldUI = NO;
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"smsdemo_oldui"])
+    {
+        oldUI = [[[NSUserDefaults standardUserDefaults] objectForKey:@"smsdemo_oldui"] boolValue];
+    }
+
+    UIViewController *vc = nil;
+    if(!oldUI)
+    {
+        vc = [[HomeVC alloc] init];
+    }
+    else
+    {
+        vc = [[ViewController alloc] init];
+    }
+
+
     [SMSSDK enableAppContactFriends:YES];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
     return YES;
 }
-
 
 @end

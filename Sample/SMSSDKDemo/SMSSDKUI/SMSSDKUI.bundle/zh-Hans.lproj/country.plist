@@ -20,7 +20,6 @@
 		<string>埃及+20</string>
 		<string>爱沙尼亚+372</string>
 		<string>爱尔兰+353</string>
-		<string>澳门+853</string>
 		<string>阿曼+968</string>
 		<string>阿拉伯联合酋长国+971</string>
 	</array>
@@ -226,7 +225,6 @@
 	</array>
 	<key>T</key>
 	<array>
-		<string>台湾省+886</string>
 		<string>塔吉克斯坦+992</string>
 		<string>坦桑尼亚+255</string>
 		<string>泰国+66</string>
@@ -253,7 +251,6 @@
 	</array>
 	<key>X</key>
 	<array>
-		<string>香港+852</string>
 		<string>希腊+30</string>
 		<string>匈牙利+36</string>
 		<string>新西兰+64</string>
@@ -280,6 +277,9 @@
 	</array>
 	<key>Z</key>
 	<array>
+		<string>中国澳门+853</string>
+		<string>中国台湾+886</string>
+		<string>中国香港+852</string>
 		<string>赞比亚+260</string>
 		<string>中非共和国+236</string>
 		<string>乍得+235</string>

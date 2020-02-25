@@ -42,10 +42,20 @@ typedef NS_ENUM(NSUInteger, SMSSDKUIProcessHUDStyle)
 {
     self.window =
     ({
+        NSArray *windows = [UIApplication sharedApplication].windows;
+        int level = 0;
+        for (UIWindow *window in windows) {
+            level = window.windowLevel>level?window.windowLevel:level;
+        }
+        
+//        level = [UIApplication sharedApplication].keyWindow.windowLevel;
+        
         CGSize size = [UIScreen mainScreen].bounds.size ;
         UIWindow *window = [[UIWindow alloc] initWithFrame:CGRectMake((size.width-179)/2.0,size.height/2.0-109,179, 109)];
         window.backgroundColor = [UIColor clearColor];
-        window.windowLevel = UIWindowLevelAlert + 1 ;
+        window.windowLevel = level + 1 ;
+//        window.windowLevel = UIWindowLevelAlert + 1 ;
+
         window;
     });
 

@@ -1,0 +1,114 @@
+/* 
+  Localizable.strings
+  SMS_SDKDemo
+
+  Created by 掌淘科技 on 14-9-26.
+  Copyright (c) 2014年 掌淘科技. All rights reserved.
+*/
+"smssdk" = "SMSSDK";
+"welcome"="Click on the screen to continue...";
+"RegisterBySMS"="Register By SMS";
+"RegisterByPhoneNumber"="Register By Phone";
+"addressbookfriends"="AddressBook friends";
+"getUserinfo" = "Get User Info";
+"submitUserInfo" = "Submit User Info";
+"myInfo" = "My Info";
+"register"="Register";
+"RegisterByVoiceCall" = "Register By Voice Call";
+"back"="Back";
+"labelnotice"="enter your mobile number";
+"telfield"="Mobile number";
+"nicknamefield"="nickname";
+"submitinfo"="submit info";
+
+"nextbtn"="Next";
+"countrylable"="Region";
+"countrychoose"="Choose the country";
+
+"notice"="Notice";
+"pleaseSettingContractKey" = "Please setting the key：NSContactsUsageDescription key in the info.plist";
+"errorphonenumber"="Phone number is invalid";
+"errorphonenumberenter"="Phone number is invalid";
+"sure"="OK";
+"alertContactAuth"="You have not yet open permission of addressBook,set now ?";
+"goset"="Set the permission";
+
+"willsendthecodeto"="We will send a verification code to the following number";
+"surephonenumber"="Phone Number Confirmation";
+"cancel"="Cancel";
+
+"codesenderrormsg"="The code send fail try again later";
+"codesenderrtitle"="Send Fail";
+
+"maxcodemsg"="The code is up the max limit";
+"maxcode"="Up max limit";
+
+"codetoooftenmsg"="The request is too often";
+"Code" = "Code";
+"verifycode"="Enter Code";
+"verifylabel"="Verification code has been sent, please check";
+"timelabel"="Takes about 60 seconds";
+"repeatsms"="Can't get code？";
+"submit"="Submit";
+"sendingin"="Sending in...";
+"timelablemsg"="Getting the verification code almost need ";
+"resendmsg"="resend";
+"second"=" seconds";
+
+"verifycoderightmsg"="Code is right";
+"verifycoderighttitle"="Success";
+"verifycodeerrormsg"="Code is invalid try again later";
+"verifycodeerrortitle"="Verify failure";
+
+"cannotgetsmsmsg"="We will re send verification code SMS to it";
+
+"codedelaymsg"="Messages may slightly delay is determined to return and start again";
+"wait"="Wait";
+
+"verifycodeformaterror"="Code format error please re-enter";
+
+"doesnotsupportarea"="Temporarily does not support the area";
+
+"addfriends"="Add";
+"invite"="Invite";
+"toaddusers"="to add users";
+"toinvitefriends"="To invite friends";
+"phonecontacts"="Phone contacts";
+
+"loading"="Loading...";
+"sendingRequest"="Requesting verification code";
+"requestSuccess"="Request Success!";
+"commitingCode"="Verify...";
+"commitSuccess"="verification is successful !";
+"authorizedcontact"="You may not be authorized to access contacts in settings authorization, you can see the contacts of friends";
+
+"addfriendstitle"="Add friends";
+"addfriendsmsg"="Has been sent to add friends information, please be patient friend reply";
+"fillyourinfo"="please fill in your information";
+"nickname"="nickname";
+
+"sendinvite"="Send invite";
+"notjoined"="not joined";
+"phonecode"="Phone";
+"smsmessage"="Join SMS_SDK, for http://mob.com web site";
+"choosephonenumber"="Choose to send invitation number";
+"close" = "Close";
+"versionNotice" = "The iOS'version is too low,it's need iOS4.0 or later for sending sms";
+"deviceFoundation" = "This device had no this foundation for sending sms";
+
+"voiceCallMsgLabel" = "please try Get verification code by voice call";
+"try voice call" = "Get verification code by voice call";
+"voiceCall" = "Get verification code by voice call";
+
+"verificationByVoiceCallConfirm" = "We will tell you the verifying code by telephone. Please pay attention to the answer";
+
+"empty"="text can`t be empty";
+"bindinfo"="bind info";
+"rebind"="rebind";
+"avatarchoose"="Choose the avatar";
+"addressbook"="AddressBook";
+"invitefriends"="invitefriends";
+"nonetwork"="Network suck, please try again later";
+"phoneverifyrightmsg"="verification is successful ";
+
+

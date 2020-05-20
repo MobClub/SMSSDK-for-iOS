@@ -1,0 +1,41 @@
+//
+//  SMSSDKUIPrefixHeader.pch
+//  SMSSDKUI
+//
+//  Created by youzu_Max on 2017/5/31.
+//  Copyright © 2017年 youzu. All rights reserved.
+//
+
+#ifndef SMSSDKUIPrefixHeader_pch
+#define SMSSDKUIPrefixHeader_pch
+
+#import <SMS_SDK/SMSSDK.h>
+
+
+#define SMSSDKUIBundle [[NSBundle alloc] initWithPath:[[NSBundle mainBundle] pathForResource:@"SMSSDKUI" ofType:@"bundle"]]
+
+#define SMSLocalized(_S_) NSLocalizedStringFromTableInBundle((_S_), @"Localizable", SMSSDKUIBundle, nil)
+
+#define StatusBarHeight [UIApplication sharedApplication].statusBarFrame.size.height
+
+#ifdef DEBUG
+
+#define SMSUILog(s, ...) NSLog(@"\n\n---------------------------------------------------\n %s[line:%d] \n %@ \n---------------------------------------------------\n", __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
+
+#else
+
+#define SMSUILog(s, ...)
+
+#endif
+
+#define SMSSDKAlert(_S_, ...)     [[[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:(_S_), ##__VA_ARGS__] delegate:nil cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", SMSSDKUIBundle, nil) otherButtonTitles:nil] show]
+
+#define SMSSDKTitleAlert(title,_S_, ...)     [[[UIAlertView alloc] initWithTitle:title message:[NSString stringWithFormat:(_S_), ##__VA_ARGS__] delegate:nil cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"sure", @"Localizable", SMSSDKUIBundle, nil) otherButtonTitles:nil] show]
+
+#define SMSCommonColor() [UIColor colorWithRed:0 green:215/255.0 blue:159/255.0 alpha:1]
+#define SMSRGB(colorHex) [UIColor colorWithRed:((float)((colorHex & 0xFF0000) >> 16)) / 255.0 green:((float)((colorHex & 0xFF00) >> 8)) / 255.0 blue:((float)(colorHex & 0xFF)) / 255.0 alpha:1.0]
+
+
+
+
+#endif /* SMSSDKUIPrefixHeader_pch */

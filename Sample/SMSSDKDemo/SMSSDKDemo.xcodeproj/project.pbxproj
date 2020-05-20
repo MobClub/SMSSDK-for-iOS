@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B0E4F4524553CD7008D02BE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0E4F4424553CD7008D02BE /* libz.tbd */; };
+		0B2932A1245537FD0001D3E7 /* SMSSDKUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B29329F245537FD0001D3E7 /* SMSSDKUI.framework */; };
+		0B2932A2245537FD0001D3E7 /* SMSSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B2932A0245537FD0001D3E7 /* SMSSDKUI.bundle */; };
 		3CF3263F23ED3DEF0043DDBA /* SMSDemoPolicyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3263E23ED3DEF0043DDBA /* SMSDemoPolicyManager.m */; };
 		3CF3264223ED5D6C0043DDBA /* SMSDemoPolicyWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3264123ED5D6C0043DDBA /* SMSDemoPolicyWebVC.m */; };
-		4431E5F61EFBBFEB0008CB41 /* libSMSSDKUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4431E5F31EFBBFDB0008CB41 /* libSMSSDKUI.a */; };
 		4431E5FA1EFBC0380008CB41 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4431E5F91EFBC0380008CB41 /* MOBFoundation.framework */; };
 		448BE9E11ED6D2470081B15A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 448BE9E01ED6D2470081B15A /* main.m */; };
 		448BE9E41ED6D2470081B15A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 448BE9E31ED6D2470081B15A /* AppDelegate.m */; };
@@ -17,8 +19,6 @@
 		448BE9EC1ED6D2470081B15A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448BE9EB1ED6D2470081B15A /* Assets.xcassets */; };
 		448BE9EF1ED6D2470081B15A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448BE9ED1ED6D2470081B15A /* LaunchScreen.storyboard */; };
 		448BE9FA1ED6D2470081B15A /* SMSSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 448BE9F91ED6D2470081B15A /* SMSSDKDemoTests.m */; };
-		448BEA1D1ED6D3E10081B15A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 448BEA1C1ED6D3E10081B15A /* libz.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
-		4495403F1EEA76F50075BEA4 /* SMSSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4495403E1EEA76F50075BEA4 /* SMSSDKUI.bundle */; };
 		8D2F150123BD88EF005474D2 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F14FF23BD88EF005474D2 /* HomeVC.m */; };
 		8D2F150223BD88EF005474D2 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F150023BD88EF005474D2 /* HomeVC.xib */; };
 		8D2F150723BD9700005474D2 /* SMSDemoCommitCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F150623BD9700005474D2 /* SMSDemoCommitCodeVC.m */; };
@@ -34,20 +34,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4431E5F21EFBBFDB0008CB41 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4431E5EE1EFBBFDB0008CB41 /* SMSSDKUI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 448BEA291ED6D4170081B15A;
-			remoteInfo = SMSSDKUI;
-		};
-		4431E5F41EFBBFE70008CB41 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4431E5EE1EFBBFDB0008CB41 /* SMSSDKUI.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 448BEA281ED6D4170081B15A;
-			remoteInfo = SMSSDKUI;
-		};
 		449540481EEA7F8A0075BEA4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 448BE9D41ED6D2470081B15A /* Project object */;
@@ -58,11 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B0E4F4424553CD7008D02BE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		0B29329F245537FD0001D3E7 /* SMSSDKUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMSSDKUI.framework; sourceTree = "<group>"; };
+		0B2932A0245537FD0001D3E7 /* SMSSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SMSSDKUI.bundle; sourceTree = "<group>"; };
+		0B5E702524553AE6001D297C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3CF3263D23ED3DEF0043DDBA /* SMSDemoPolicyManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSDemoPolicyManager.h; sourceTree = "<group>"; };
 		3CF3263E23ED3DEF0043DDBA /* SMSDemoPolicyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSDemoPolicyManager.m; sourceTree = "<group>"; };
 		3CF3264023ED5D6C0043DDBA /* SMSDemoPolicyWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSDemoPolicyWebVC.h; sourceTree = "<group>"; };
 		3CF3264123ED5D6C0043DDBA /* SMSDemoPolicyWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSDemoPolicyWebVC.m; sourceTree = "<group>"; };
-		4431E5EE1EFBBFDB0008CB41 /* SMSSDKUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SMSSDKUI.xcodeproj; path = SMSSDKUI/SMSSDKUI.xcodeproj; sourceTree = "<group>"; };
 		4431E5F91EFBC0380008CB41 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		448BE9DC1ED6D2470081B15A /* SMSSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMSSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		448BE9E01ED6D2470081B15A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,9 +65,6 @@
 		448BE9F51ED6D2470081B15A /* SMSSDKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMSSDKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		448BE9F91ED6D2470081B15A /* SMSSDKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSSDKDemoTests.m; sourceTree = "<group>"; };
 		448BE9FB1ED6D2470081B15A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		448BEA1C1ED6D3E10081B15A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		448BEA1E1ED6D3E90081B15A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		4495403E1EEA76F50075BEA4 /* SMSSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SMSSDKUI.bundle; path = ../SMSSDKUI/SMSSDKUI.bundle; sourceTree = "<group>"; };
 		8D2F14FE23BD88EF005474D2 /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		8D2F14FF23BD88EF005474D2 /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
 		8D2F150023BD88EF005474D2 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
@@ -110,11 +96,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B0E4F4524553CD7008D02BE /* libz.tbd in Frameworks */,
 				8DF6E368214CE6B8005711BC /* libc++.tbd in Frameworks */,
-				4431E5F61EFBBFEB0008CB41 /* libSMSSDKUI.a in Frameworks */,
+				0B2932A1245537FD0001D3E7 /* SMSSDKUI.framework in Frameworks */,
 				8D6B449D239FC5E300272970 /* SMS_SDK.framework in Frameworks */,
 				4431E5FA1EFBC0380008CB41 /* MOBFoundation.framework in Frameworks */,
-				448BEA1D1ED6D3E10081B15A /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +114,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B29329E245537FD0001D3E7 /* SMSSDKUIPackage */ = {
+			isa = PBXGroup;
+			children = (
+				0B29329F245537FD0001D3E7 /* SMSSDKUI.framework */,
+				0B2932A0245537FD0001D3E7 /* SMSSDKUI.bundle */,
+			);
+			name = SMSSDKUIPackage;
+			path = ../../SMSSDKUIPackage;
+			sourceTree = "<group>";
+		};
 		3CF3263C23ED38B60043DDBA /* Policy */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,17 +135,10 @@
 			path = Policy;
 			sourceTree = "<group>";
 		};
-		4431E5EF1EFBBFDB0008CB41 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4431E5F31EFBBFDB0008CB41 /* libSMSSDKUI.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		444590401F7B3B2C0090FE24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B0E4F4424553CD7008D02BE /* libz.tbd */,
 				8DF6E367214CE6B8005711BC /* libc++.tbd */,
 				8DD5D35E214B964A006614BC /* CoreTelephony.framework */,
 			);
@@ -159,7 +148,6 @@
 		448BE9D31ED6D2470081B15A = {
 			isa = PBXGroup;
 			children = (
-				4431E5EE1EFBBFDB0008CB41 /* SMSSDKUI.xcodeproj */,
 				448BE9DE1ED6D2470081B15A /* SMSSDKDemo */,
 				449540531EEA80040075BEA4 /* Libs */,
 				448BE9F81ED6D2470081B15A /* SMSSDKDemoTests */,
@@ -189,6 +177,7 @@
 				8D2F14FE23BD88EF005474D2 /* HomeVC.h */,
 				8D2F14FF23BD88EF005474D2 /* HomeVC.m */,
 				8D2F150023BD88EF005474D2 /* HomeVC.xib */,
+				0B5E702524553AE6001D297C /* PrefixHeader.pch */,
 			);
 			path = SMSSDKDemo;
 			sourceTree = "<group>";
@@ -231,21 +220,10 @@
 			path = Required;
 			sourceTree = "<group>";
 		};
-		448BEA1B1ED6D3E00081B15A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				448BEA1E1ED6D3E90081B15A /* libstdc++.tbd */,
-				448BEA1C1ED6D3E10081B15A /* libz.tbd */,
-			);
-			name = Frameworks;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		449540531EEA80040075BEA4 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				448BEA1B1ED6D3E00081B15A /* Frameworks */,
-				4495403E1EEA76F50075BEA4 /* SMSSDKUI.bundle */,
+				0B29329E245537FD0001D3E7 /* SMSSDKUIPackage */,
 				448BEA131ED6D3120081B15A /* SDK */,
 			);
 			name = Libs;
@@ -322,7 +300,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4431E5F51EFBBFE70008CB41 /* PBXTargetDependency */,
 			);
 			name = SMSSDKDemo;
 			productName = SMSSDKDemo;
@@ -364,7 +341,6 @@
 					};
 					448BE9F41ED6D2470081B15A = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = LW5266U92D;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 448BE9DB1ED6D2470081B15A;
 					};
@@ -383,12 +359,6 @@
 			mainGroup = 448BE9D31ED6D2470081B15A;
 			productRefGroup = 448BE9DD1ED6D2470081B15A /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4431E5EF1EFBBFDB0008CB41 /* Products */;
-					ProjectRef = 4431E5EE1EFBBFDB0008CB41 /* SMSSDKUI.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				448BE9DB1ED6D2470081B15A /* SMSSDKDemo */,
@@ -397,25 +367,15 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		4431E5F31EFBBFDB0008CB41 /* libSMSSDKUI.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSMSSDKUI.a;
-			remoteRef = 4431E5F21EFBBFDB0008CB41 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		448BE9DA1ED6D2470081B15A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2932A2245537FD0001D3E7 /* SMSSDKUI.bundle in Resources */,
 				448BE9EF1ED6D2470081B15A /* LaunchScreen.storyboard in Resources */,
 				8D2F151323BDC002005474D2 /* SMSDemoUI.bundle in Resources */,
 				8D2F150223BD88EF005474D2 /* HomeVC.xib in Resources */,
-				4495403F1EEA76F50075BEA4 /* SMSSDKUI.bundle in Resources */,
 				448BE9EC1ED6D2470081B15A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,11 +421,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4431E5F51EFBBFE70008CB41 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SMSSDKUI;
-			targetProxy = 4431E5F41EFBBFE70008CB41 /* PBXContainerItemProxy */;
-		};
 		449540491EEA7F8A0075BEA4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 448BE9DB1ED6D2470081B15A /* SMSSDKDemo */;
@@ -519,6 +474,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SMSSDKDemo/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -567,6 +524,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SMSSDKDemo/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -584,44 +543,66 @@
 		448BEA0A1ED6D2470081B15A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 永超 李 (6L4556Q7ET)";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LW5266U92D;
 				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../SDK\"/**";
-				GCC_PREFIX_HEADER = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../SDK\"/**",
+					"\"$(SRCROOT)/../SMSSDKUIPackage\"/**",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SMSSDKDemo/PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../SDK\"/**",
+					"\"$(SRCROOT)/../SMSSDKUIPackage\"/**",
+				);
 				INFOPLIST_FILE = SMSSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 3.2.7;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.SMSSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9ca8ebb1-0581-4482-a54e-2fe444ea9b07";
 				PROVISIONING_PROFILE_SPECIFIER = SMSSDKDevelopment;
+				TVOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
 		448BEA0B1ED6D2470081B15A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou ZhangTao Network Technology Co., Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LW5266U92D;
 				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../SDK\"/**";
-				GCC_PREFIX_HEADER = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../SDK\"/**",
+					"\"$(SRCROOT)/../SMSSDKUIPackage\"/**",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SMSSDKDemo/PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../SDK\"/**",
+					"\"$(SRCROOT)/../SMSSDKUIPackage\"/**",
+				);
 				INFOPLIST_FILE = SMSSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 3.2.7;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.SMSSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3807aac7-5c27-488f-a865-268eb1dd8043";
 				PROVISIONING_PROFILE_SPECIFIER = SMSSDK;
+				TVOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -629,17 +610,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LW5266U92D;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../SDK\"/**";
 				INFOPLIST_FILE = SMSSDKDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = youzu.SMSSDKDemoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.SMSSDKDemoTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMSSDKDemo.app/SMSSDKDemo";
+				TVOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -647,17 +631,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LW5266U92D;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../SDK\"/**";
 				INFOPLIST_FILE = SMSSDKDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = youzu.SMSSDKDemoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.SMSSDKDemoTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMSSDKDemo.app/SMSSDKDemo";
+				TVOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};

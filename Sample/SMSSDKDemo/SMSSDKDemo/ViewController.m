@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import <SMS_SDK/SMSSDK.h>
 #import <SMS_SDK/SMSSDK+ContactFriends.h>
-#import "SMSSDKUI.h"
+#import <SMSSDKUI/SMSSDKUI.h>
 #import <MOBFoundation/MOBFoundation.h>
 
 

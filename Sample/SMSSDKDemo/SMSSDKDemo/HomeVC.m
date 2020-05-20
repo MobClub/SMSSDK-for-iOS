@@ -56,15 +56,9 @@ static BOOL hasShow = NO;
     if(!hasShow)
     {
         hasShow = YES;
-        
-        UIColor *aggreeColor = [UIColor colorWithRed:8/255.0 green:151/255.0 blue:156/255.0 alpha:1];
-        NSMutableArray *btnColors = [NSMutableArray new];
-        [btnColors addObject:[UIColor colorWithRed:235/255.0 green:234/255.0 blue:236/255.0 alpha:1]];
-        [btnColors addObject:aggreeColor];
-        [MobSDK setPrivacyBackgroundColor:nil operationButtonColor:btnColors];
 
         //获取隐私协议
-        [MobSDK getPrivacyPolicy:@"1" compeletion:^(NSDictionary * _Nullable data, NSError * _Nullable error) {
+        [MobSDK getPrivacyPolicy:@"1" language:@"zh" compeletion:^(NSDictionary * _Nullable data, NSError * _Nullable error) {
             
             NSString *url = data[@"content"];
             if(url)

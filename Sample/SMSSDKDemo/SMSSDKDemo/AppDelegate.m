@@ -20,7 +20,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOption
 {
-    
+    [SMSSDK getCountryZone:^(NSError *error, NSArray *zonesArray) {
+        
+
+    }];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];

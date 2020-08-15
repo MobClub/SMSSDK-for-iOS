@@ -59,16 +59,16 @@ static BOOL hasShow = NO;
 
         //获取隐私协议
         [MobSDK getPrivacyPolicy:@"1" language:@"zh" compeletion:^(NSDictionary * _Nullable data, NSError * _Nullable error) {
-            
+
             NSString *url = data[@"content"];
             if(url)
             {
                 [SMSDemoPolicyManager show:url compeletion:^(BOOL accept) {
                     //是否接受隐私协议
                     [MobSDK uploadPrivacyPermissionStatus:accept onResult:^(BOOL success) {
-                        
+
                     }];
-                    
+
                 }];
             }
 
@@ -88,6 +88,13 @@ static BOOL hasShow = NO;
             vc.modalPresentationStyle = UIModalPresentationFullScreen;
             [self presentViewController:vc animated:YES completion:nil];
             
+            //提交用户信息
+            SMSSDKUserInfo *user = [[SMSSDKUserInfo alloc] init];
+            user.phone = dict[@"phone"];
+            user.zone = dict[@"zone"];
+            [SMSSDK submitUserInfo:user result:^(NSError *error) {
+                
+            }];
         }
         
     }];

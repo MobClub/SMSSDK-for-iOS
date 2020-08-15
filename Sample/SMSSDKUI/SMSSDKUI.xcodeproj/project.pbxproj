@@ -564,7 +564,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 3.2.7;
+				MARKETING_VERSION = 3.2.10;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mob.SMSSDKUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -595,7 +595,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 3.2.7;
+				MARKETING_VERSION = 3.2.10;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mob.SMSSDKUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -611,6 +611,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				TVOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
@@ -620,6 +621,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				TVOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;

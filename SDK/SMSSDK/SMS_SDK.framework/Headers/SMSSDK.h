@@ -75,16 +75,4 @@
  */
 + (void) getCountryZone:(SMSGetZoneResultHandler)result;
 
-/**
- * @from                    v1.1.1
- * @brief                  通讯录服务授权弹窗
- *
- 
- * @param refuseBlock  拒绝回调
- * @param  acceptBlock 接受回调
- * @param canShowDialogBlock 是否能显示弹窗回调
- **/
-+(void)showContactsServiceDialog:(nullable SMSSDKDialogViewHandler)refuseBlock
-                          accept:(nullable SMSSDKDialogViewHandler)acceptBlock
-                   canShowDialog:(nullable SMSSDKDialogViewShowHandler)canShowDialogBlock;
 @end

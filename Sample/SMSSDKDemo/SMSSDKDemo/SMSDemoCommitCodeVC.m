@@ -895,6 +895,9 @@
 
 - (void)startTimeLbl
 {
+    [self.codeTf resignFirstResponder];
+    [self.phoneTf resignFirstResponder];
+    
     self.getCodeBtn.userInteractionEnabled = NO;
     self.textTitleLbl.userInteractionEnabled = NO;
     self.voiceTitleLbl.userInteractionEnabled = NO;

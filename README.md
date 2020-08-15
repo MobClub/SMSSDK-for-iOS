@@ -4,7 +4,7 @@
 
 **Current SMSSDK version**
 
-- iOS v3.2.6
+- iOS v3.2.10
 
 **中文集成文档**
 

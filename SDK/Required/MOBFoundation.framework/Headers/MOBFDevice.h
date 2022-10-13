@@ -8,57 +8,24 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <MOBFoundation/MOBSDKDef.h>
 
 extern NSString *kMOBFReachabilityChangedNotification;
 
-/**
- *  网络类型
- */
-typedef NS_ENUM(NSUInteger, MOBFNetworkType)
-{
-    /**
-     *  无网咯
-     */
-    MOBFNetworkTypeNone         = 0,
-    /**
-     *  蜂窝网络
-     */
-    MOBFNetworkTypeCellular     = 2,
-    /**
-     *  WIFI
-     */
-    MOBFNetworkTypeWifi         = 1,
-    /**
-     *  2G网络
-     */
-    MOBFNetworkTypeCellular2G   = 3,
-    /**
-     *  3G网络
-     */
-    MOBFNetworkTypeCellular3G   = 4,
-    /**
-     *  4G网络
-     */
-    MOBFNetworkTypeCellular4G   = 5,
-};
-
-
-/**
- IP版本
-
- - MOBFIPVersion4: IPv4
- - MOBFIPVersion6: IPv6
- */
-typedef NS_ENUM(NSUInteger, MOBFIPVersion)
-{
-    MOBFIPVersion4 = 0,
-    MOBFIPVersion6 = 1,
-};
 
 /**
  *  设备工具类
  */
 @interface MOBFDevice : NSObject
+
+
+/**
+ *  获取单例的 CTTelephonyNetworkInfo
+ *
+ *  @return CTTelephonyNetworkInfo
+ */
++ (CTTelephonyNetworkInfo *)networkInfo;
 
 /**
  *  获取网卡物理地址
@@ -82,11 +49,25 @@ typedef NS_ENUM(NSUInteger, MOBFIPVersion)
 + (MOBFNetworkType)currentNetworkType;
 
 /**
+ *  获取当前网络类型字符串
+ *
+ *  @return 网络类型
+ */
++ (NSString *)currentNetworkTypeStr;
+
+/**
  *  获取手机运营商代码
  *
  *  @return 手机运营商代码
  */
 + (NSString *)carrier;
+
+/**
+ *  获取手机运营商信息
+ *
+ *  @return 手机运营商信息
+ */
++ (CTCarrier *)curCarrier;
 
 /**
  *  获取手机运营商名称
@@ -177,6 +158,7 @@ typedef NS_ENUM(NSUInteger, MOBFIPVersion)
 /**
  *  获取设备IP地址
  *
+ *  @param ver 版本号
  *  @return IP地址
  */
 + (NSString *)ipAddress:(MOBFIPVersion)ver;
@@ -222,5 +204,41 @@ typedef NS_ENUM(NSUInteger, MOBFIPVersion)
  *  @return 网络类型
  */
 + (NSString *)currentDataNetworkType;
+
+/**
+ *  系统版本
+ *
+ *  @return 系统版本
+ */
++ (NSString *)systemVersion;
+
+/**
+ *  系统名称
+ *
+ *  @return 系统名称
+ */
++ (NSString *)systemName;
+
+/**
+*  获取设备名称 (如:iPhone 8 Plus)
+*
+*  @return 设备名称
+*/
++ (NSString *)deviceName;
+
+/**
+*  设备类型
+*
+*  @return 设备类型
+*/
++ (UIUserInterfaceIdiom)userInterfaceIdiom;
+
+
+/**
+*  获取机器名称 (如:x86_64)
+*
+*  @return 机器名称
+*/
++ (NSString *)machineName;
 
 @end

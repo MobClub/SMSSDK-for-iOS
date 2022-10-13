@@ -16,6 +16,25 @@
  */
 @interface SMSSDK : NSObject
 
+#pragma mark - 支持获取手机号码认证 Token (get the token to verify the phone number)
+/**
+*  @brief                   请求手机号码认证Token
+*
+*  @param handler           请求结果回调(Results of the request)
+*/
++ (void) getMobileAuthTokenWith:(SMSSDKMobileAuthTokenResultHandler)handler;
+
+/**
+*  @brief                   验证手机号
+*
+*  @param phoneNum          电话号码(The phone number)
+*  @param tokenInfo         SDK返回的SMSSDKAuthToken Model
+*  @param completion        请求结果回调(Results of the request)
+*/
++ (void) verifyMobileWithPhone:(NSString *)phoneNum
+                         token:(SMSSDKAuthToken *)tokenInfo
+                    completion:(SMSSDKMobileVerifyResultHandler)completion;
+
 #pragma mark - 支持获取验证码和提交验证码 (get the verification code and commit verifacation code)
 /**
  *  @from                    v1.1.1

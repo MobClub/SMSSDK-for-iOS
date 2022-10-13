@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+
 @class SMSSDKUserInfo;
+@class SMSSDKAuthToken;
+@class SMSSDKCallingResult;
 
 typedef NS_ENUM(NSUInteger, SMSGetCodeMethod)
 {
@@ -66,5 +69,30 @@ typedef void(^SMSSDKDialogViewHandler)(BOOL noMoreInquiries);
  */
 typedef void(^SMSSDKDialogViewShowHandler)(BOOL canShow);
 
+/**
+ * @brief 请求手机号码认证Token结果回调
+ * @param model 包含token的具体信息
+ * @param error 为空时表示请求成功
+ */
+typedef void(^SMSSDKMobileAuthTokenResultHandler)(SMSSDKAuthToken *model, NSError *error);
 
+/**
+* @brief 请求手机号码认证Token回调
+* @param dict 包含token的具体信息
+* @param error 为空时表示请求成功
+*/
+typedef void(^SMSSDKMobileAuthTokenHandler)(NSDictionary *dict, NSError *error);
+
+/**
+* @brief 手机号码验证结果回调
+* @param isValid 是否验证成功 YES成功 NO失败
+* @param error 为空时表示请求成功
+*/
+typedef void(^SMSSDKMobileVerifyResultHandler)(BOOL isValid, NSError *error);
+
+/**
+ * @brief 请求手机号码认证Token回调
+ * @param result SMSSDKCallingResult
+ */
+typedef void(^SMSSDKResultHandler)(SMSSDKCallingResult *result);
 

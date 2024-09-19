@@ -31,7 +31,7 @@
 "CustomerServiceTelephone"="客服电话";
 "hasselected"="已选择";
 "loginsucess"="登录成功";
-"byMobTechSDK"="本服务由MobTech SDK提供";
+"byMobTechSDK"="本服务由SMSSDK提供";
 "loginfail"="喔噢,登录失败";
 "timeconsuming"="验证码发送耗时";
 "startverify"= "开始验证";

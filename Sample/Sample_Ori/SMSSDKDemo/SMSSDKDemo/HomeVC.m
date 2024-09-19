@@ -57,24 +57,11 @@ static BOOL hasShow = NO;
     if(!hasShow)
     {
         hasShow = YES;
-
-        //获取隐私协议
-        [MobSDK getPrivacyPolicy:@"1" language:@"zh" compeletion:^(NSDictionary * _Nullable data, NSError * _Nullable error) {
-
-            NSString *url = data[@"content"];
-            if(url)
-            {
-                [SMSDemoPolicyManager show:url compeletion:^(BOOL accept) {
-                    //是否接受隐私协议
-                    [MobSDK uploadPrivacyPermissionStatus:accept onResult:^(BOOL success) {
-
-                    }];
-
-                }];
-            }
-
+        NSString *url = @"https://policy.zztfly.com/sdk/sms/privacy";
+        [SMSDemoPolicyManager show:url compeletion:^(BOOL accept) {
+            //是否接受隐私协议
+            [MobSDK uploadPrivacyPermissionStatus:accept onResult:^(BOOL success) {}];
         }];
-
     }
     static int curStep = 0;
     if (curStep==0) {

@@ -154,15 +154,15 @@ static UIButton *acceptView = nil;
     {
         if(![SMSDemoHelper isZhHans])
         {
-            return [NSString stringWithFormat:@"You are welcome to use demo provided by mobtech. Smssdk provides developers with a free SMS verification code service. The top channel is issued in 3 seconds, which is suitable for login, password retrieval, payment authentication and other scenarios. We will use mobtech's privacy policy to help you understand what data we need to collect. Please refer to our privacy policy at %@ for details",self.url];
+            return [NSString stringWithFormat:@"You are welcome to use demo provided by Smssdk. Smssdk provides developers with a free SMS verification code service. The top channel is issued in 3 seconds, which is suitable for login, password retrieval, payment authentication and other scenarios. We will use smssdk's privacy policy to help you understand what data we need to collect. Please refer to our privacy policy at %@ for details",self.url];
         }
-        return  [NSString stringWithFormat:@"   欢迎您使用MobTech提供的演示DEMO，SMSSDK为开发者提供完全免费的短信验证码服务，顶级通道3秒下发，适用于登录注册、找回密码、支付认证等场景。我们将依据MobTech的《隐私政策》来帮助你了解我们需要收集哪些数据。请您详细查看我们的隐私政策，详见：%@",self.url];
+        return  [NSString stringWithFormat:@"   欢迎您使用SMSSDK提供的演示DEMO，SMSSDK为开发者提供完全免费的短信验证码服务，顶级通道3秒下发，适用于登录注册、找回密码、支付认证等场景。我们将依据SMSSDK的《隐私政策》来帮助你了解我们需要收集哪些数据。请您详细查看我们的隐私政策，详见：%@",self.url];
     }
     if(![SMSDemoHelper isZhHans])
     {
-        return @"You are welcome to use demo provided by mobtech. Smssdk provides developers with a free SMS verification code service. The top channel is issued in 3 seconds, which is suitable for login, password retrieval, payment authentication and other scenarios. We will use mobtech's privacy policy to help you understand what data we need to collect. Please refer to our privacy policy at http://www.mob.com/about/policy for details";
+        return @"You are welcome to use demo provided by Smssdk. Smssdk provides developers with a free SMS verification code service. The top channel is issued in 3 seconds, which is suitable for login, password retrieval, payment authentication and other scenarios. We will use sms's privacy policy to help you understand what data we need to collect. Please refer to our privacy policy at https://policy.zztfly.com/sdk/sms/privacy for details";
     }
-    return @"   欢迎您使用MobTech提供的演示DEMO，SMSSDK为开发者提供完全免费的短信验证码服务，顶级通道3秒下发，适用于登录注册、找回密码、支付认证等场景。我们将依据MobTech的《隐私政策》来帮助你了解我们需要收集哪些数据。请您详细查看我们的隐私政策，详见：http://www.mob.com/about/policy";
+    return @"   欢迎您使用SMSSDK提供的演示DEMO，SMSSDK为开发者提供完全免费的短信验证码服务，顶级通道3秒下发，适用于登录注册、找回密码、支付认证等场景。我们将依据SMSSDK的《隐私政策》来帮助你了解我们需要收集哪些数据。请您详细查看我们的隐私政策，详见：https://policy.zztfly.com/sdk/sms/privacy";
 }
 
 
@@ -170,7 +170,7 @@ static UIButton *acceptView = nil;
 {
     if(self.url)
         return self.url;
-    return @"http://www.mob.com/about/policy";
+    return @"https://policy.zztfly.com/sdk/sms/privacy";
 }
 
 +(NSString *)getRefuseTitle

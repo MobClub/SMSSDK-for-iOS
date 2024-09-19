@@ -1171,19 +1171,33 @@ typedef NS_ENUM(NSUInteger, MobileVerifyFlow) {
                 [SMSSDK verifyMobileWithPhone:phoneNum
                                         token:model
                                    completion:^(BOOL isValid, NSError *error) {
-                    NSLog(@"手机号认证结果: %d, error: %@", isValid, error.description);
-                    if (isValid) { // 手机号验证成功
-                        __strong typeof(weakSelf) strongSelf = weakSelf;
-                        _i = 0;
-                        [_timer invalidate];
-                        
-                        [strongSelf dismissViewControllerAnimated:YES completion:^{
-                            strongSelf.result(@{@"phone": strongSelf.phoneTf.text, @"zone": strongSelf.zone}, nil);
-                        }];
-                    } else {
-                        NSLog(@"手机号认证失败，开发发送手机验证码!");
-                        weakSelf.currentState = (weakSelf.methodType == SMSGetCodeMethodSMS) ? SMSMobileVerify : VoiceMobileVerify;
-                        [weakSelf updateSomeSubviewsConstraints];
+                    dispatch_block_t tBlock = ^{
+                        NSLog(@"手机号认证结果: %d, error: %@", isValid, error.description);
+                        if (isValid) { // 手机号验证成功
+                            __strong typeof(weakSelf) strongSelf = weakSelf;
+                            _i = 0;
+                            [_timer invalidate];
+                            
+                            [strongSelf dismissViewControllerAnimated:YES completion:^{
+                                strongSelf.result(@{@"phone": strongSelf.phoneTf.text, @"zone": strongSelf.zone}, nil);
+                            }];
+                        } else {
+                            NSLog(@"手机号认证失败，开发发送手机验证码!");
+                            weakSelf.currentState = (weakSelf.methodType == SMSGetCodeMethodSMS) ? SMSMobileVerify : VoiceMobileVerify;
+                            [weakSelf updateSomeSubviewsConstraints];
+                        }
+                    };
+                    
+                    if([NSThread isMainThread])
+                    {
+                        tBlock();
+                    }
+                    else
+                    {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            tBlock();
+                        });
+
                     }
                 }];
             } else {
